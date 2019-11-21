@@ -35,9 +35,9 @@
         <div id="collapsePosts" class="collapse" aria-labelledby="headingPosts" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Posts Menu</h6>
-            <a class="collapse-item" href="buttons.html">Create</a>
-            <a class="collapse-item" href="buttons.html">List</a>
-            <a class="collapse-item" href="buttons.html">Archived</a>
+            <a class="collapse-item" href="{{ route('posts.create') }}">Create</a>
+            <a class="collapse-item" href="{{ route('posts.index') }}">List</a>
+            <a class="collapse-item" href="{{ route('posts.index') }}">Archived</a>
           </div>
         </div>
       </li>
