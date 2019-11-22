@@ -41,7 +41,7 @@ class PostsController extends Controller
             'slug' => Str::slug($request->title)
         ]);
 
-        $request->thumbnail->move(public_path('upload/img/thumb/'.$tmp_thumbnail));
+        $request->thumbnail->move(public_path('upload/img/thumb/'), $tmp_thumbnail);
 
         return redirect()->route('posts.index')->with('status', 'New Post Saved!');
     }

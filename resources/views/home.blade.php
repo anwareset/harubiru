@@ -1,5 +1,16 @@
 @extends('admin-template.page')
+@section('title', 'Dashboard')
+@section('activedashboard', 'active')
 @section('content')
 <!-- Page Heading -->
-<h1 class="h3 mb-4 text-gray-800">Anu Page</h1>
+<div class="main-content">
+  <section class="section">
+    <div class="section-header">
+      <h1>Dashboard</h1>
+    </div>
+
+    <div class="section-body">
+    </div>
+  </section>
+</div>
 @endsection

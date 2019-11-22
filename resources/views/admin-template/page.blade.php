@@ -4,60 +4,28 @@
 <!-- Header -->
 @include('admin-template.header')
 
+<body>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
 
-<body id="page-top">
+      <!-- Topbar -->
+      @include('admin-template.topbar')
 
-  <!-- Page Wrapper -->
-  <div id="wrapper">
-
-    <!-- Sidebar -->
-
-    @include('admin-template.sidebar')
-
-    <!-- End of Sidebar -->
-
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
+      <!-- Sidebar -->
+      @include('admin-template.sidebar')
 
       <!-- Main Content -->
-      <div id="content">
-
-        <!-- Topbar -->
-        @include('admin-template.topbar')
-        <!-- End of Topbar -->
-
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
-
-          @yield('content')
-
-        </div>
-        <!-- /.container-fluid -->
-
-      </div>
-      <!-- End of Main Content -->
+      @yield('content')
 
       <!-- Footer -->
       @include('admin-template.footer')
-      <!-- End of Footer -->
 
     </div>
-    <!-- End of Content Wrapper -->
-
   </div>
-  <!-- End of Page Wrapper -->
-
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-
-  <!-- Logout Modal-->
-  @include('admin-template.logout-modal')
 
   <!-- JavaScript -->
   @include('admin-template.js')
 
 </body>
-
 </html>

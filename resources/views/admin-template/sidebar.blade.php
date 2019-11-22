@@ -1,120 +1,49 @@
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-      <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
-        </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
-      </a>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider my-0">
-
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item">
-        <a class="nav-link @yield('activehome')" href="/home">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
+<div class="main-sidebar sidebar-style-2">
+  <aside id="sidebar-wrapper">
+    <div class="sidebar-brand">
+      <a href="index.html">Stisla</a>
+    </div>
+    <div class="sidebar-brand sidebar-brand-sm">
+      <a href="index.html">St</a>
+    </div>
+    <ul class="sidebar-menu">
+      <li class="@yield('activedashboard')"><a class="nav-link" href="/home"><i class="fas fa-fire"></i> <span>Dashboard</span></a>
       </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Articles
-      </div>
-
-      <!-- Nav Item - Posts Collapse Menu -->
-      <li class="nav-item @yield('activeposts')">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePosts" aria-expanded="true" aria-controls="collapsePosts">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Posts</span>
-        </a>
-        <div id="collapsePosts" class="collapse" aria-labelledby="headingPosts" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Posts Menu</h6>
-            <a class="collapse-item" href="{{ route('posts.create') }}">Create</a>
-            <a class="collapse-item" href="{{ route('posts.index') }}">List</a>
-            <a class="collapse-item" href="{{ route('posts.index') }}">Archived</a>
-          </div>
-        </div>
+      <li class="menu-header">Articles</li>
+      <li class="dropdown @yield('activeposts')">
+        <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-alt"></i><span>Posts</span></a>
+        <ul class="dropdown-menu">
+          <li class="@yield('active_p_new')"><a class="nav-link" href="{{ route('posts.create') }}">New Posts</a></li>
+          <li class="@yield('active_p_lists')"><a class="nav-link" href="{{ route('posts.index') }}">Lists</a></li>
+          <li class="@yield('active_p_archived')"><a class="nav-link" href="index.html">Archived</a></li>
+        </ul>
       </li>
-
-      <!-- Nav Item - Categories Collapse Menu -->
-      <li class="nav-item @yield('activecategories')">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCategories" aria-expanded="true" aria-controls="collapseCategories">
-          <i class="fas fa-fw fa-wrench"></i>
-          <span>Category</span>
-        </a>
-        <div id="collapseCategories" class="collapse" aria-labelledby="headingCategories" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="{{ route('categories.create') }}">Create</a>
-            <a class="collapse-item" href="{{ route('categories.index') }}">List</a>
-          </div>
-        </div>
+      <li class="dropdown @yield('activecategories')">
+        <a href="#" class="nav-link has-dropdown"><i class="fas fa-book"></i><span>Category</span></a>
+        <ul class="dropdown-menu">
+          <li class="@yield('active_c_add')"><a class="nav-link" href="{{ route('categories.create') }}">Add Category</a></li>
+          <li class="@yield('active_c_lists')"><a class="nav-link" href="{{ route('categories.index') }}">Lists</a></li>
+        </ul>
       </li>
-
-      <!-- Nav Item - Tags Collapse Menu -->
-      <li class="nav-item @yield('activetags')">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTags" aria-expanded="true" aria-controls="collapseTags">
-          <i class="fas fa-fw fa-wrench"></i>
-          <span>Tags</span>
-        </a>
-        <div id="collapseTags" class="collapse" aria-labelledby="headingTags" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="{{ route('tags.create') }}">Create</a>
-            <a class="collapse-item" href="{{ route('tags.create') }}">List</a>
-          </div>
-        </div>
+      <li class="dropdown @yield('activetags')">
+        <a href="#" class="nav-link has-dropdown"><i class="fas fa-bookmark"></i><span>Tags</span></a>
+        <ul class="dropdown-menu">
+          <li class="@yield('active_t_add')"><a class="nav-link" href="{{ route('tags.create') }}">Add Tags</a></li>
+          <li class="@yield('active_t_lists')"><a class="nav-link" href="{{ route('tags.index') }}">Lists</a></li>
+        </ul>
       </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Advanced Settings
-      </div>
-
-      <!-- Nav Item - Accounts Collapse Menu -->
-      <li class="nav-item @yield('activeaccounts')">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAccounts" aria-expanded="true" aria-controls="collapseAccounts">
-          <i class="fas fa-fw fa-wrench"></i>
-          <span>Accounts</span>
-        </a>
-        <div id="collapseAccounts" class="collapse" aria-labelledby="headingAccounts" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="">Create</a>
-            <a class="collapse-item" href="">List</a>
-          </div>
-        </div>
+      <li class="menu-header">Settings</li>
+      <li class="dropdown @yield('activeaccounts')">
+        <a href="#" class="nav-link has-dropdown"><i class="fas fa-users"></i><span>Accounts</span></a>
+        <ul class="dropdown-menu">
+          <li class="@yield('active_a_create')"><a class="nav-link" href="index-0.html">Create</a></li>
+          <li @yield('active_a_lists')><a class="nav-link" href="index.html">Lists</a></li>
+        </ul>
       </li>
-
-      <!-- Manage Profile -->
-      <li class="nav-item @yield('activemanageprofile')">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Manage Profile</span></a>
+      <li class="@yield('activeprofile')"><a class="nav-link" href="blank.html"><i class="far fa-user-circle"></i> <span>Profile</span></a>
       </li>
-
-      <!-- Nav Item - Site Configurations -->
-      <li class="nav-item @yield('siteonfigurations')">
-        <a class="nav-link" href="tables.html">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Site Configurations</span></a>
+      <li class="@yield('activeconfigurations')"><a class="nav-link" href="blank.html"><i class="fas fa-sliders-h"></i> <span>Site Configurations</span></a>
       </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider d-none d-md-block">
-
-      <!-- Sidebar Toggler (Sidebar) -->
-      <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
-      </div>
-
     </ul>
+  </aside>
+</div>
