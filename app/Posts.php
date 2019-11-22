@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Posts extends Model
 {
+	use SoftDeletes;
+
 	protected $fillable = ['title', 'category_id', 'content', 'thumbnail', 'slug'];
 
     public function category(){

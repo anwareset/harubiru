@@ -53,6 +53,7 @@
 									</div>
 									@enderror
 									<select type="text" name="category" class="form-control select2 @error('category') is-invalid @enderror" value="{{old('category')}}">
+										<option value="" selected="">Select Category</option>
 										@foreach($categories as $result)
 										<option value="{{ $result->id }}">{{ $result->name }} </option>
 										@endforeach

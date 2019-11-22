@@ -9,11 +9,15 @@
 		<div class="section-header">
 			<h1>Posts</h1>
 		</div>
-
 		<div class="section-body">
 			<div class="row">
 				<div class="col-12">
 					<div class="card">
+						@if (session('status'))
+						<div class="alert alert-success" role="alert">
+							{{ session('status') }}
+						</div>
+						@endif
 						<div class="card-header py-3">
 							<a href="{{ route('posts.create') }}" class="btn btn-sm btn-success btn-icon btn-icon-left">
 								<span class="icon text-white-50">
@@ -53,15 +57,11 @@
 											<td align="center">{{ $print->category->name }}</td>
 											<td align="center">
 												@foreach($print->tags as $tag)
-												<?php if(($tag->id % 2) == 0){ ?>
-													<div class="badge badge-primary">
-														{{ $tag->name }}
-													</div>
-												<?php } else { ?>
-													<div class="badge badge-danger">
-														{{ $tag->name }}
-													</div>
-												<?php } ?>
+												@if($tag->id % 2)
+												<div class="badge badge-primary">{{ $tag->name }}</div>
+												@else
+												<div class="badge badge-danger">{{ $tag->name }}</div>
+												@endif
 												@endforeach
 											</td>
 											<td><img style="max-width: 90px; margin-left: 20%" src="{{ asset($print->thumbnail) }}" alt="harubiru.me-{{ $print->slug }}"></td>

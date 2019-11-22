@@ -55,20 +55,50 @@ class PostsController extends Controller
     }
 
 
-    public function edit(Posts $posts)
+    public function edit($id)
     {
-        //
+        $posts = Posts::findorfail($id);
+        $categories =  Categories::all();
+        $tags = Tags::all();
+
+        return view('admin.posts.edit', compact('posts', 'categories','tags'));
     }
 
 
-    public function update(Request $request, Posts $posts)
+    public function update(Request $request, $id)
     {
-        //
+        $posts = Posts::findorfail($id);
+
+        if($request->has('thumbnail')){
+            $tmp_thumbnail =  time().$request->thumbnail->getClientOriginalName();
+            $request->thumbnail->move(public_path('upload/img/thumb/'), $tmp_thumbnail);
+
+            $posts_data = [
+                'title' => $request->title,
+                'content' => $request->content,
+                'thumbnail' => 'upload/img/thumb/'.$tmp_thumbnail,
+                'category_id' => $request->category,
+                'slug' => Str::slug($request->title)
+            ];
+        } else {
+            $posts_data = [
+                'title' => $request->title,
+                'content' => $request->content,
+                'category_id' => $request->category,
+                'slug' => Str::slug($request->title)
+            ];
+        }
+        $posts->tags()->sync($request->tags);
+        $posts->update($posts_data);
+
+        return redirect()->route('posts.index')->with('status', 'Post Updated!');
     }
 
 
-    public function destroy(Posts $posts)
+    public function destroy($id)
     {
-        //
+        Posts::findorfail($id)->delete();
+
+        return redirect()->back()->with('status', 'Post Archived!');
     }
 }

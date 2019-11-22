@@ -14,6 +14,11 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="card">
+						@if (session('status'))
+						<div class="alert alert-success" role="alert">
+							{{ session('status') }}
+						</div>
+						@endif
 						<div class="card-header py-3">
 							<a href="{{ route('tags.create') }}" class="btn btn-sm btn-success btn-icon btn-icon-left">
 								<span class="icon text-white-50">
