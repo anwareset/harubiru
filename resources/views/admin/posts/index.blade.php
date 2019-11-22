@@ -30,6 +30,7 @@
 											<th width="5%" class="text-center">#</th>
 											<th>Title</th>
 											<th width="20%" class="text-center">Category</th>
+											<th width="20%" class="text-center">Tags</th>
 											<th width="15%" class="text-center">Thumbnail</th>
 											<th width="10%" class="text-center">Action</th>
 										</tr>
@@ -39,6 +40,7 @@
 											<th width="5%" class="text-center">#</th>
 											<th class="text-center">Title</th>
 											<th width="20%" class="text-center">Category</th>
+											<th width="20%" class="text-center">Tags</th>
 											<th width="15%" class="text-center">Thumbnail</th>
 											<th width="10%" class="text-center">Action</th>
 										</tr>
@@ -49,6 +51,19 @@
 											<td align="center">{{ $result + $posts->firstitem() }}</td>
 											<td>{{ $print->title }}</td>
 											<td align="center">{{ $print->category->name }}</td>
+											<td align="center">
+												@foreach($print->tags as $tag)
+												<?php if(($tag->id % 2) == 0){ ?>
+													<div class="badge badge-primary">
+														{{ $tag->name }}
+													</div>
+												<?php } else { ?>
+													<div class="badge badge-danger">
+														{{ $tag->name }}
+													</div>
+												<?php } ?>
+												@endforeach
+											</td>
 											<td><img style="max-width: 90px; margin-left: 20%" src="{{ asset($print->thumbnail) }}" alt="harubiru.me-{{ $print->slug }}"></td>
 											<td align="center">
 												<form method="POST" action="{{ route('posts.destroy', $print->id) }}">

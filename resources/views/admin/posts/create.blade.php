@@ -59,6 +59,24 @@
 									</select>
 								</div>
 								<div class="form-group">
+									<label>Tags</label>
+									@if (session('status'))
+									<div class="alert alert-success" role="alert">
+										{{ session('status') }}
+									</div>
+									@endif
+									@error('tags')
+									<div class="alert alert-danger" role="alert">
+										{{ $message }}
+									</div>
+									@enderror
+									<select type="text" name="tags[]" class="form-control select2 @error('tags') is-invalid @enderror" multiple="" value="{{old('tags')}}">
+										@foreach($tags as $result2)
+										<option value="{{ $result2->id }}">{{ $result2->name }} </option>
+										@endforeach
+									</select>
+								</div>
+								<div class="form-group">
 									<label>Content</label>
 									@if (session('status'))
 									<div class="alert alert-success" role="alert">

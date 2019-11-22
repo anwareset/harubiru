@@ -48,12 +48,12 @@
 												<form method="POST" action="{{ route('tags.destroy', $print->id) }}">
 													@csrf
 													@method('delete')
-													<a href="{{ route('tags.edit', $print->id) }}" class="btn btn-sm btn-warning btn-icon-split">
+													<a href="{{ route('tags.edit', $print->id) }}" class="btn btn-sm btn-warning btn-icon">
 														<span class="icon text-white-50">
 															<i class="fas fa-edit"></i>
 														</span>
 													</a>
-													<button type="submit" class="btn btn-sm btn-danger btn-icon-split">
+													<button type="submit" class="btn btn-sm btn-danger btn-icon">
 														<span class="icon text-white-50">
 															<i class="fas fa-trash"></i>
 														</span>

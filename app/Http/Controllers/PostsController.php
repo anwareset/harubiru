@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Posts;
 use App\Categories;
+use App\Tags;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -19,7 +20,8 @@ class PostsController extends Controller
     public function create()
     {
         $categories =  Categories::all();
-        return view('admin.posts.create', compact('categories'));
+        $tags = Tags::all();
+        return view('admin.posts.create', compact('categories', 'tags'));
     }
 
     public function store(Request $request)
@@ -39,7 +41,7 @@ class PostsController extends Controller
             'thumbnail' => 'upload/img/thumb/'.$tmp_thumbnail,
             'category_id' => $request->category,
             'slug' => Str::slug($request->title)
-        ]);
+        ])->tags()->attach($request->tags);
 
         $request->thumbnail->move(public_path('upload/img/thumb/'), $tmp_thumbnail);
 
