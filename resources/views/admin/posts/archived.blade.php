@@ -22,6 +22,12 @@
 							<form method="POST" action="{{ route('posts.massclean') }}">
 								@csrf
 								@method('delete')
+								<a href="{{ route('posts.index') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
+									<span class="icon text-white-50">
+										<i class="fas fa-chevron-circle-left"></i>
+									</span>
+									<span class="text">Back</span>
+								</a>
 								<button type="submit" class="btn btn-sm btn-danger btn-icon">
 									<span class="icon text-white-50">
 										<i class="fas fa-trash"></i>

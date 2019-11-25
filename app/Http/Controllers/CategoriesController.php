@@ -33,7 +33,7 @@ class CategoriesController extends Controller
             'slug' => Str::slug($request->name)
         ]);
 
-        return redirect()->back()->with('status', 'New Category Saved!');
+        return redirect()->back()->with('success', 'New Category Saved!');
     }
 
     public function show(Categories $categories)

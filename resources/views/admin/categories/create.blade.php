@@ -13,6 +13,16 @@
       <div class="row">
         <div class="col-12">
           <div class="card">
+            @if (session('success'))
+            <div class="alert alert-success" role="alert">
+              {{ session('success') }}
+            </div>
+            @endif
+            @error('success')
+            <div class="alert alert-danger" role="alert">
+              {{ $message }}
+            </div>
+            @enderror
             <div class="card-header py-3">
               <a href="{{ route('categories.index') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
                 <span class="icon text-white-50">

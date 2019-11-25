@@ -33,7 +33,7 @@ class TagsController extends Controller
             'slug' => Str::slug($request->name)
         ]);
 
-        return redirect()->back()->with('status', 'New Tag Saved!');
+        return redirect()->back()->with('success', 'New Tag Saved!');
     }
 
 

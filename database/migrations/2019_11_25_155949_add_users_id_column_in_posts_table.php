@@ -6,13 +6,23 @@ use Illuminate\Support\Facades\Schema;
 
 class AddUsersIdColumnInPostsTable extends Migration
 {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->renameColumn('user_id', 'users_id');
+            $table->integer('users_id');
         });
     }
 
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
     {
         Schema::table('posts', function (Blueprint $table) {

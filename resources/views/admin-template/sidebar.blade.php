@@ -34,13 +34,13 @@
       </li>
       <li class="menu-header">Settings</li>
       <li class="dropdown @yield('activeaccounts')">
-        <a href="#" class="nav-link has-dropdown"><i class="fas fa-users"></i><span>Accounts</span></a>
+        <a href="#" class="nav-link has-dropdown"><i class="fas fa-users-cog"></i><span>Accounts</span></a>
         <ul class="dropdown-menu">
-          <li class="@yield('active_a_create')"><a class="nav-link" href="index-0.html">Create</a></li>
-          <li @yield('active_a_lists')><a class="nav-link" href="index.html">Lists</a></li>
+          <li class="@yield('active_a_create')"><a class="nav-link" href="{{ route('users.index') }}">Create</a></li>
+          <li @yield('active_a_lists')><a class="nav-link" href="{{ route('users.index') }}">Lists</a></li>
         </ul>
       </li>
-      <li class="@yield('activeprofile')"><a class="nav-link" href="blank.html"><i class="far fa-user-circle"></i> <span>Profile</span></a>
+      <li class="@yield('activeprofile')"><a class="nav-link" href="blank.html"><i class="fas fa-user-cog"></i> <span>Profile</span></a>
       </li>
       <li class="@yield('activeconfigurations')"><a class="nav-link" href="blank.html"><i class="fas fa-sliders-h"></i> <span>Site Configurations</span></a>
       </li>
