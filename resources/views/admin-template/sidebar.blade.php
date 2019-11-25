@@ -15,7 +15,7 @@
         <ul class="dropdown-menu">
           <li class="@yield('active_p_new')"><a class="nav-link" href="{{ route('posts.create') }}">New Posts</a></li>
           <li class="@yield('active_p_lists')"><a class="nav-link" href="{{ route('posts.index') }}">Lists</a></li>
-          <li class="@yield('active_p_archived')"><a class="nav-link" href="index.html">Archived</a></li>
+          <li class="@yield('active_p_archived')"><a class="nav-link" href="{{ route('posts.archived') }}">Archived</a></li>
         </ul>
       </li>
       <li class="dropdown @yield('activecategories')">

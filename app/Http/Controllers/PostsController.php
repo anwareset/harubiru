@@ -101,4 +101,34 @@ class PostsController extends Controller
 
         return redirect()->back()->with('status', 'Post Archived!');
     }
+
+    public function archived()
+    {
+        $posts = Posts::onlyTrashed()->paginate();
+
+        return view('admin.posts.archived', compact('posts'));
+    }
+
+    public function restore($id)
+    {
+        Posts::withTrashed()->where('id', $id)->first()->restore();
+
+        return redirect()->back()->with('status', 'Post Restored!');
+    }
+
+    public function clean($id)
+    {
+        Posts::withTrashed()->where('id', $id)->first()->forceDelete();
+
+        return redirect()->back()->with('status', 'Post Permanently Cleaned!');
+    }
+
+    public function massclean()
+    {
+        Posts::withTrashed()->forceDelete();
+        
+        return redirect()->back()->with('status', 'Archive Cleaned!');
+
+        //return redirect()->back()->with('status', 'Archive Cleaned!');
+    }
 }
