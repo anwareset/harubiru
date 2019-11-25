@@ -33,6 +33,7 @@
 										<tr>
 											<th width="5%" class="text-center">#</th>
 											<th>Title</th>
+											<th width="15%" class="text-center">Author</th>
 											<th width="20%" class="text-center">Category</th>
 											<th width="20%" class="text-center">Tags</th>
 											<th width="15%" class="text-center">Thumbnail</th>
@@ -43,6 +44,7 @@
 										<tr>
 											<th width="5%" class="text-center">#</th>
 											<th class="text-center">Title</th>
+											<th width="15%" class="text-center">Author</th>
 											<th width="20%" class="text-center">Category</th>
 											<th width="20%" class="text-center">Tags</th>
 											<th width="15%" class="text-center">Thumbnail</th>
@@ -54,13 +56,14 @@
 										<tr>
 											<td align="center">{{ $result + $posts->firstitem() }}</td>
 											<td>{{ $print->title }}</td>
+											<td align="center">{{ $print->users->name }}</td>
 											<td align="center">{{ $print->category->name }}</td>
 											<td align="center">
 												@foreach($print->tags as $tag)
 												@if($tag->id % 2)
-												<div class="badge badge-primary">{{ $tag->name }}</div>
+													<h6><span class="badge badge-primary">{{ $tag->name }}</span></h6>
 												@else
-												<div class="badge badge-danger">{{ $tag->name }}</div>
+													<h6><span class="badge badge-danger">{{ $tag->name }}</span></h6>
 												@endif
 												@endforeach
 											</td>

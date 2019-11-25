@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Posts;
 use App\Categories;
 use App\Tags;
+use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -40,7 +41,8 @@ class PostsController extends Controller
             'content' => $request->content,
             'thumbnail' => 'upload/img/thumb/'.$tmp_thumbnail,
             'category_id' => $request->category,
-            'slug' => Str::slug($request->title)
+            'slug' => Str::slug($request->title),
+            'user_id' => Auth::id()
         ])->tags()->attach($request->tags);
 
         $request->thumbnail->move(public_path('upload/img/thumb/'), $tmp_thumbnail);
