@@ -42,9 +42,10 @@ class UsersController extends Controller
         //
     }
 
-    public function edit(User $user)
+    public function edit($id)
     {
-        //
+        $users = User::findorfail($id);
+        return view('admin.users.edit', compact('users'));
     }
 
     public function update(Request $request, User $user)
