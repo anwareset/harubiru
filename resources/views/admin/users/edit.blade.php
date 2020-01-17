@@ -33,6 +33,7 @@
             <div class="card-body">
               <form method="POST" action=" {{ route('users.update', $users->id) }} ">
                 @csrf
+                @method('put')
                 <div class="form-group">
                   <label>Name</label>
                   @if (session('status'))
@@ -51,7 +52,7 @@
                         <i class="fas fa-user-alt"></i>
                       </div>
                     </div>
-                    <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ $users->name }}">
+                    <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ $users->name }}" readonly>
                   </div>
                 </div>
                 <div class="form-group">
@@ -112,27 +113,17 @@
                         <i class="fas fa-lock"></i>
                       </div>
                     </div>
-                    <input type="password" name="password" data-indicator="pwindicator" class="form-control pwstrength @error('password') is-invalid @enderror">
+                    <input type="password" name="password" data-indicator="pwindicator" class="form-control pwstrength">
                   </div>
                   <div id="pwindicator" class="pwindicator">
                     <div class="bar"></div>
                     <div class="label"></div>
                   </div>
-                  @if (session('status'))
-                  <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
-                  </div>
-                  @endif
-                  @error('password')
-                  <div class="alert alert-danger" role="alert">
-                    {{ $message }}
-                  </div>
-                  @enderror
                 </div>
                 <div class="form-group">
                   <button class="btn btn-success btn-icon btn-icon-left btn-block">
                     <i class="fas fa-flag"></i>
-                    <span class="text">Create New Account</span>
+                    <span class="text">Update User</span>
                   </button>
                 </div>
               </form>

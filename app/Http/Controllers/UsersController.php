@@ -48,13 +48,36 @@ class UsersController extends Controller
         return view('admin.users.edit', compact('users'));
     }
 
-    public function update(Request $request, User $user)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|min:3|max:40',
+            'email' => 'required|email',
+            'level' => 'required'
+        ]);
+
+        if ($request->input('password')) {
+            $user_data = [
+                'name' => $request->name,
+                'email' => $request->email,
+                'level' => $request->level,
+                'password' => bcrypt($request->password)
+            ];
+        } else {
+            $user_data = [
+                'name' => $request->name,
+                'email' => $request->email,
+                'level' => $request->level
+            ];
+        }
+        User::whereId($id)->update($user_data);
+        return redirect()->route('users.index')->with('status', 'User Data Updated!');
     }
 
-    public function destroy(User $user)
+    public function destroy($id)
     {
-        //
+        $user = User::findorfail($id);
+        $user->delete();
+        return redirect()->route('users.index')->with('status', 'User Deleted!');
     }
 }
