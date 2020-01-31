@@ -1,766 +1,360 @@
-<!DOCTYPE html>
-<html lang="zxx" class="no-js">
+<!doctype html>
+<html lang="zxx">
 
 <head>
-  <!-- Mobile Specific Meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="{{ asset('front/img/fav.png') }}" />
-  <!-- Author Meta -->
-  <meta name="author" content="colorlib" />
-  <!-- Meta Description -->
-  <meta name="description" content="" />
-  <!-- Meta Keyword -->
-  <meta name="keywords" content="" />
-  <!-- meta character set -->
-  <meta charset="UTF-8" />
-  <!-- Site Title -->
-  <title>Eclipse Education</title>
-
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" />
-  <!--
-      CSS
-      =============================================
-    -->
-  <link rel="stylesheet" href="{{ asset('front/css/linearicons.css') }}" />
-  <link rel="stylesheet" href="{{ asset('front/css/font-awesome.min.css') }}" />
-  <link rel="stylesheet" href="{{ asset('front/css/bootstrap.css') }}" />
-  <link rel="stylesheet" href="{{ asset('front/css/magnific-popup.css') }}" />
-  <link rel="stylesheet" href="{{ asset('front/css/owl.carousel.css') }}" />
-  <link rel="stylesheet" href="{{ asset('front/css/nice-select.css') }}">
-  <link rel="stylesheet" href="{{ asset('front/css/hexagons.min.css') }}" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" />
-  <link rel="stylesheet" href="{{ asset('front/css/main.css') }}" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>HaruBiru</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('front/img/favicon/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('front/img/favicon/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('front/img/favicon/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{asset('front/img/favicon/site.webmanifest')}}">
+    <link rel="mask-icon" href="{{asset('front/img/favicon/safari-pinned-tab.svg')}}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="{{asset('front/css/animate.css')}}">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="{{asset('front/css/all.css')}}">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="{{asset('front/css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/themify-icons.css')}}">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="{{asset('front/css/magnific-popup.css')}}">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="{{asset('front/css/slick.css')}}">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="{{asset('front/css/style.css')}}">
+    <!-- typewriter CSS -->
+    <link rel="stylesheet" href="{{asset('front/css/typewriter.css')}}">
 </head>
 
 <body>
-  <!-- ================ Start Header Area ================= -->
-  <header class="default-header">
-    <nav class="navbar navbar-expand-lg  navbar-light">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="img/logo.png" alt="" />
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="lnr lnr-menu"></span>
-        </button>
+    <!--::header part start::-->
+    <header class="main_menu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand main_logo" href="index.html"><img src="{{asset('front/img/HaruBiru.png') }}" alt="logo"> </a>
+                        <a class="navbar-brand single_page_logo" href="index.html"> <img src="{{asset('front/img/HaruBiru_footer.png') }}" alt="logo"> </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="menu_icon"></span>
+                        </button>
 
-        <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
-          <ul class="navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <!-- Dropdown -->
-            <li class="dropdown">
-              <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                Pages
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="elements.html">Elements</a>
-                <a class="dropdown-item" href="course-details.html">Course Details</a>
-              </div>
-            </li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                Blog
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="blog-home.html">Blog Home</a>
-                <a class="dropdown-item" href="blog-single.html">Blog Details</a>
-              </div>
-            </li>
-            <li><a href="contacts.html">Contacts</a></li>
-
-            <li>
-              <button class="search">
-                <span class="lnr lnr-magnifier" id="search"></span>
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="search-input" id="search-input-box">
-      <div class="container">
-        <form class="d-flex justify-content-between">
-          <input type="text" class="form-control" id="search-input" placeholder="Search Here" />
-          <button type="submit" class="btn"></button>
-          <span class="lnr lnr-cross" id="close-search" title="Close Search"></span>
-        </form>
-      </div>
-    </div>
-  </header>
-  <!-- ================ End Header Area ================= -->
-
-  <!-- ================ start banner Area ================= -->
-  <section class="home-banner-area">
-    <div class="container">
-      <div class="row justify-content-center fullscreen align-items-center">
-        <div class="col-lg-5 col-md-8 home-banner-left">
-          <h1 class="text-white" >
-            Take the first step <br />
-            to learn with us
-          </h1>
-          <p class="mx-auto text-white  mt-20 mb-40">
-            In the history of modern astronomy, there is probably no one
-            greater leap forward than the building and launch of the space
-            telescope known as the Hubble.
-          </p>
-        </div>
-        <div class="offset-lg-2 col-lg-5 col-md-12 home-banner-right">
-          <img class="img-fluid" src="img/header-img.png" alt="" />
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ================ End banner Area ================= -->
-
-  <!-- ================ Start Feature Area ================= -->
-  <section class="feature-area">
-    <div class="container-fluid">
-      <div class="feature-inner row">
-        <div class="col-lg-2 col-md-6">
-          <div class="feature-item d-flex">
-            <i class="ti-book"></i>
-            <div class="ml-20">
-              <h4>New Classes</h4>
-              <p>
-                In the history of modern astronomy, there is probably no one greater leap forward.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-6">
-          <div class="feature-item d-flex">
-            <i class="ti-cup"></i>
-            <div class="ml-20">
-              <h4>Top Courses</h4>
-              <p>
-                In the history of modern astronomy, there is probably no one greater leap forward.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-6">
-          <div class="feature-item d-flex border-right-0">
-            <i class="ti-desktop"></i>
-            <div class="ml-20">
-              <h4>Full E-Books</h4>
-              <p>
-                In the history of modern astronomy, there is probably no one greater leap forward.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ================ End Feature Area ================= -->
-
-  <!-- ================ Start Popular Course Area ================= -->
-  <section class="popular-course-area section-gap">
-    <div class="container-fluid">
-      <div class="row justify-content-center section-title">
-        <div class="col-lg-12">
-          <h2>
-            Popular Courses <br />
-            Available Right Now
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-      </div>
-      <div class="owl-carousel popuar-course-carusel">
-        <div class="single-popular-course">
-          <div class="thumb">
-            <img class="f-img img-fluid mx-auto" src="img/popular-course/p1.jpg" alt="" />
-          </div>
-          <div class="details">
-            <div class="d-flex justify-content-between mb-20">
-              <p class="name">programming language</p>
-              <p class="value">$150</p>
-            </div>
-            <a href="#">
-              <h4>Learn Angular JS Course for Legendary Persons</h4>
-            </a>
-            <div class="bottom d-flex mt-15">
-              <ul class="list">
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-              </ul>
-              <p class="ml-20">25 Reviews</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="single-popular-course">
-          <div class="thumb">
-            <img class="f-img img-fluid mx-auto" src="img/popular-course/p2.jpg" alt="" />
-          </div>
-          <div class="details">
-            <div class="d-flex justify-content-between mb-20">
-              <p class="name">programming language</p>
-              <p class="value">$150</p>
-            </div>
-            <a href="#">
-              <h4>Learn Angular JS Course for Legendary Persons</h4>
-            </a>
-            <div class="bottom d-flex mt-15">
-              <ul class="list">
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-              </ul>
-              <p class="ml-20">25 Reviews</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="single-popular-course">
-          <div class="thumb">
-            <img class="f-img img-fluid mx-auto" src="img/popular-course/p3.jpg" alt="" />
-          </div>
-          <div class="details">
-            <div class="d-flex justify-content-between mb-20">
-              <p class="name">programming language</p>
-              <p class="value">$150</p>
-            </div>
-            <a href="#">
-              <h4>Learn Angular JS Course for Legendary Persons</h4>
-            </a>
-            <div class="bottom d-flex mt-15">
-              <ul class="list">
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-              </ul>
-              <p class="ml-20">25 Reviews</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="single-popular-course">
-          <div class="thumb">
-            <img class="f-img img-fluid mx-auto" src="img/popular-course/p4.jpg" alt="" />
-          </div>
-          <div class="details">
-            <div class="d-flex justify-content-between mb-20">
-              <p class="name">programming language</p>
-              <p class="value">$150</p>
-            </div>
-            <a href="#">
-              <h4>Learn Angular JS Course for Legendary Persons</h4>
-            </a>
-            <div class="bottom d-flex mt-15">
-              <ul class="list">
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-              </ul>
-              <p class="ml-20">25 Reviews</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ================ End Popular Course Area ================= -->
-
-  <!-- ================ Start Video Area ================= -->
-  <section class="video-area section-gap-bottom">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-5">
-          <div class="section-title text-white">
-            <h2 class="text-white">
-              Watch Our Trainers <br>
-              in Live Action
-            </h2>
-            <p>
-              In the history of modern astronomy, there is probably no one greater leap forward than the building and
-              launch of the space telescope known as the Hubble.
-            </p>
-          </div>
-        </div>
-        <div class="offset-lg-1 col-md-6 video-left">
-          <div class="owl-carousel video-carousel">
-            <div class="single-video">
-              <div class="video-part">
-                <img class="img-fluid" src="img/video-img.jpg" alt="">
-                <div class="overlay"></div>
-                <a class="popup-youtube play-btn" href="https://www.youtube.com/watch?v=VufDd-QL1c0">
-                  <img class="play-icon" src="img/play-btn.png" alt="">
-                </a>
-              </div>
-              <h4 class="text-white mb-20 mt-30">Learn Angular js Course for Legendary Persons</h4>
-              <p class="text-white mb-20">
-                In the history of modern astronomy, there is probably no one greater leap forward than the building and
-                launch of the space telescope known as the Hubble.
-              </p>
-            </div>
-
-            <div class="single-video">
-              <div class="video-part">
-                <img class="img-fluid" src="img/video-img.jpg" alt="">
-                <div class="overlay"></div>
-                <a class="popup-youtube play-btn" href="https://www.youtube.com/watch?v=VufDd-QL1c0">
-                  <img class="play-icon" src="img/play-btn.png" alt="">
-                </a>
-              </div>
-              <h4 class="text-white mb-20 mt-30">Learn Angular js Course for Legendary Persons</h4>
-              <p class="text-white mb-20">
-                In the history of modern astronomy, there is probably no one greater leap forward than the building and
-                launch of the space telescope known as the Hubble.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ================ End Video Area ================= -->
-
-  <!-- ================ Start Feature Area ================= -->
-  <section class="other-feature-area">
-    <div class="container">
-      <div class="feature-inner row">
-        <div class="col-lg-12">
-          <div class="section-title text-left">
-            <h2>
-              Features That <br />
-              Can Avail By Everyone
-            </h2>
-            <p>
-              If you are looking at blank cassettes on the web, you may be
-              very confused at the difference in price. You may see some for
-              as low as $.17 each.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="other-feature-item">
-            <i class="ti-key"></i>
-            <h4>Lifetime Access</h4>
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed
-                do eiusmod tempor incididunt labore. Lorem ipsum dolor sit
-                amet consec tetur adipisicing elit, sed do eiusmod tempor
-                incididunt labore.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mt--160">
-          <div class="other-feature-item">
-            <i class="ti-files"></i>
-            <h4>Source File Included</h4>
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed
-                do eiusmod tempor incididunt labore. Lorem ipsum dolor sit
-                amet consec tetur adipisicing elit, sed do eiusmod tempor
-                incididunt labore.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mt--260">
-          <div class="other-feature-item">
-            <i class="ti-medall-alt"></i>
-            <h4>Student Membership</h4>
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed
-                do eiusmod tempor incididunt labore. Lorem ipsum dolor sit
-                amet consec tetur adipisicing elit, sed do eiusmod tempor
-                incididunt labore.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="other-feature-item">
-            <i class="ti-briefcase"></i>
-            <h4>35000+ Courses</h4>
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed
-                do eiusmod tempor incididunt labore. Lorem ipsum dolor sit
-                amet consec tetur adipisicing elit, sed do eiusmod tempor
-                incididunt labore.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mt--160">
-          <div class="other-feature-item">
-            <i class="ti-crown"></i>
-            <h4>Expert Mentors</h4>
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed
-                do eiusmod tempor incididunt labore. Lorem ipsum dolor sit
-                amet consec tetur adipisicing elit, sed do eiusmod tempor
-                incididunt labore.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mt--260">
-          <div class="other-feature-item">
-            <i class="ti-headphone-alt"></i>
-            <h4>Live Supports</h4>
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed
-                do eiusmod tempor incididunt labore. Lorem ipsum dolor sit
-                amet consec tetur adipisicing elit, sed do eiusmod tempor
-                incididunt labore.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ================ End Feature Area ================= -->
-
-  <!-- ================ Start Testimonials Area ================= -->
-  <section class="testimonials-area section-gap">
-    <div class="container">
-      <div class="testi-slider owl-carousel" data-slider-id="1">
-        <div class="row align-items-center">
-          <div class="col-lg-5">
-            <div class="item">
-              <div class="testi-item">
-                <img src="img/quote.png" alt="" />
-                <div class="mt-40 text">
-                  <p>
-                    As conscious traveling Paup ers we must always be oncerned
-                    about our dear Mother Earth. If you think about it, you
-                    travel across her face and She is the host to your
-                    journey.
-                  </p>
+                        <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown"
+                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Blog
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="blog.html"> blog</a>
+                                        <a class="dropdown-item" href="single-blog.html">Ingin Menulis?</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="features.html">Video</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="elements.html">Portofolio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pricing.html">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#" class="d-none d-sm-block btn_1 home_page_btn">Sedang Beruntung?</a>
+                    </nav>
                 </div>
-                <h4>Fanny Spencer</h4>
-                <p>Chief Executive, Amazon</p>
-              </div>
             </div>
-          </div>
-
-          <div class="offset-lg-1 col-lg-6">
-            <img src="img/testimonial/t1.jpg" alt="" />
-          </div>
         </div>
+    </header>
+    <!--::Header part end::-->
 
-        <div class="row align-items-center">
-          <div class="col-lg-5">
-            <div class="item">
-              <div class="testi-item">
-                <img src="img/quote.png" alt="" />
-                <div class="mt-40 text">
-                  <p>
-                    As conscious traveling Paup ers we must always be oncerned
-                    about our dear Mother Earth. If you think about it, you
-                    travel across her face <br />
-                    and She is the host to your journey.
-                  </p>
+    <!--::banner part start::-->
+    <section class="banner_part">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-5">
+                    <div class="banner_img d-none d-lg-block">
+                        <img src="{{asset('front/img/banner_img.png') }}" alt="">
+                    </div>
                 </div>
-                <h4>Fanny Spencer</h4>
-                <p>Chief Executive, Amazon</p>
-              </div>
+                <div class="col-lg-6">
+                    <div class="banner_text">
+                        <div class="banner_text_iner">
+                            <h1>Hadirkan Teknologi
+                                Untuk <a class="typewrite" data-period="2000" data-type='[ "Aku", "Kamu", "Semua" ]'></a></h1>
+                            <p>Anda sedang berada dalam mesin inkubator,
+                                dan mesin ini akan membantu anda tetap bertahan
+                                hidup. Lalu bertumbuh kembang menghadapi dunia teknologi.</p>
+                            <a href="#" class="btn_2">Ayo Mempelajarinya</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+        </div>
+        <img src="{{asset('front/img/animate_icon/Ellipse_7.png') }}" alt="" class="feature_icon_1 custom-animation1">
+        <img src="{{asset('front/img/animate_icon/Ellipse_8.png') }}" alt="" class="feature_icon_2 custom-animation2">
+        <img src="{{asset('front/img/animate_icon/Ellipse_1.png') }}" alt="" class="feature_icon_3 custom-animation3">
+        <img src="{{asset('front/img/animate_icon/Ellipse_2.png') }}" alt="" class="feature_icon_4 custom-animation4">
+        <img src="{{asset('front/img/animate_icon/Ellipse_3.png') }}" alt="" class="feature_icon_5 custom-animation5">
+        <img src="{{asset('front/img/animate_icon/Ellipse_4.png') }}" alt="" class="feature_icon_6 custom-animation6">
+    </section>
+    <!--::banner part start::-->
 
-          <div class="offset-lg-1 col-lg-6">
-            <img src="img/testimonial/t1.jpg" alt="" />
-          </div>
+    <!--::use sasu part end::-->
+    <section class="use_sasu padding_top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_feature">
+                        <div class="single_feature_part">
+                            <img src="{{asset('front/img/icon/feature_icon_1.png') }}" alt="">
+                            <h4>Amankan Diri</h4>
+                            <p>Mari mencari tahu bagaimana suatu hal dapat bekerja lalu belajar
+                            cara mengamankannya agar tetap terlindungi dari berbagai kemungkinan
+                            buruk. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_feature">
+                        <div class="single_feature_part">
+                            <img src="{{asset('front/img/icon/feature_icon_2.png') }}" alt="">
+                            <h4>Bebaskan Diri</h4>
+                            <p>Melepaskan diri dari hal mainstream.
+                            Tuangkan ide ke suatu hal, dan temukan sebuah
+                            inovasi. Karena setiap individu adalah unik. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_feature">
+                        <div class="single_feature_part">
+                            <img src="{{asset('front/img/icon/feature_icon_3.png') }}" alt="">
+                            <h4>Tumpukan Teknologi</h4>
+                            <p>Sudahi kebiasaan konsumeris, karena diluar sana
+                            ada banyak tumpukan teknologi yang dapat digunakan untuk membangun
+                            kebutuhanmu sendiri. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- ================ End Testimonials Area ================= -->
+        <img src="{{asset('front/img/animate_icon/Ellipse_1.png') }}" alt="" class="feature_icon_1 custom-animation1">
+    </section>
+    <!--::use sasu part end::-->
 
-  <!-- ================ Start Registration Area ================= -->
-  <section class="registration-area">
-    <div class="container">
-      <div class="row align-items-end">
-        <div class="col-lg-5">
-          <div class="section-title text-left text-white">
-            <h2 class="text-white">
-              Watch Our Trainers <br>
-              in Live Action
-            </h2>
-            <p>
-              If you are looking at blank cassettes on the web, you may be
-              very confused at the difference in price. You may see some for
-              as low as $.17 each.
-            </p>
-          </div>
+    <!--::about_us part start::-->
+    <section class="about_us section_padding">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-6 col-lg-5">
+                    <div class="about_us_text">
+                        <img src="{{asset('front/img/icon/Icon_1.png') }}" alt="">
+                        <h2>Kami akan berada di<br>
+                            berbagai Media Sosial</h2>
+                        <p>Supaya kita dapat terus berinteraksi, HaruBiru
+                        akan membuat akun di beberapa Media Sosial seperti Facebook, Instagram,
+                        Twitter, dan tentu saja bahkan di YouTube.</p>
+                        <a href="#" class="btn_2">Temukan Kami</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="learning_img">
+                        <img src="{{asset('front/img/about_img.png')}}" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="offset-lg-3 col-lg-4 col-md-6">
-          <div class="course-form-section">
-            <h3 class="text-white">Courses for Free</h3>
-            <p class="text-white">It is high time for learning</p>
-            <form class="course-form-area contact-page-form course-form text-right" id="myForm" action="mail.html" method="post">
-              <div class="form-group col-md-12">
-                <input type="text" class="form-control" id="name" name="name" placeholder="Name" onfocus="this.placeholder = ''"
-                 onblur="this.placeholder = 'Name'">
-              </div>
-              <div class="form-group col-md-12">
-                <input type="text" class="form-control" id="subject" name="subject" placeholder="Phone Number" onfocus="this.placeholder = ''"
-                 onblur="this.placeholder = 'Phone Number'">
-              </div>
-              <div class="form-group col-md-12">
-                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" onfocus="this.placeholder = ''"
-                 onblur="this.placeholder = 'Email Address'">
-              </div>
-              <div class="col-lg-12 text-center">
-                <button class="btn text-uppercase">Submit</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ================ End Registration Area ================= -->
+        <img src="{{asset('front/img/animate_icon/Ellipse_4.png')}}" alt="" class="feature_icon_1 custom-animation1">
+    </section>
+    <!--::about_us part end::-->
 
-  <!-- ================ Start Blog Post Area ================= -->
-  <section class="blog-post-area section-gap">
-    <div class="container-fluid">
-      <div class="feature-inner row">
-        <div class="col-lg-12">
-          <div class="section-title text-left">
-            <h2>
-              Features That <br />
-              Can Avail By Everyone
-            </h2>
-            <p>
-              There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope.
-              It’s exciting to think about setting up your own viewing station.
-            </p>
-          </div>
+    <!--::about_us part start::-->
+    <section class="about_us right_time">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-6 col-lg-6">
+                    <div class="learning_img">
+                        <img src="{{asset('front/img/kedua.jpg')}}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-5">
+                    <div class="about_us_text">
+                        <img src="{{asset('front/img/icon/Icon_2.png')}}" alt="">
+                        <h2>Berkumpul dan berdiskusi bersama</h2>
+                        <p>Lelah menjadi individu kesepian? Ayo berkumpul dalam lingkungan diskusi komunal.
+                        Bertukar pikiran pada komune bersama-sama di Telegram.</p>
+                        <a href="#" class="btn_2">Bergabung</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="single-blog-post">
-            <img src="img/blog-post/b1.jpg" class="img-fluid" alt="" />
-            <div class="overlay"></div>
-            <div class="top-text">
-              <p>29th, oct, 2018</p>
-              <p>121 likes</p>
-              <p>05 comments</p>
-            </div>
-            <div class="text">
-              <h4 class="text-white">Smart Kitchen Setup</h4>
-              <div>
-                <p>
-                  Lorem ipsum dolor sit amet consec tetur adipisicing elit,
-                  sed do.
-                </p>
-              </div>
-              <a href="#" class="primary-btn">
-                View Details
-                <i class="fa fa-long-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mt--160">
-          <div class="single-blog-post">
-            <img src="img/blog-post/b2.jpg" class="img-fluid" alt="" />
-            <div class="overlay"></div>
-            <div class="top-text">
-              <p>29th, oct, 2018</p>
-              <p>121 likes</p>
-              <p>05 comments</p>
-            </div>
-            <div class="text">
-              <h4 class="text-white">Smart Kitchen Setup</h4>
-              <div>
-                <p>
-                  Lorem ipsum dolor sit amet consec tetur adipisicing elit,
-                  sed do.
-                </p>
-              </div>
-              <a href="#" class="primary-btn">
-                View Details
-                <i class="fa fa-long-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mt--260">
-          <div class="single-blog-post">
-            <img src="img/blog-post/b3.jpg" class="img-fluid" alt="" />
-            <div class="overlay"></div>
-            <div class="top-text">
-              <p>29th, oct, 2018</p>
-              <p>121 likes</p>
-              <p>05 comments</p>
-            </div>
-            <div class="text">
-              <h4 class="text-white">Smart Kitchen Setup</h4>
-              <div>
-                <p>
-                  Lorem ipsum dolor sit amet consec tetur adipisicing elit,
-                  sed do.
-                </p>
-              </div>
-              <a href="#" class="primary-btn">
-                View Details
-                <i class="fa fa-long-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ================ End Blog Post Area ================= -->
+        <img src="{{asset('front/img/animate_icon/Ellipse_5.png')}}" alt="" class="feature_icon_2 custom-animation2">
+    </section>
+    <!--::about_us part end::-->
 
-  <!-- ================ start footer Area ================= -->
-  <footer class="footer-area section-gap">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-2 col-md-6 single-footer-widget">
-					<h4>Top Products</h4>
-					<ul>
-						<li><a href="#">Managed Website</a></li>
-						<li><a href="#">Manage Reputation</a></li>
-						<li><a href="#">Power Tools</a></li>
-						<li><a href="#">Marketing Service</a></li>
-					</ul>
-				</div>
-				<div class="col-lg-2 col-md-6 single-footer-widget">
-					<h4>Quick Links</h4>
-					<ul>
-						<li><a href="#">Jobs</a></li>
-						<li><a href="#">Brand Assets</a></li>
-						<li><a href="#">Investor Relations</a></li>
-						<li><a href="#">Terms of Service</a></li>
-					</ul>
-				</div>
-				<div class="col-lg-2 col-md-6 single-footer-widget">
-					<h4>Features</h4>
-					<ul>
-						<li><a href="#">Jobs</a></li>
-						<li><a href="#">Brand Assets</a></li>
-						<li><a href="#">Investor Relations</a></li>
-						<li><a href="#">Terms of Service</a></li>
-					</ul>
-				</div>
-				<div class="col-lg-2 col-md-6 single-footer-widget">
-					<h4>Resources</h4>
-					<ul>
-						<li><a href="#">Guides</a></li>
-						<li><a href="#">Research</a></li>
-						<li><a href="#">Experts</a></li>
-						<li><a href="#">Agencies</a></li>
-					</ul>
-				</div>
-				<div class="col-lg-4 col-md-6 single-footer-widget">
-					<h4>Newsletter</h4>
-					<p>You can trust us. we only send promo offers,</p>
-					<div class="form-wrap" id="mc_embed_signup">
-						<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-						 method="get" class="form-inline">
-							<input class="form-control" name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '"
-							 required="" type="email">
-							<button class="click-btn btn btn-default text-uppercase">subscribe</button>
-							<div style="position: absolute; left: -5000px;">
-								<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-							</div>
+    <!--::client logo part end::-->
+    <br><br><br>
+    <section class="client_logo">
+        <img src="{{asset('front/img/animate_icon/Ellipse_1.png')}}" alt="" class="feature_icon_1 custom-animation1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb_iner text-center">
+                        <div class="breadcrumb_iner_item">
+                            <h3>Beberapa teknologi yang digunakan di HaruBiru</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="owl-carousel d-flex justify-content-between">
+                        <div class="single_client_logo">
+                            <img src="{{asset('front/img/client_logo/laravel.png')}}" alt="">
+                        </div>
+                        <div class="single_client_logo">
+                            <img src="{{asset('front/img/client_logo/nginx.png')}}" alt="">
+                        </div>
+                        <div class="single_client_logo">
+                            <img src="{{asset('front/img/client_logo/heroku.png')}}" alt="">
+                        </div>
+                        <div class="single_client_logo">
+                            <img src="{{asset('front/img/client_logo/mariadb.png')}}" alt="">
+                        </div>
+                        <div class="single_client_logo">
+                            <img src="{{asset('front/img/client_logo/docker.png')}}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--::client logo part end::-->
 
-							<div class="info"></div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<div class="footer-bottom row align-items-center">
-				<p class="footer-text m-0 col-lg-8 col-md-12">
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-				<div class="col-lg-4 col-md-12 footer-social">
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-dribbble"></i></a>
-					<a href="#"><i class="fa fa-behance"></i></a>
-				</div>
-			</div>
-		</div>
-	</footer>
-  <!-- ================ End footer Area ================= -->
+    <!--::footer_part start::-->
+    <footer class="footer_part">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-4 col-lg-5">
+                    <div class="single_footer_part">
+                        <a href="index.html" class="footer_logo_iner"> <img src="{{asset('front/img/HaruBiru_footer.png')}}" alt="#"> </a>
+                        <p>Didedikasikan untuk semua yang ingin belajar tentang
+                            pengetahuan dan teknologi. Ketidaktahuan memperbudak, pengetahuan membebaskan.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-1">
+                    <div class="single_footer_part">
+                        
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-2">
+                    <div class="single_footer_part">
+                        <h4>Hall Of Fame</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="">Report Bug</a></li>
+                            <li><a href="">Heroes</a></li>
+                            <li><a href="">Patched</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-2">
+                    <div class="single_footer_part">
+                        <h4>Quick Links</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="">License</a></li>
+                            <li><a href="">Privacy & Policy</a></li>
+                            <li><a href="">Contribute</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-2">
+                    <div class="single_footer_part">
+                        <h4>Resources</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="http://owrt.ddns.my.id:8080/webui-aria2/">Aria2 Downloader</a></li>
+                            <li><a href="ftp://owrt.ddns.my.id">FTP Server</a></li>
+                            <li><a href="http://www.onlinux.me">OnLinux</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="copyright_text">
+                        <P><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyleft &copy <script>document.write(new Date().getFullYear());</script> | Made with <svg class="mx-1" height="16" width="16" viewBox="0 0 47.5 47.5" style="enable-background:new 0 0 47.5 47.5"><clipPath id="clipPath16" clipPathUnits="userSpaceOnUse"><path id="path18" d="M0 38H38V0H0V38z" /></clipPath></defs><g transform="matrix(1.25,0,0,-1.25,0,47.5)" id="g10"><g id="g12"><g clip-path="url(#clipPath16)" id="g14"><g transform="translate(36.8848,25.1665)" id="g20"><path id="path22" style="fill:#be1931;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m0 0c0 5.45-4.418 9.868-9.867 9.868-3.308.0-6.227-1.633-8.018-4.129-1.79 2.496-4.71 4.129-8.017 4.129-5.45.0-9.868-4.418-9.868-9.868.0-.772.098-1.52.266-2.241 1.371-8.512 10.835-17.494 17.619-19.96 6.783 2.466 16.249 11.448 17.617 19.96C-.098-1.52.0-.772.0.0" /></g></g></g></g></svg> by <a href="http://127.0.0.1" target="_blank">HaruBiru</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></P>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer_icon social_icon">
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="single_social_icon"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="#" class="single_social_icon"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#" class="single_social_icon"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" class="single_social_icon"><i class="fab fa-telegram"></i></a></li>
+                            <li><a href="#" class="single_social_icon"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="#" class="single_social_icon"><i class="fab fa-github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--::footer_part end::-->
 
-  <script src="{{ asset('js/vendor/jquery-2.2.4.min.js') }}"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-    crossorigin="anonymous"></script>
-  <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-  <script src="{{ asset('front/js/jquery.ajaxchimp.min.js') }}"></script>
-  <script src="{{ asset('front/js/jquery.magnific-popup.min.js') }}"></script>
-  <script src="{{ asset('front/js/parallax.min.js') }}"></script>
-  <script src="{{ asset('front/js/owl.carousel.min.js') }}"></script>
-  <script src="{{ asset('front/js/jquery.sticky.js') }}"></script>
-  <script src="{{ asset('front/js/hexagons.min.js') }}"></script>
-  <script src="{{ asset('front/js/jquery.counterup.min.js') }}"></script>
-  <script src="{{ asset('front/js/waypoints.min.js') }}"></script>
-  <script src="{{ asset('front/js/jquery.nice-select.min.js') }}"></script>
-  <script src="{{ asset('front/js/main.js') }}"></script>
+    <!-- jquery plugins here-->
+    <script src="{{asset('front/js/jquery-1.12.1.min.js')}}"></script>
+    <!-- popper js -->
+    <script src="{{asset('front/js/popper.min.js')}}"></script>
+    <!-- bootstrap js -->
+    <script src="{{asset('front/js/bootstrap.min.js')}}"></script>
+    <!-- easing js -->
+    <script src="{{asset('front/js/jquery.magnific-popup.js')}}"></script>
+    <!-- swiper js -->
+    <script src="{{asset('front/js/swiper.min.js')}}"></script>
+    <!-- swiper js -->
+    <script src="{{asset('front/js/masonry.pkgd.js')}}"></script>
+    <!-- particles js -->
+    <script src="{{asset('front/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('front/js/jquery.nice-select.min.js')}}"></script>
+    <!-- slick js -->
+    <script src="{{asset('front/js/slick.min.js')}}"></script>
+    <script src="{{asset('front/js/jquery.counterup.min.js')}}"></script>
+    <script src="{{asset('front/js/waypoints.min.js')}}"></script>
+    <script src="{{asset('front/js/contact.js')}}"></script>
+    <script src="{{asset('front/js/jquery.ajaxchimp.min.js')}}"></script>
+    <script src="{{asset('front/js/jquery.form.js')}}"></script>
+    <script src="{{asset('front/js/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('front/js/mail-script.js')}}"></script>
+    <!-- custom js -->
+    <script src="{{asset('front/js/custom.js')}}"></script>
+    <!-- custom js -->
+    <script src="{{asset('front/js/typewriter.js')}}"></script>
 </body>
 
 </html>

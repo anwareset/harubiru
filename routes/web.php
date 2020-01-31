@@ -2,10 +2,46 @@
 
 Auth::routes();
 
+// Landing Page
 Route::get('/', function () {
-	return view('welcome');
+	return view('front.landing');
 });
 
+// Main Menu
+Route::get('/portofolio', function () {
+	return view('front.portofolio');
+});
+Route::get('/about', function () {
+	return view('front.about');
+});
+Route::get('/contact', function () {
+	return view('front.contact');
+});
+
+// Quick Links
+Route::get('/license', function () {
+	return view('front.license');
+});
+Route::get('/privacy-policy', function () {
+	return view('front.privacy-policy');
+});
+Route::get('/contribute', function () {
+	return view('front.report-bug');
+});
+
+// Hall of Fame
+Route::get('/report-bug', function () {
+	return view('front.report-bug');
+});
+Route::get('/heroes', function () {
+	return view('front.heroes');
+});
+Route::get('/patched', function () {
+	return view('front.patched');
+});
+
+
+// Back End
 Route::group(['middleware' => 'auth'], function()
 {
 	Route::get('/home', 'HomeController@index')->name('home');

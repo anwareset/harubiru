@@ -33,6 +33,7 @@
         </ul>
       </li>
       <li class="menu-header">Settings</li>
+      @if(Auth::user()->level == 1)
       <li class="dropdown @yield('activeaccounts')">
         <a href="#" class="nav-link has-dropdown"><i class="fas fa-users-cog"></i><span>Accounts</span></a>
         <ul class="dropdown-menu">
@@ -40,10 +41,13 @@
           <li @yield('active_a_lists')><a class="nav-link" href="{{ route('users.index') }}">Lists</a></li>
         </ul>
       </li>
+      @endif
       <li class="@yield('activeprofile')"><a class="nav-link" href="blank.html"><i class="fas fa-user-cog"></i> <span>Profile</span></a>
       </li>
+      @if(Auth::user()->level == 1)
       <li class="@yield('activeconfigurations')"><a class="nav-link" href="blank.html"><i class="fas fa-sliders-h"></i> <span>Site Configurations</span></a>
       </li>
+      @endif
     </ul>
   </aside>
 </div>
