@@ -2,9 +2,18 @@
 
 Auth::routes();
 
+
+
+// This is for Front End
+
 // Landing Page
 Route::get('/', function () {
 	return view('front.landing');
+});
+
+// Blog
+Route::get('/blog', function () {
+	return view('front.blog.articles');
 });
 
 // Main Menu
@@ -26,7 +35,7 @@ Route::get('/privacy-policy', function () {
 	return view('front.privacy-policy');
 });
 Route::get('/contribute', function () {
-	return view('front.report-bug');
+	return view('front.contribute');
 });
 
 // Hall of Fame
@@ -41,7 +50,8 @@ Route::get('/patched', function () {
 });
 
 
-// Back End
+
+// This is for Back End
 Route::group(['middleware' => 'auth'], function()
 {
 	Route::get('/home', 'HomeController@index')->name('home');
