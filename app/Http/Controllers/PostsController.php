@@ -42,7 +42,7 @@ class PostsController extends Controller
             'thumbnail' => 'upload/img/thumb/'.$tmp_thumbnail,
             'category_id' => $request->category,
             'slug' => Str::slug($request->title),
-            'user_id' => Auth::id()
+            'users_id' => Auth::id()
         ])->tags()->attach($request->tags);
 
         $request->thumbnail->move(public_path('upload/img/thumb/'), $tmp_thumbnail);

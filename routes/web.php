@@ -12,9 +12,7 @@ Route::get('/', function () {
 });
 
 // Blog
-Route::get('/blog', function () {
-	return view('front.blog.articles');
-});
+Route::get('/blog', 'BlogController@index');
 
 // Main Menu
 Route::get('/portofolio', function () {

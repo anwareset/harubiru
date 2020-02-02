@@ -72,7 +72,7 @@
                             <p>Anda sedang berada dalam mesin inkubator,
                                 dan mesin ini akan membantu anda tetap bertahan
                                 hidup. Lalu bertumbuh kembang menghadapi dunia teknologi.</p>
-                            <a href="#" class="btn_2">Ayo Mempelajarinya</a>
+                            <a href="blog" class="btn_2">Ayo Mempelajarinya</a>
                         </div>
                     </div>
                 </div>
