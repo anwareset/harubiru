@@ -75,7 +75,7 @@
                         </aside>
 
                         <aside class="single_sidebar_widget popular_post_widget">
-                            <h3 class="widget_title">Recent Post</h3>
+                            <h3 class="widget_title">Popular Post</h3>
                             @foreach($articles as $article)
                             <div class="media post_item">
                                 <img src="{{ $article->thumbnail }}" style="width: 85px; height: 85px; object-fit: cover;" alt="post">
