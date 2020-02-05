@@ -89,7 +89,7 @@
 										{{ $message }}
 									</div>
 									@enderror
-									<textarea type="text" name="content" class="form-control summernote @error('content') is-invalid @enderror" value="{{old('content')}}"></textarea>
+									<textarea id="editorPosts" name="content" class="@error('content') is-invalid @enderror" value="{{old('content')}}"></textarea>
 								</div>
 								<div class="form-group">
 									<label>Thumbnail</label>
@@ -119,5 +119,10 @@
 		</div>
 	</section>
 </div>
+
+<!-- CKEditor -->
+<script>
+    CKEDITOR.replace( 'editorPosts' );
+</script>
 
 @endsection

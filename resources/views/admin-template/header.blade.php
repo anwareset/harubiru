@@ -1,6 +1,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>HaruBiru - @yield('title')</title>
 
   <!-- General CSS Files -->
@@ -22,13 +23,21 @@
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
 <!-- Start GA -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-94034622-3');
-</script>
+</script> -->
 <!-- /END GA -->
+
+<!-- CKEditor Libraries -->
+<script src="{{ asset('assets/modules/ckeditor/ckeditor.js') }}"></script>
+
+<!-- Page Specific JS File -->
+<!-- <script src="{{ asset('assets/js/page/forms-advanced-forms.js') }}"></script> -->
+
+
 </head>

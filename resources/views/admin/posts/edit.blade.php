@@ -99,7 +99,7 @@
 										{{ $message }}
 									</div>
 									@enderror
-									<textarea type="text" name="content" class="form-control summernote" value="{{ $posts->content }}"></textarea>
+									<textarea type="text" id="editorPostsEdit" name="content" class="form-control">{{ $posts->content }}</textarea>
 								</div>
 								<div class="form-group">
 									<label>Thumbnail</label>
@@ -129,5 +129,10 @@
 		</div>
 	</section>
 </div>
+
+<!-- CKEditor -->
+<script>
+    CKEDITOR.replace( 'editorPostsEdit' );
+</script>
 
 @endsection

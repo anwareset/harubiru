@@ -10,8 +10,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand main_logo" href="index.html"><img src="{{asset('front/img/HaruBiru.png') }}" alt="logo"> </a>
-                        <a class="navbar-brand single_page_logo" href="index.html"> <img src="{{asset('front/img/HaruBiru_footer.png') }}" alt="logo"> </a>
+                        <a class="navbar-brand main_logo" href="{{ url('') }}"><img src="{{asset('front/img/HaruBiru.png') }}" alt="logo"> </a>
+                        <a class="navbar-brand single_page_logo" href="{{ url('') }}"> <img src="{{asset('front/img/HaruBiru_footer.png') }}" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -21,7 +21,7 @@
                         <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="">Home</a>
+                                    <a class="nav-link" href="{{ url('') }}">Home</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="" id="navbarDropdown"
@@ -29,21 +29,21 @@
                                         Blog
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="blog"> blog</a>
-                                        <a class="dropdown-item" href="contribute">Ingin Menulis?</a>
+                                        <a class="dropdown-item" href="{{ url('blog') }}"> blog</a>
+                                        <a class="dropdown-item" href="{{ url('contribute') }}">Ingin Menulis?</a>
                                     </div>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="https://youtube.com">Video</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="portofolio">Portofolio</a>
+                                    <a class="nav-link" href="{{ url('portofolio') }}">Portofolio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="about">About</a>
+                                    <a class="nav-link" href="{{ url('about') }}">About</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact">Contact</a>
+                                    <a class="nav-link" href="{{ url('contact') }}">Contact</a>
                                 </li>
                             </ul>
                         </div>
@@ -72,7 +72,7 @@
                             <p>Anda sedang berada dalam mesin inkubator,
                                 dan mesin ini akan membantu anda tetap bertahan
                                 hidup. Lalu bertumbuh kembang menghadapi dunia teknologi.</p>
-                            <a href="blog" class="btn_2">Ayo Mempelajarinya</a>
+                            <a href="{{ url('blog') }}" class="btn_2">Ayo Mempelajarinya</a>
                         </div>
                     </div>
                 </div>

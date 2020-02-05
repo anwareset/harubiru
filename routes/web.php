@@ -2,9 +2,7 @@
 
 Auth::routes();
 
-
-
-// This is for Front End
+//================== This is for Front End ====================
 
 // Landing Page
 Route::get('/', function () {
@@ -13,6 +11,7 @@ Route::get('/', function () {
 
 // Blog
 Route::get('/blog', 'BlogController@index');
+Route::get('/blog/{slug}', 'BlogController@show')->name('blog.details');
 
 // Main Menu
 Route::get('/portofolio', function () {
@@ -49,7 +48,8 @@ Route::get('/patched', function () {
 
 
 
-// This is for Back End
+//================== This is for Back End ====================
+
 Route::group(['middleware' => 'auth'], function()
 {
 	Route::get('/home', 'HomeController@index')->name('home');
