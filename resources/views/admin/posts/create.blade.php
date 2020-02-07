@@ -89,7 +89,7 @@
 										{{ $message }}
 									</div>
 									@enderror
-									<textarea id="editorPosts" name="content" class="@error('content') is-invalid @enderror" value="{{old('content')}}"></textarea>
+									<textarea id="editor" name="content" class="@error('content') is-invalid @enderror" value="{{old('content')}}"></textarea>
 								</div>
 								<div class="form-group">
 									<label>Thumbnail</label>
@@ -122,7 +122,13 @@
 
 <!-- CKEditor -->
 <script>
-    CKEDITOR.replace( 'editorPosts' );
+  CKEDITOR.replace('editor', {
+  	language: 'en',
+    filebrowserImageBrowseUrl: '/filemanager?type=Images',
+    filebrowserImageUploadUrl: '/filemanager/upload?type=Images&_token=',
+    filebrowserBrowseUrl: '/filemanager?type=Files',
+    filebrowserUploadUrl: '/filemanager/upload?type=Files&_token='
+  });
 </script>
 
 @endsection

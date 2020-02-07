@@ -28,6 +28,4 @@
     <link rel="stylesheet" href="{{asset('front/css/slick.css')}}">
     <!-- style CSS -->
     <link rel="stylesheet" href="{{asset('front/css/style.css')}}">
-    <!-- typewriter CSS -->
-    <link rel="stylesheet" href="{{asset('front/css/typewriter.css')}}">
 </head>

@@ -8,13 +8,14 @@ use App\Tags;
 use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Input;
 
 class PostsController extends Controller
 {
 
     public function index()
     {
-        $posts =  Posts::paginate();
+        $posts =  Posts::latest()->paginate();
         return view('admin.posts.index', compact('posts'));
     }
 
@@ -133,4 +134,5 @@ class PostsController extends Controller
 
         //return redirect()->back()->with('status', 'Archive Cleaned!');
     }
+
 }

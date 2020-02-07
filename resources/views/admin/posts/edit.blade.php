@@ -99,7 +99,7 @@
 										{{ $message }}
 									</div>
 									@enderror
-									<textarea type="text" id="editorPostsEdit" name="content" class="form-control">{{ $posts->content }}</textarea>
+									<textarea type="text" id="editor" name="content" class="form-control">{{ $posts->content }}</textarea>
 								</div>
 								<div class="form-group">
 									<label>Thumbnail</label>
@@ -132,7 +132,13 @@
 
 <!-- CKEditor -->
 <script>
-    CKEDITOR.replace( 'editorPostsEdit' );
+  CKEDITOR.replace('editor', {
+  	language: 'en',
+    filebrowserImageBrowseUrl: '/filemanager?type=Images',
+    filebrowserImageUploadUrl: '/filemanager/upload?type=Images&_token=',
+    filebrowserBrowseUrl: '/filemanager?type=Files',
+    filebrowserUploadUrl: '/filemanager/upload?type=Files&_token='
+  });
 </script>
 
 @endsection
