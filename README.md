@@ -8,12 +8,12 @@ A simple CMS for blogging that builded with Laravel Framework
 ## Requirements
 Just run this command
 ```text
+mysqladmin -uroot -p create harubiru
 composer install
 cp .env.example .env
 php artisan key:generate
 php artisan migrate
 php artisan db:seed --class UsersTableSeederAddDefaultAdmin
-mysqladmin -uroot -p create harubiru
 ```
 
 ## Configuration
