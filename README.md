@@ -2,7 +2,7 @@
 A simple CMS for blogging that builded with Laravel Framework
 
 <p align="center">
-	<a name="top" href="https://github.com/anwareset/harubiru"><img src="https://raw.githubusercontent.com/anwareset/harubiru/master/harubiru1.png"></a>
+	<a name="top" href="https://github.com/anwareset/harubiru"><img src="https://github.com/anwareset/harubiru/raw/master/harubiru1.png"></a>
 </p>
 
 ## Requirements
@@ -20,7 +20,7 @@ Please check your <b>.env</b> configuration
 ```text
 APP_NAME=HARUBIRU
 ...
-APP_URL=http://harubiru.test
+APP_URL=<b>http://harubiru.test</b>
 ...
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
