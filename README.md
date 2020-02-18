@@ -16,7 +16,7 @@ php artisan db:seed --class UsersTableSeederAddDefaultAdmin
 mysqladmin -uroot -p create harubiru
 ```
 
-## Directory
+## Configuration
 Please check your <b>.env</b> configuration
 ```text
 APP_NAME=HARUBIRU
