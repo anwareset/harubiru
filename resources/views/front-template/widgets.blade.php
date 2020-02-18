@@ -32,14 +32,14 @@
 
         <aside class="single_sidebar_widget popular_post_widget">
             <h3 class="widget_title">Popular Post</h3>
-            @foreach($articles as $article)
+            @foreach($widgets as $widget)
             <div class="media post_item">
-                <img src="{{ asset($article->thumbnail) }}" style="width: 85px; height: 85px; object-fit: cover;" alt="post">
+                <img src="{{ asset($widget->thumbnail) }}" style="width: 85px; height: 85px; object-fit: cover;" alt="post">
                 <div class="media-body">
-                    <a href="{{ route('blog.details', $article->slug) }}">
-                        <h3>{{ $article->title }}</h3>
+                    <a href="{{ route('blog.details', $widget->slug) }}">
+                        <h3>{{ $widget->title }}</h3>
                     </a>
-                    <p>{{ $article->created_at->diffForHumans() }}</p>
+                    <p>{{ $widget->created_at->diffForHumans() }}</p>
                 </div>
             </div>
             @endforeach

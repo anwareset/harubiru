@@ -18,6 +18,7 @@
           <li class="@yield('active_p_archived')"><a class="nav-link" href="{{ route('posts.archived') }}">Archived</a></li>
         </ul>
       </li>
+      @if(Auth::user()->level == 1)
       <li class="dropdown @yield('activecategories')">
         <a href="#" class="nav-link has-dropdown"><i class="fas fa-book"></i><span>Category</span></a>
         <ul class="dropdown-menu">
@@ -32,6 +33,7 @@
           <li class="@yield('active_t_lists')"><a class="nav-link" href="{{ route('tags.index') }}">Lists</a></li>
         </ul>
       </li>
+      @endif
       <li class="menu-header">Settings</li>
       @if(Auth::user()->level == 1)
       <li class="dropdown @yield('activeaccounts')">
@@ -42,7 +44,7 @@
         </ul>
       </li>
       @endif
-      <li class="@yield('activeprofile')"><a class="nav-link" href="blank.html"><i class="fas fa-user-cog"></i> <span>Profile</span></a>
+      <li class="@yield('activeprofile')"><a class="nav-link" href="{{ route('profiles.index') }}"><i class="fas fa-user-cog"></i> <span>Profile</span></a>
       </li>
       @if(Auth::user()->level == 1)
       <li class="@yield('activeconfigurations')"><a class="nav-link" href="blank.html"><i class="fas fa-sliders-h"></i> <span>Site Configurations</span></a>

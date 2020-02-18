@@ -63,4 +63,5 @@ Route::group(['middleware' => 'auth'], function()
 	Route::resource('categories', 'CategoriesController');
 	Route::resource('posts', 'PostsController');
 	Route::resource('users', 'UsersController');
+	Route::resource('profiles', 'ProfilesController');
 });
