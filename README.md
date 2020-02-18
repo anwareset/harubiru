@@ -20,7 +20,7 @@ Please check your <b>.env</b> configuration
 ```text
 APP_NAME=HARUBIRU
 ...
-APP_URL=<b>http://harubiru.test</b>
+APP_URL=http://harubiru.test
 ...
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
