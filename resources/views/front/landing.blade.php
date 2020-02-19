@@ -21,29 +21,19 @@
                         <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('') }}">Home</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Blog
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ url('blog') }}"> blog</a>
-                                        <a class="dropdown-item" href="{{ url('contribute') }}">Ingin Menulis?</a>
-                                    </div>
+                                    <a class="nav-link" href="{{ url('') }}">beranda</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="https://youtube.com">Video</a>
+                                    <a class="nav-link" href="{{ url('blog') }}">Blog</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('portofolio') }}">Portofolio</a>
+                                    <a class="nav-link" href="{{ url('galeri') }}">Galeri</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('about') }}">About</a>
+                                    <a class="nav-link" href="{{ url('about') }}">tentang kami</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('contact') }}">Contact</a>
+                                    <a class="nav-link" href="{{ url('contact') }}">hubungi kami</a>
                                 </li>
                             </ul>
                         </div>
@@ -69,10 +59,8 @@
                         <div class="banner_text_iner">
                             <h1>Hadirkan Teknologi
                                 Untuk <a class="typewrite" data-period="2000" data-type='[ "Aku", "Kamu", "Semua" ]'></a></h1>
-                            <p>Anda sedang berada dalam mesin inkubator,
-                                dan mesin ini akan membantu anda tetap bertahan
-                                hidup. Lalu bertumbuh kembang menghadapi dunia teknologi.</p>
-                            <a href="{{ url('blog') }}" class="btn_2">Ayo Mempelajarinya</a>
+                            <p>Jati adalah desa yang mayoritas penduduknya petani, tempat pendidikannya sd,mi dan smpn tarokan serta. beberapa ponpes yang berada di kecamatan Tarokan, Kabupaten Kediri, Jawa Timur, Indonesia. Di desa ini terdapat industri rumah tangga yaitu tahu tempe bengkel pembuat alat pertanian seperti mesin perontok padi/jagung yang bergerak dalam pembuatan tempe.</p>
+                            <a href="{{ url('blog') }}" class="btn_2" style="text-align: center;"><li class="fas fa-angle-double-down"></li> Lanjutkan Membaca</a>
                         </div>
                     </div>
                 </div>
