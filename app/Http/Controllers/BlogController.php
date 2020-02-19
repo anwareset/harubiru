@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use App\Posts;
 use App\Categories;
 use App\Tags;
+use App\Sites;
 
 class BlogController extends Controller
 {
@@ -15,8 +16,9 @@ class BlogController extends Controller
     	$articles =  Posts::latest()->paginate(3);
         $widgets =  Posts::latest()->take(5)->get();
     	$categories = Categories::get();
+        $sites = Sites::first();
     	$tags = Tags::get();
-        return view('front.blog.articles', compact('articles', 'widgets', 'categories', 'tags'));
+        return view('front.blog.articles', compact('articles', 'widgets', 'categories', 'tags', 'sites'));
     }
     public function show($slug)
     {
