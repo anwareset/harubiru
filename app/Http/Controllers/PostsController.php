@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Posts;
 use App\Categories;
 use App\Tags;
+use App\Sites;
 use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -16,14 +17,16 @@ class PostsController extends Controller
     public function index()
     {
         $posts =  Posts::latest()->paginate();
-        return view('admin.posts.index', compact('posts'));
+        $sites = Sites::first();
+        return view('admin.posts.index', compact('posts', 'sites'));
     }
 
     public function create()
     {
         $categories =  Categories::all();
         $tags = Tags::all();
-        return view('admin.posts.create', compact('categories', 'tags'));
+        $sites = Sites::first();
+        return view('admin.posts.create', compact('categories', 'tags', 'sites'));
     }
 
     public function store(Request $request)
@@ -51,20 +54,14 @@ class PostsController extends Controller
         return redirect()->route('posts.index')->with('status', 'New Post Saved!');
     }
 
-
-    public function show(Posts $posts)
-    {
-        //
-    }
-
-
     public function edit($id)
     {
         $posts = Posts::findorfail($id);
         $categories =  Categories::all();
         $tags = Tags::all();
+        $sites = Sites::first();
 
-        return view('admin.posts.edit', compact('posts', 'categories','tags'));
+        return view('admin.posts.edit', compact('posts', 'categories','tags', 'sites'));
     }
 
 
@@ -108,8 +105,9 @@ class PostsController extends Controller
     public function archived()
     {
         $posts = Posts::onlyTrashed()->paginate();
+        $sites = Sites::first();
 
-        return view('admin.posts.archived', compact('posts'));
+        return view('admin.posts.archived', compact('posts', 'sites'));
     }
 
     public function restore($id)

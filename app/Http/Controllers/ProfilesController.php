@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Sites;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -11,7 +12,8 @@ class ProfilesController extends Controller
     public function index()
     {
         $users = User::findorfail(Auth::user()->id);
-        return view('admin.profiles.index', compact('users'));
+        $sites = Sites::first();
+        return view('admin.profiles.index', compact('users', 'sites'));
     }
 
     public function update(Request $request, $id)

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Sites;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -10,7 +11,8 @@ class UsersController extends Controller
     public function index()
     {
         $users =  User::paginate();
-        return view('admin.users.index', compact('users'));
+        $sites = Sites::first();
+        return view('admin.users.index', compact('users', 'sites'));
     }
 
     public function create()
@@ -37,15 +39,11 @@ class UsersController extends Controller
         return redirect()->back()->with('success', 'New User Saved!');
     }
 
-    public function show(User $user)
-    {
-        //
-    }
-
     public function edit($id)
     {
         $users = User::findorfail($id);
-        return view('admin.users.edit', compact('users'));
+        $sites = Sites::first();
+        return view('admin.users.edit', compact('users', 'sites'));
     }
 
     public function update(Request $request, $id)

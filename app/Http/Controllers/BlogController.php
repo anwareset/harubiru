@@ -27,6 +27,7 @@ class BlogController extends Controller
     	$contents = Posts::where('slug', $slug)->get();
     	$categories = Categories::get();
     	$tags = Tags::get();
-        return view('front.blog.article-details', compact('contents', 'widgets', 'articles', 'categories', 'tags'));
+        $sites = Sites::first();
+        return view('front.blog.article-details', compact('contents', 'widgets', 'articles', 'categories', 'tags', 'sites'));
     }
 }

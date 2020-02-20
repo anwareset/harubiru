@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Categories;
+use App\Sites;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -12,13 +13,15 @@ class CategoriesController extends Controller
     public function index()
     {
         $categories =  Categories::paginate();
-        return view('admin.categories.index', compact('categories'));
+        $sites = Sites::first();
+        return view('admin.categories.index', compact('categories', 'sites'));
     }
 
 
     public function create()
     {
-        return view('admin.categories.create');
+        $sites = Sites::first();
+        return view('admin.categories.create', 'sites');
     }
 
 
@@ -44,8 +47,9 @@ class CategoriesController extends Controller
 
     public function edit($id)
     {
+        $sites = Sites::first();
         $category = Categories::findorfail($id);
-        return view('admin.categories.edit', compact('category'));
+        return view('admin.categories.edit', compact('category', 'sites'));
     }
 
 

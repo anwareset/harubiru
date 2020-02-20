@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Tags;
+use App\Sites;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -12,7 +13,8 @@ class TagsController extends Controller
     public function index()
     {
         $tags =  Tags::paginate();
-        return view('admin.tags.index', compact('tags'));
+        $sites = Sites::first();
+        return view('admin.tags.index', compact('tags', 'sites'));
     }
 
 
@@ -36,17 +38,11 @@ class TagsController extends Controller
         return redirect()->back()->with('success', 'New Tag Saved!');
     }
 
-
-    public function show(Tags $tags)
-    {
-        //
-    }
-
-
     public function edit($id)
     {
         $tag = Tags::findorfail($id);
-        return view('admin.tags.edit', compact('tag'));
+        $sites = Sites::first();
+        return view('admin.tags.edit', compact('tag', 'sites'));
     }
 
 
