@@ -60,7 +60,7 @@
                             <h1>Hadirkan Teknologi
                                 Untuk <a class="typewrite" data-period="2000" data-type='[ "Aku", "Kamu", "Semua" ]'></a></h1>
                             <p>Jati adalah desa yang mayoritas penduduknya petani, tempat pendidikannya sd,mi dan smpn tarokan serta. beberapa ponpes yang berada di kecamatan Tarokan, Kabupaten Kediri, Jawa Timur, Indonesia. Di desa ini terdapat industri rumah tangga yaitu tahu tempe bengkel pembuat alat pertanian seperti mesin perontok padi/jagung yang bergerak dalam pembuatan tempe.</p>
-                            <a href="{{ url('blog') }}" class="btn_2" style="text-align: center;"><li class="fas fa-angle-double-down"></li> Lanjutkan Membaca</a>
+                            <a href="{{ url('blog') }}" class="btn_2" style="text-align: center;"><li class="fas fa-angle-double-down" style="margin-right: 10px;"></li> Lanjutkan Membaca</a>
                         </div>
                     </div>
                 </div>

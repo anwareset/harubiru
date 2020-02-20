@@ -12,8 +12,8 @@ Route::get('/blog', 'BlogController@index');
 Route::get('/blog/{slug}', 'BlogController@show')->name('blog.details');
 
 // Main Menu
-Route::get('/portofolio', function () {
-	return view('front.portofolio');
+Route::get('/galeri', function () {
+	return view('front.galeri');
 });
 Route::get('/about', function () {
 	return view('front.about');

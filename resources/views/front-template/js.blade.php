@@ -25,3 +25,5 @@
 <!-- custom js -->
 <script src="{{asset('front/js/custom.js')}}"></script>
 <script src="{{asset('front/js/typewriter.js')}}"></script>
+<!-- lightbox js -->
+<script src="{{asset('front/lightbox2-2.11.1/js/lightbox.js')}}"></script>
