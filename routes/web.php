@@ -5,9 +5,7 @@ Auth::routes();
 //================== This is for Front End ====================
 
 // Landing Page
-Route::get('/', function () {
-	return view('front.landing');
-});
+Route::get('/', 'LandingController@index');
 
 // Blog
 Route::get('/blog', 'BlogController@index');
@@ -64,4 +62,5 @@ Route::group(['middleware' => 'auth'], function()
 	Route::resource('posts', 'PostsController');
 	Route::resource('users', 'UsersController');
 	Route::resource('profiles', 'ProfilesController');
+	Route::resource('sites', 'SitesController');
 });

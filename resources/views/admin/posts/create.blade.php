@@ -71,7 +71,7 @@
 										{{ $message }}
 									</div>
 									@enderror
-									<select type="text" name="tags[]" class="form-control select2 @error('tags') is-invalid @enderror" multiple="" value="{{old('tags')}}">
+									<select type="text" name="tags[]" class="form-control select2" multiple="">
 										@foreach($tags as $result2)
 										<option value="{{ $result2->id }}">{{ $result2->name }} </option>
 										@endforeach

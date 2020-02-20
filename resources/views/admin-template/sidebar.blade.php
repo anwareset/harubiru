@@ -47,7 +47,7 @@
       <li class="@yield('activeprofile')"><a class="nav-link" href="{{ route('profiles.index') }}"><i class="fas fa-user-cog"></i> <span>Profile</span></a>
       </li>
       @if(Auth::user()->level == 1)
-      <li class="@yield('activeconfigurations')"><a class="nav-link" href="blank.html"><i class="fas fa-sliders-h"></i> <span>Site Configurations</span></a>
+      <li class="@yield('activeconfigurations')"><a class="nav-link" href="{{ route('sites.index') }}"><i class="fas fa-sliders-h"></i> <span>Site Configurations</span></a>
       </li>
       @endif
     </ul>
