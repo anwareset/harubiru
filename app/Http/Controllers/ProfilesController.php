@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use App\Sites;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -12,8 +11,7 @@ class ProfilesController extends Controller
     public function index()
     {
         $users = User::findorfail(Auth::user()->id);
-        $sites = Sites::first();
-        return view('admin.profiles.index', compact('users', 'sites'));
+        return view('admin.profiles.index', compact('users'));
     }
 
     public function update(Request $request, $id)
@@ -36,7 +34,7 @@ class ProfilesController extends Controller
             ];
         }
         User::whereId($id)->update($user_data);
-        return redirect()->route('profiles.index')->with('status', 'User Data Updated!');
+        return redirect()->route('webmanager.profiles.index')->with('status', 'User Data Updated!');
     }
 
 }

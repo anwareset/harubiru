@@ -19,7 +19,7 @@
 						</div>
 						@endif
 						<div class="card-header py-3">
-							<a href="{{ route('posts.create') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
+							<a href="{{ route('webmanager.posts.create') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
 								<span class="icon text-white-50">
 									<i class="fas fa-flag"></i>
 								</span>
@@ -69,10 +69,10 @@
 											</td>
 											<td><img style="max-width: 90px; margin-left: 20%" src="{{ asset($print->thumbnail) }}" alt="harubiru.me-{{ $print->slug }}"></td>
 											<td align="center">
-												<form method="POST" action="{{ route('posts.destroy', $print->id) }}">
+												<form method="POST" action="{{ route('webmanager.posts.destroy', $print->id) }}">
 													@csrf
 													@method('delete')
-													<a href="{{ route('posts.edit', $print->id) }}" class="btn btn-sm btn-warning btn-icon">
+													<a href="{{ route('webmanager.posts.edit', $print->id) }}" class="btn btn-sm btn-warning btn-icon">
 														<span class="icon text-white-50">
 															<i class="fas fa-edit"></i>
 														</span>

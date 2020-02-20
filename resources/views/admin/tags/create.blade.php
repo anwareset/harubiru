@@ -24,7 +24,7 @@
 						</div>
 						@enderror
 						<div class="card-header py-3">
-							<a href="{{ route('tags.index') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
+							<a href="{{ route('webmanager.tags.index') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
 								<span class="icon text-white-50">
 									<i class="fas fa-chevron-circle-left"></i>
 								</span>
@@ -32,7 +32,7 @@
 							</a>  
 						</div>
 						<div class="card-body">
-							<form method="POST" action=" {{ route('tags.store') }} ">
+							<form method="POST" action=" {{ route('webmanager.tags.store') }} ">
 								@csrf
 								<div class="form-group">
 									<label>Tags Name</label>

@@ -16,7 +16,7 @@
 				<div class="col-12">
 					<div class="card">
 						<div class="card-header py-3">
-							<a href="{{ route('posts.index') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
+							<a href="{{ route('webmanager.posts.index') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
 								<span class="icon text-white-50">
 									<i class="fas fa-chevron-circle-left"></i>
 								</span>
@@ -24,7 +24,7 @@
 							</a>  
 						</div>
 						<div class="card-body">
-							<form method="POST" enctype="multipart/form-data" action=" {{ route('posts.store') }} ">
+							<form method="POST" enctype="multipart/form-data" action=" {{ route('webmanager.posts.store') }} ">
 								@csrf
 								<div class="form-group">
 									<label>Title</label>

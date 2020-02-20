@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use App\Sites;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -11,8 +10,7 @@ class UsersController extends Controller
     public function index()
     {
         $users =  User::paginate();
-        $sites = Sites::first();
-        return view('admin.users.index', compact('users', 'sites'));
+        return view('admin.users.index', compact('users'));
     }
 
     public function create()
@@ -42,8 +40,7 @@ class UsersController extends Controller
     public function edit($id)
     {
         $users = User::findorfail($id);
-        $sites = Sites::first();
-        return view('admin.users.edit', compact('users', 'sites'));
+        return view('admin.users.edit', compact('users'));
     }
 
     public function update(Request $request, $id)
@@ -69,13 +66,13 @@ class UsersController extends Controller
             ];
         }
         User::whereId($id)->update($user_data);
-        return redirect()->route('users.index')->with('status', 'User Data Updated!');
+        return redirect()->route('webmanager.users.index')->with('status', 'User Data Updated!');
     }
 
     public function destroy($id)
     {
         $user = User::findorfail($id);
         $user->delete();
-        return redirect()->route('users.index')->with('status', 'User Deleted!');
+        return redirect()->route('webmanager.users.index')->with('status', 'User Deleted!');
     }
 }

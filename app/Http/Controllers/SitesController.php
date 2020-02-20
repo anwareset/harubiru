@@ -26,7 +26,7 @@ class SitesController extends Controller
         ];
 
         Sites::whereId(1)->update($site_data);
-        return redirect()->route('sites.index')->with('status', 'Site Configurations Updated!');
+        return redirect()->route('webmanager.sites.index')->with('status', 'Site Configurations Updated!');
     }
 
 }

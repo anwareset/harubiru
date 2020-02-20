@@ -13,7 +13,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header py-3">
-              <a href="{{ route('categories.index') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
+              <a href="{{ route('webmanager.categories.index') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
                 <span class="icon text-white-50">
                   <i class="fas fa-chevron-circle-left"></i>
                 </span>
@@ -21,7 +21,7 @@
               </a>  
             </div>
             <div class="card-body">
-              <form action="{{ route('categories.update', $category->id) }}" method="POST">
+              <form action="{{ route('webmanager.categories.update', $category->id) }}" method="POST">
                 @csrf
                 @method('patch')
                 <div class="form-group">

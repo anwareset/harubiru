@@ -14,7 +14,7 @@
 				<div class="col-12">
 					<div class="card">
 						<div class="card-header py-3">
-							<a href="{{ route('tags.index') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
+							<a href="{{ route('webmanager.tags.index') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
 								<span class="icon text-white-50">
 									<i class="fas fa-chevron-circle-left"></i>
 								</span>
@@ -22,7 +22,7 @@
 							</a>  
 						</div>
 						<div class="card-body">
-							<form action="{{ route('tags.update', $tag->id) }}" method="POST">
+							<form action="{{ route('webmanager.tags.update', $tag->id) }}" method="POST">
 								@csrf
 								@method('patch')
 								<div class="form-group">

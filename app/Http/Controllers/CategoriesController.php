@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Categories;
-use App\Sites;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -13,15 +12,13 @@ class CategoriesController extends Controller
     public function index()
     {
         $categories =  Categories::paginate();
-        $sites = Sites::first();
-        return view('admin.categories.index', compact('categories', 'sites'));
+        return view('admin.categories.index', compact('categories'));
     }
 
 
     public function create()
     {
-        $sites = Sites::first();
-        return view('admin.categories.create', 'sites');
+        return view('admin.categories.create');
     }
 
 
@@ -47,9 +44,8 @@ class CategoriesController extends Controller
 
     public function edit($id)
     {
-        $sites = Sites::first();
         $category = Categories::findorfail($id);
-        return view('admin.categories.edit', compact('category', 'sites'));
+        return view('admin.categories.edit', compact('category'));
     }
 
 
@@ -66,7 +62,7 @@ class CategoriesController extends Controller
 
         Categories::whereId($id)->update($category_data);
 
-        return redirect()->route('categories.index')->with('status', 'Category Updated!');
+        return redirect()->route('webmanager.categories.index')->with('status', 'Category Updated!');
     }
 
 
@@ -74,6 +70,6 @@ class CategoriesController extends Controller
     {
     	$category = Categories::findorfail($id);
     	$category->delete();
-        return redirect()->route('categories.index')->with('status', 'Category Deleted!');
+        return redirect()->route('webmanager.categories.index')->with('status', 'Category Deleted!');
     }
 }

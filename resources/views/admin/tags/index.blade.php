@@ -20,7 +20,7 @@
 						</div>
 						@endif
 						<div class="card-header py-3">
-							<a href="{{ route('tags.create') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
+							<a href="{{ route('webmanager.tags.create') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
 								<span class="icon text-white-50">
 									<i class="fas fa-flag"></i>
 								</span>
@@ -50,10 +50,10 @@
 											<td align="center">{{ $result + $tags->firstitem() }}</td>
 											<td>{{ $print->name }}</td>
 											<td align="center">
-												<form method="POST" action="{{ route('tags.destroy', $print->id) }}">
+												<form method="POST" action="{{ route('webmanager.tags.destroy', $print->id) }}">
 													@csrf
 													@method('delete')
-													<a href="{{ route('tags.edit', $print->id) }}" class="btn btn-sm btn-warning btn-icon">
+													<a href="{{ route('webmanager.tags.edit', $print->id) }}" class="btn btn-sm btn-warning btn-icon">
 														<span class="icon text-white-50">
 															<i class="fas fa-edit"></i>
 														</span>
