@@ -12,11 +12,7 @@ mysqladmin -uroot -p create harubiru
 composer install
 cp .env.example .env
 php artisan key:generate
-php artisan migrate
-php artisan make:seeder UsersTableSeederAddDefaultAdmin
-php artisan make:seeder SiteconfigTableSeederAddSiteName
-php artisan db:seed --class UsersTableSeederAddDefaultAdmin
-php artisan db:seed --class SiteconfigTableSeederAddSiteName
+php artisan migrate:fresh --seed
 ```
 
 ## Configuration
