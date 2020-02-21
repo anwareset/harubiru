@@ -5,7 +5,9 @@ Auth::routes();
 //================== This is for Front End ====================
 
 // Landing Page
-Route::get('/', 'LandingController@index');
+Route::get('/', function () {
+	return view('front.landing');
+});
 
 // Blog
 Route::get('/blog', 'BlogController@index');
@@ -50,17 +52,35 @@ Route::get('/patched', function () {
 
 Route::group(['middleware' => 'auth'], function()
 {
-	Route::get('/home', 'HomeController@index')->name('home');
+	Route::get('/webmanager', 'WebManagerController@index')->name('webmanager');
 
-	Route::get('/posts/archived', 'PostsController@archived')->name('posts.archived');
-	Route::get('/posts/restore/{id}', 'PostsController@restore')->name('posts.restore');
-	Route::delete('/posts/clean/{id}', 'PostsController@clean')->name('posts.clean');
-	Route::delete('/posts/massclean', 'PostsController@massclean')->name('posts.massclean');
+	Route::get('/webmanager/posts/archived', 'PostsController@archived')->name('webmanager.posts.archived');
+	Route::get('/webmanager/posts/restore/{id}', 'PostsController@restore')->name('webmanager.posts.restore');
+	Route::delete('/webmanager/posts/clean/{id}', 'PostsController@clean')->name('webmanager.posts.clean');
+	Route::delete('/webmanager/posts/massclean', 'PostsController@massclean')->name('webmanager.posts.massclean');
 
-	Route::resource('tags', 'TagsController');
-	Route::resource('categories', 'CategoriesController');
-	Route::resource('posts', 'PostsController');
-	Route::resource('users', 'UsersController');
-	Route::resource('profiles', 'ProfilesController');
-	Route::resource('sites', 'SitesController');
+	Route::prefix('webmanager')->name('webmanager.')->group(function() {
+   		Route::resource('tags','TagsController');
+	});
+
+	Route::prefix('webmanager')->name('webmanager.')->group(function() {
+   		Route::resource('categories','CategoriesController');
+	});
+
+	Route::prefix('webmanager')->name('webmanager.')->group(function() {
+   		Route::resource('posts','PostsController');
+	});
+
+	Route::prefix('webmanager')->name('webmanager.')->group(function() {
+   		Route::resource('users','UsersController');
+	});
+
+	Route::prefix('webmanager')->name('webmanager.')->group(function() {
+   		Route::resource('profiles','ProfilesController');
+	});
+
+	Route::prefix('webmanager')->name('webmanager.')->group(function() {
+   		Route::resource('sites','SitesController');
+	});
+
 });

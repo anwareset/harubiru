@@ -12,9 +12,7 @@ mysqladmin -uroot -p create harubiru
 composer install
 cp .env.example .env
 php artisan key:generate
-php artisan migrate
-php artisan db:seed --class UsersTableSeederAddDefaultAdmin
-php artisan db:seed --class SiteconfigTableSeederAddSiteName
+php artisan migrate:fresh --seed
 ```
 
 ## Configuration
@@ -43,4 +41,4 @@ Add <b>harubiru.test</b> in your <b>/etc/hosts</b> configuration
 You can access the <b>landing page</b> by visit <b>http://harubiru.test</b>
 
 ## Admin Page
-You can access the <b>admin page</b> by visit <b>http://harubiru.test/login</b>
+You can access the <b>manager page</b> by visit <b>http://harubiru.test/webmanager</b>

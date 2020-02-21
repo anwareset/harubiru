@@ -20,7 +20,7 @@
             </div>
             @endif
             <div class="card-header py-3">
-              <a href="{{ route('users.create') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
+              <a href="{{ route('webmanager.users.create') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
                 <span class="icon text-white-50">
                   <i class="fas fa-user-plus"></i>
                 </span>
@@ -64,10 +64,10 @@
                         </h6>
                       </td>
                       <td align="center">
-                        <form method="POST" action="{{ route('users.destroy', $print->id) }}">
+                        <form method="POST" action="{{ route('webmanager.users.destroy', $print->id) }}">
                           @csrf
                           @method('delete')
-                          <a href="{{ route('users.edit', $print->id) }}" class="btn btn-sm btn-warning btn-icon">
+                          <a href="{{ route('webmanager.users.edit', $print->id) }}" class="btn btn-sm btn-warning btn-icon">
                             <span class="icon text-white-50">
                               <i class="fas fa-user-edit"></i>
                             </span>

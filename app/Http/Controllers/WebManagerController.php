@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Sites;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class WebManagerController extends Controller
 {
     public function __construct()
     {
@@ -14,7 +13,6 @@ class HomeController extends Controller
 
     public function index()
     {
-        $sites = Sites::first();
-        return view('home', compact('sites'));
+        return view('admin.dashboard.index');
     }
 }

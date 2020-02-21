@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Tags;
-use App\Sites;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -13,8 +12,7 @@ class TagsController extends Controller
     public function index()
     {
         $tags =  Tags::paginate();
-        $sites = Sites::first();
-        return view('admin.tags.index', compact('tags', 'sites'));
+        return view('admin.tags.index', compact('tags'));
     }
 
 
@@ -41,8 +39,7 @@ class TagsController extends Controller
     public function edit($id)
     {
         $tag = Tags::findorfail($id);
-        $sites = Sites::first();
-        return view('admin.tags.edit', compact('tag', 'sites'));
+        return view('admin.tags.edit', compact('tag'));
     }
 
 
@@ -59,7 +56,7 @@ class TagsController extends Controller
 
         Tags::whereId($id)->update($tag_data);
 
-        return redirect()->route('tags.index')->with('status', 'Tag Data Updated!');
+        return redirect()->route('webmanager.tags.index')->with('status', 'Tag Data Updated!');
     }
 
 
@@ -67,6 +64,6 @@ class TagsController extends Controller
     {
         $tag = Tags::findorfail($id);
         $tag->delete();
-        return redirect()->route('tags.index')->with('status', 'Tag Data Deleted!');
+        return redirect()->route('webmanager.tags.index')->with('status', 'Tag Data Deleted!');
     }
 }

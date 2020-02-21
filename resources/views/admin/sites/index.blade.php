@@ -23,7 +23,7 @@
             </div>
             @enderror
             <div class="card-header py-3">
-              <a href="{{ route('home') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
+              <a href="{{ route('webmanager') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
                 <span class="icon text-white-50">
                   <i class="fas fa-chevron-circle-left"></i>
                 </span>
@@ -31,7 +31,7 @@
               </a>  
             </div>
             <div class="card-body">
-              <form method="POST" action=" {{ route('sites.store') }} ">
+              <form method="POST" action=" {{ route('webmanager.sites.store') }} ">
                 @csrf
                 @method('post')
                 <div class="form-group">

@@ -23,7 +23,7 @@
             </div>
             @enderror
             <div class="card-header py-3">
-              <a href="{{ route('users.index') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
+              <a href="{{ route('webmanager.users.index') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
                 <span class="icon text-white-50">
                   <i class="fas fa-chevron-circle-left"></i>
                 </span>
@@ -31,7 +31,7 @@
               </a>  
             </div>
             <div class="card-body">
-              <form method="POST" action=" {{ route('users.update', $users->id) }} ">
+              <form method="POST" action=" {{ route('webmanager.users.update', $users->id) }} ">
                 @csrf
                 @method('put')
                 <div class="form-group">

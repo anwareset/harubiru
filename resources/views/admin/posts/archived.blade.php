@@ -19,10 +19,10 @@
 						</div>
 						@endif
 						<div class="card-header py-3">
-							<form method="POST" action="{{ route('posts.massclean') }}">
+							<form method="POST" action="{{ route('webmanager.posts.massclean') }}">
 								@csrf
 								@method('delete')
-								<a href="{{ route('posts.index') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
+								<a href="{{ route('webmanager.posts.index') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
 									<span class="icon text-white-50">
 										<i class="fas fa-chevron-circle-left"></i>
 									</span>
@@ -76,10 +76,10 @@
 											</td>
 											<td><img style="max-width: 90px; margin-left: 20%" src="{{ asset($print->thumbnail) }}" alt="harubiru.me-{{ $print->slug }}"></td>
 											<td align="center">
-												<form method="POST" action="{{ route('posts.clean', $print->id) }}">
+												<form method="POST" action="{{ route('webmanager.posts.clean', $print->id) }}">
 													@csrf
 													@method('delete')
-													<a href="{{ route('posts.restore', $print->id) }}" class="btn btn-sm btn-info btn-icon">
+													<a href="{{ route('webmanager.posts.restore', $print->id) }}" class="btn btn-sm btn-info btn-icon">
 														<span class="icon text-white-50">
 															<i class="fas fa-recycle"></i>
 														</span>
