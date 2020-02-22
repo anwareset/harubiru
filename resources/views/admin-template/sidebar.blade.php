@@ -33,6 +33,14 @@
           <li class="@yield('active_t_lists')"><a class="nav-link" href="{{ route('webmanager.tags.index') }}">Lists</a></li>
         </ul>
       </li>
+      <li class="menu-header">Gallery</li>
+      <li class="dropdown @yield('activegallery')">
+        <a href="#" class="nav-link has-dropdown"><i class="fas fa-images"></i><span>Photos</span></a>
+        <ul class="dropdown-menu">
+          <li class="@yield('active_g_new')"><a class="nav-link" href="{{ route('webmanager.gallery.create') }}">New Posts</a></li>
+          <li class="@yield('active_g_lists')"><a class="nav-link" href="{{ route('webmanager.gallery.index') }}">Lists</a></li>
+        </ul>
+      </li>
       @endif
       <li class="menu-header">Settings</li>
       @if(Auth::user()->level == 1)

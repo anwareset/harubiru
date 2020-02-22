@@ -1,14 +1,14 @@
 @extends('admin-template.page')
-@section('title', 'New Post')
-@section('activeposts', 'active')
-@section('active_p_new', 'active')
+@section('title', 'Edit Caption')
+@section('activegallery', 'active')
+@section('active_g_edit', 'active')
 @section('content')
 
 <!-- Page Heading -->
 <div class="main-content">
 	<section class="section">
 		<div class="section-header">
-			<h1>New Post</h1>
+			<h1>Edit Post</h1>
 		</div>
 
 		<div class="section-body">
@@ -16,7 +16,7 @@
 				<div class="col-12">
 					<div class="card">
 						<div class="card-header py-3">
-							<a href="{{ route('webmanager.posts.index') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
+							<a href="{{ route('webmanager.galley.index') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
 								<span class="icon text-white-50">
 									<i class="fas fa-chevron-circle-left"></i>
 								</span>
@@ -24,8 +24,9 @@
 							</a>  
 						</div>
 						<div class="card-body">
-							<form method="POST" enctype="multipart/form-data" action=" {{ route('webmanager.posts.store') }} ">
+							<form method="POST" enctype="multipart/form-data" action=" {{ route('webmanager.gallery.update', $gallery->id) }} ">
 								@csrf
+								@method('PATCH')
 								<div class="form-group">
 									<label>Title</label>
 									@if (session('status'))
@@ -38,7 +39,7 @@
 										{{ $message }}
 									</div>
 									@enderror
-									<input type="text" name="title" class="form-control @error('title') is-invalid @enderror" value="{{old('title')}}">
+									<input type="text" name="title" class="form-control @error('title') is-invalid @enderror" value="{{ $gallery->title }}">
 								</div>
 								<div class="form-group">
 									<label>Category</label>
@@ -53,9 +54,12 @@
 									</div>
 									@enderror
 									<select type="text" name="category" class="form-control select2 @error('category') is-invalid @enderror" value="{{old('category')}}">
-										<option value="" selected="">Select Category</option>
 										@foreach($categories as $result)
-										<option value="{{ $result->id }}">{{ $result->name }} </option>
+										<option value="{{ $result->id }}"
+											@if ($result->id == $gallery->category_id)
+												selected=""
+											@endif
+											>{{ $result->name }} </option>
 										@endforeach
 									</select>
 								</div>
@@ -71,9 +75,15 @@
 										{{ $message }}
 									</div>
 									@enderror
-									<select type="text" name="tags[]" class="form-control select2" multiple="">
+									<select type="text" name="tags[]" class="form-control select2 @error('tags') is-invalid @enderror" multiple="" value="{{old('tags')}}">
 										@foreach($tags as $result2)
-										<option value="{{ $result2->id }}">{{ $result2->name }} </option>
+										<option value="{{ $result2->id }}"
+										@foreach($gallery->tags as $tag)
+											@if($result2->id == $tag->id)
+												selected
+											@endif
+										@endforeach
+											> {{ $result2->name }} </option>
 										@endforeach
 									</select>
 								</div>
@@ -89,10 +99,15 @@
 										{{ $message }}
 									</div>
 									@enderror
-									<textarea id="editor" name="content" class="@error('content') is-invalid @enderror" value="{{old('content')}}"></textarea>
+									<textarea type="text" id="editor" name="content" class="form-control">{{ $gallery->content }}</textarea>
 								</div>
 								<div class="form-group">
 									<label>Thumbnail</label>
+									@if (session('status'))
+									<div class="alert alert-success" role="alert">
+										{{ session('status') }}
+									</div>
+									@endif
 									@error('thumbnail')
 									<div class="alert alert-danger" role="alert">
 										{{ $message }}
@@ -103,7 +118,7 @@
 								<div class="form-group">
 									<button class="btn btn-success btn-icon btn-icon-left btn-block">
 										<i class="fas fa-flag"></i>
-										<span class="text">Add New Post</span>
+										<span class="text">Update Post</span>
 									</button>
 								</div>
 							</form>
