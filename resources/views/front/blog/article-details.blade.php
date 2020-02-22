@@ -2,7 +2,7 @@
 @foreach ($contents as $content)
 @section('title', $content->title)
 @endforeach
-@section('breadcrumb1', 'Article Details')
+@section('breadcrumb1', 'Detail Artikel')
 @section('breadcrumb2', 'Blog')
 @section('breadcrumb-link', url('blog'))
 @section('content')

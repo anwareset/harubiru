@@ -193,14 +193,14 @@
                             <img src="{{asset('front/img/client_logo/nginx.png')}}" alt="">
                         </div>
                         <div class="single_client_logo">
+                            <img src="{{asset('front/img/client_logo/mariadb.png')}}" alt="">
+                        </div>
+                        <!-- <div class="single_client_logo">
                             <img src="{{asset('front/img/client_logo/heroku.png')}}" alt="">
                         </div>
                         <div class="single_client_logo">
-                            <img src="{{asset('front/img/client_logo/mariadb.png')}}" alt="">
-                        </div>
-                        <div class="single_client_logo">
                             <img src="{{asset('front/img/client_logo/docker.png')}}" alt="">
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
