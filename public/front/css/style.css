@@ -720,6 +720,15 @@ ul {
   background-color: transparent;
 }
 
+/* hover button 'lanjutkan membaca' on landing page */
+.rotate{
+  margin-right: 10px;
+}
+.rotate:hover{
+  transform: rotate(-90deg);
+  transition-duration: 0.5s;
+}
+
 @media (max-width: 576px) {
   /* line 58, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_button.scss */
   .btn_2 {
