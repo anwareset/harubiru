@@ -27,7 +27,7 @@
                                     <a class="nav-link" href="{{ url('blog') }}">Blog</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('galeri') }}">Galeri</a>
+                                    <a class="nav-link" href="{{ url('gallery') }}">Galeri</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ url('about') }}">tentang kami</a>
