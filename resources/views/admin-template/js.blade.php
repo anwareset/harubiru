@@ -20,6 +20,7 @@
   <script src="{{ asset('assets/modules/summernote/summernote-bs4.js') }}"></script>
   <script src="{{ asset('assets/modules/codemirror/lib/codemirror.js') }}"></script>
   <script src="{{ asset('assets/modules/codemirror/mode/javascript/javascript.js') }}"></script>
+  <script src="{{ asset('assets/modules/chocolat/dist/js/jquery.chocolat.min.js') }}"></script>
 
   <!-- Page Specific JS File -->
   <!-- <script src="{{ asset('assets/js/page/forms-advanced-forms.js') }}"></script> -->
