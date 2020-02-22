@@ -57,7 +57,7 @@
                 <div class="col-lg-6">
                     <div class="banner_text">
                         <div class="banner_text_iner">
-                            <h1>Hadirkan Teknologi
+                            <h1>Desa Jati, <br>
                                 Untuk <a class="typewrite" data-period="2000" data-type='[ "Aku", "Kamu", "Semua" ]'></a></h1>
                             <p>Jati adalah desa yang mayoritas penduduknya petani, tempat pendidikannya sd,mi dan smpn tarokan serta. beberapa ponpes yang berada di kecamatan Tarokan, Kabupaten Kediri, Jawa Timur, Indonesia. Di desa ini terdapat industri rumah tangga yaitu tahu tempe bengkel pembuat alat pertanian seperti mesin perontok padi/jagung yang bergerak dalam pembuatan tempe.</p>
                             <a href="{{ url('blog') }}" class="btn_2" style="text-align: center;"><li class="fas fa-angle-double-down" style="margin-right: 10px;"></li> Lanjutkan Membaca</a>
@@ -83,10 +83,8 @@
                     <div class="single_feature">
                         <div class="single_feature_part">
                             <img src="{{asset('front/img/icon/feature_icon_1.png') }}" alt="">
-                            <h4>Amankan Diri</h4>
-                            <p>Mari mencari tahu bagaimana suatu hal dapat bekerja lalu belajar
-                            cara mengamankannya agar tetap terlindungi dari berbagai kemungkinan
-                            buruk. </p>
+                            <h4>Tanah yang subur</h4>
+                            <p>Desa ini cocok untuk lahan pertanian dan perkebunan. </p>
                         </div>
                     </div>
                 </div>
@@ -94,10 +92,9 @@
                     <div class="single_feature">
                         <div class="single_feature_part">
                             <img src="{{asset('front/img/icon/feature_icon_2.png') }}" alt="">
-                            <h4>Bebaskan Diri</h4>
-                            <p>Melepaskan diri dari hal mainstream.
-                            Tuangkan ide ke suatu hal, dan temukan sebuah
-                            inovasi. Karena setiap individu adalah unik. </p>
+                            <h4>Cuaca yang bersahabat</h4>
+                            <p>Desa Jati memiliki cuaca yang berawan dan terkadang hujan, yang menjadikan
+                            desa ini memiliki udara bersih dan sejuk. </p>
                         </div>
                     </div>
                 </div>
@@ -105,10 +102,8 @@
                     <div class="single_feature">
                         <div class="single_feature_part">
                             <img src="{{asset('front/img/icon/feature_icon_3.png') }}" alt="">
-                            <h4>Tumpukan Teknologi</h4>
-                            <p>Sudahi kebiasaan konsumeris, karena diluar sana
-                            ada banyak tumpukan teknologi yang dapat digunakan untuk membangun
-                            kebutuhanmu sendiri. </p>
+                            <h4>Desa Pendidikan</h4>
+                            <p>Lebih dari 1 sekolah tersebar di desa ini. </p>
                         </div>
                     </div>
                 </div>

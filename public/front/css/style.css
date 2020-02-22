@@ -6334,3 +6334,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* Galeri */
+.fixgaleri{
+  height: 375px; width: 450px; object-fit: cover;
+  margin: 10px;
+}
