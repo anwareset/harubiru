@@ -14,9 +14,8 @@ Route::get('/blog', 'BlogController@index');
 Route::get('/blog/{slug}', 'BlogController@show')->name('blog.details');
 
 // Main Menu
-Route::get('/galeri', function () {
-	return view('front.galeri');
-});
+Route::get('/gallery', 'FrontGalleryController@index');
+
 Route::get('/about', function () {
 	return view('front.about');
 });
@@ -65,6 +64,10 @@ Route::group(['middleware' => 'auth'], function()
 
 	Route::prefix('webmanager')->name('webmanager.')->group(function() {
    		Route::resource('categories','CategoriesController');
+	});
+
+	Route::prefix('webmanager')->name('webmanager.')->group(function() {
+   		Route::resource('gallery','GalleryController');
 	});
 
 	Route::prefix('webmanager')->name('webmanager.')->group(function() {
