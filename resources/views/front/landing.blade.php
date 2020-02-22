@@ -59,8 +59,8 @@
                         <div class="banner_text_iner">
                             <h1>Desa Jati, <br>
                                 Untuk <a class="typewrite" data-period="2000" data-type='[ "Aku", "Kamu", "Semua" ]'></a></h1>
-                            <p>Jati adalah desa yang mayoritas penduduknya petani, tempat pendidikannya sd,mi dan smpn tarokan serta. beberapa ponpes yang berada di kecamatan Tarokan, Kabupaten Kediri, Jawa Timur, Indonesia. Di desa ini terdapat industri rumah tangga yaitu tahu tempe bengkel pembuat alat pertanian seperti mesin perontok padi/jagung yang bergerak dalam pembuatan tempe.</p>
-                            <a href="{{ url('blog') }}" class="btn_2" style="text-align: center;"><li class="fas fa-angle-double-down rotate"></li> Lanjutkan Membaca</a>
+                            <p>Jati adalah desa yang mayoritas penduduknya petani, tempat pendidikannya SD, MI dan SMPN Tarokan serta. beberapa Ponpes yang berada di kecamatan Tarokan, Kabupaten Kediri, Jawa Timur, Indonesia. Di desa ini terdapat industri rumah tangga yaitu tahu tempe bengkel pembuat alat pertanian seperti mesin perontok padi/jagung yang bergerak dalam pembuatan tempe.</p>
+                            <a href="{{ url('#fuck') }}" class="btn_2" style="text-align: center;"><li class="fas fa-angle-double-down rotate"></li> Lanjutkan Membaca</a>
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
     <!--::banner part start::-->
 
     <!--::use sasu part end::-->
-    <section class="use_sasu padding_top">
+    <section class="use_sasu padding_top" id="fuck">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-sm-6">
@@ -154,10 +154,10 @@
                 <div class="col-md-6 col-lg-5">
                     <div class="about_us_text">
                         <img src="{{asset('front/img/icon/Icon_2.png')}}" alt="">
-                        <h2>Berkumpul dan berdiskusi bersama</h2>
-                        <p>Lelah menjadi individu kesepian? Ayo berkumpul dalam lingkungan diskusi komunal.
-                        Bertukar pikiran pada komune bersama-sama di Telegram.</p>
-                        <a href="#" class="btn_2">Bergabung</a>
+                        <h2>Anda memiliki info dan ingin membagikannya?</h2>
+                        <p>Lelah menjadi individu kesepian? Mulailah menulis artikel anda sendiri, dan berbagilah informasi
+                        kepada teman-teman anda.</p>
+                        <a href="{{ url('login') }}" class="btn_2">Bergabung</a>
                     </div>
                 </div>
             </div>
@@ -214,6 +214,14 @@
 
     <!-- JavaScript -->
     @include('front-template.js')
+    <script>
+        $('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+});
+    </script>
 </body>
 
 </html>
