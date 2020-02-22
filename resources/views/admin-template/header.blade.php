@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="{{ asset('assets/modules/summernote/summernote-bs4.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/modules/codemirror/lib/codemirror.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/modules/codemirror/theme/duotone-dark.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/modules/chocolat/dist/css/chocolat.css') }}">
 
   <!-- Template CSS -->
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">

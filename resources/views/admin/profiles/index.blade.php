@@ -11,72 +11,89 @@
     <div class="section-body">
       <div class="row">
         <div class="col-12">
+          @if (session('status'))
+          <div class="alert alert-success" role="alert">
+            {{ session('status') }}
+          </div>
+          @endif
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-lg-6">
           <div class="card">
-            @if (session('success'))
-            <div class="alert alert-success" role="alert">
-              {{ session('success') }}
-            </div>
-            @endif
-            @error('success')
-            <div class="alert alert-danger" role="alert">
-              {{ $message }}
-            </div>
-            @enderror
-            <div class="card-header py-3">
-              <a href="{{ route('webmanager') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
-                <span class="icon text-white-50">
-                  <i class="fas fa-chevron-circle-left"></i>
-                </span>
-                <span class="text">Back</span>
-              </a>  
-            </div>
-            <div class="card-body">
-              <form method="POST" action=" {{ route('webmanager.profiles.update', $users->id) }} ">
-                @csrf
-                @method('put')
-                <div class="form-group">
-                  <label>Name</label>
-                  @if (session('status'))
-                  <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
+            <form method="POST" action=" {{ route('webmanager.profiles.update', $users->id) }} ">
+              @csrf
+              @method('put')
+              <div class="card-header" style="margin-top: -20px">
+                <h4>Avatar</h4>
+                <div class="card-header-action">
+                  <div class="form-group">
+                    <a href="#" class="btn btn-primary" style="margin-top: 25px">Change</a>
                   </div>
-                  @endif
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="mb-2 text-muted">Click the picture below to see the full size.</div>
+                <div class="chocolat-parent">
+                  <a href="{{ asset('assets/img/example-image.jpg') }}" class="chocolat-image" title="">
+                    <div data-crop-image="285">
+                      <img alt="image" src="{{ asset('assets/img/example-image.jpg') }}" class="img-fluid">
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-6">
+            <div class="card" id="sample-login">
+              @error('success')
+              <div class="alert alert-danger" role="alert">
+                {{ $message }}
+              </div>
+              @enderror
+              <div class="card-header">
+                <h4>Profile</h4>
+              </div>
+              <div class="card-body pb-0">
+                <p class="text-muted">You can update your account information here.</p>
+                <div class="form-group">
                   @error('name')
                   <div class="alert alert-danger" role="alert">
                     {{ $message }}
                   </div>
                   @enderror
+                  <label>Name</label>
                   <div class="input-group">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
                         <i class="fas fa-user-alt"></i>
                       </div>
                     </div>
-                    <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ $users->name }}" readonly>
+                    <input name="name" type="text" class="form-control @error('name') is-invalid @enderror" value="{{ $users->name }}" placeholder="Name">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label>Email</label>
-                  @if (session('status'))
-                  <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
-                  </div>
-                  @endif
                   @error('email')
                   <div class="alert alert-danger" role="alert">
                     {{ $message }}
                   </div>
                   @enderror
+                  <label>Email</label>
                   <div class="input-group">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
                         <i class="fas fa-at"></i>
                       </div>
                     </div>
-                    <input type="text" name="email" class="form-control" value="{{ $users->email }}">
+                    <input name="email" type="text" class="form-control @error('email') is-invalid @enderror" value="{{ $users->email }}" placeholder="Email">
                   </div>
                 </div>
                 <div class="form-group">
+                  @error('password')
+                  <div class="alert alert-danger" role="alert">
+                    {{ $message }}
+                  </div>
+                  @enderror
                   <label>New Password</label>
                   <div class="input-group">
                     <div class="input-group-prepend">
@@ -84,11 +101,7 @@
                         <i class="fas fa-lock"></i>
                       </div>
                     </div>
-                    <input type="password" name="password" data-indicator="pwindicator" class="form-control pwstrength">
-                  </div>
-                  <div id="pwindicator" class="pwindicator">
-                    <div class="bar"></div>
-                    <div class="label"></div>
+                    <input name="password" type="password" class="form-control" placeholder="Password">
                   </div>
                 </div>
                 <div class="form-group">
@@ -102,7 +115,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-</div>
-@endsection
+    </section>
+  </div>
+  @endsection

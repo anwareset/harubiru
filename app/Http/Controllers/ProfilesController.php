@@ -34,7 +34,7 @@ class ProfilesController extends Controller
             ];
         }
         User::whereId($id)->update($user_data);
-        return redirect()->route('webmanager.profiles.index')->with('status', 'User Data Updated!');
+        return redirect()->route('webmanager.profiles.index')->with('status', 'Profile Updated!');
     }
 
 }
