@@ -1,6 +1,6 @@
 @extends('front-template.page')
 @section('title', 'Blog')
-@section('breadcrumb1', 'Articles')
+@section('breadcrumb1', 'Artikel')
 @section('breadcrumb2', 'Blog')
 @section('content')
 <section class="blog_area section_padding">
