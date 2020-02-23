@@ -37,11 +37,6 @@ class GalleryController extends Controller
         return redirect()->route('webmanager.gallery.index')->with('status', 'New Photo Saved!');
     }
 
-    public function show($id)
-    {
-        //
-    }
-
     public function edit($id)
     {
         $gallery = Gallery::findorfail($id);
@@ -51,11 +46,23 @@ class GalleryController extends Controller
 
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'caption' => 'required|min:15'
+        ]);
+
+        $photo_data = [
+            'caption' => $request->gallery,
+        ];
+
+        Gallery::whereId($id)->update($photo_data);
+
+        return redirect()->route('webmanager.gallery.index')->with('status', 'Caption Updated!');
     }
 
     public function destroy($id)
     {
-        //
+        $gallery = Gallery::findorfail($id);
+        $gallery->delete();
+        return redirect()->route('webmanager.gallery.index')->with('status', 'Photo Deleted!');
     }
 }
