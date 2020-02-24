@@ -58,7 +58,7 @@
                     <div class="banner_text">
                         <div class="banner_text_iner">
                             <h1>Desa Jati, <br>
-                                Untuk <a class="typewrite" data-period="2000" data-type='[ "Aku", "Kamu", "Semua" ]'></a></h1>
+                                Untuk <span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
                             <p>Jati adalah desa yang mayoritas penduduknya petani, tempat pendidikannya SD, MI dan SMPN Tarokan serta. beberapa Ponpes yang berada di kecamatan Tarokan, Kabupaten Kediri, Jawa Timur, Indonesia. Di desa ini terdapat industri rumah tangga yaitu tahu tempe bengkel pembuat alat pertanian seperti mesin perontok padi/jagung yang bergerak dalam pembuatan tempe.</p>
                             <a href="{{ url('#fuck') }}" class="btn_2" style="text-align: center;"><li class="fas fa-angle-double-down rotate"></li> Lanjutkan Membaca</a>
                         </div>

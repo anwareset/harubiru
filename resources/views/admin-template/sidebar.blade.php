@@ -1,10 +1,10 @@
 <div class="main-sidebar sidebar-style-2">
   <aside id="sidebar-wrapper">
     <div class="sidebar-brand">
-      <a href="index.html">{{ App\Sites::first()->sitename }}</a>
+      <a href="{{ route('webmanager') }}">{{ App\Sites::first()->sitename }}</a>
     </div>
     <div class="sidebar-brand sidebar-brand-sm">
-      <a href="index.html">St</a>
+      <a href="{{ route('webmanager') }}">DJ</a>
     </div>
     <ul class="sidebar-menu">
       <li class="@yield('activedashboard')"><a class="nav-link" href="{{ route('webmanager') }}"><i class="fas fa-fire"></i> <span>Dashboard</span></a>
