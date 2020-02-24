@@ -6349,3 +6349,10 @@ h1, h2, h3, h4, h5, h6 {
   height: 375px; width: 450px; object-fit: cover;
   margin: 10px;
 }
+.boxym{
+  height: 375px; width: 450px;
+}
+.boxym:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+  opacity: 0.9; 
+}
