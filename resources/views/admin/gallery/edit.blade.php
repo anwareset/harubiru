@@ -16,7 +16,7 @@
 				<div class="col-12">
 					<div class="card">
 						<div class="card-header py-3">
-							<a href="{{ route('webmanager.galley.index') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
+							<a href="{{ route('webmanager.gallery.index') }}" class="btn btn-sm btn-primary btn-icon btn-icon-left">
 								<span class="icon text-white-50">
 									<i class="fas fa-chevron-circle-left"></i>
 								</span>
@@ -24,101 +24,27 @@
 							</a>  
 						</div>
 						<div class="card-body">
+							<div class="form-group">
+								<label>Photo</label>
+								<div class="chocolat-parent">
+									<a href="{{ asset($gallery->url) }}" class="chocolat-image" title="{{ $gallery->caption }}">
+										<div data-crop-image="300">
+											<img alt="image" src="{{ asset($gallery->url) }}" class="img-fluid" style="height: 275px; width: 750px; object-fit: cover; margin-left: auto; margin-right: auto; display: block;">
+										</div>
+									</a>
+								</div>
+							</div>
 							<form method="POST" enctype="multipart/form-data" action=" {{ route('webmanager.gallery.update', $gallery->id) }} ">
 								@csrf
 								@method('PATCH')
 								<div class="form-group">
-									<label>Title</label>
-									@if (session('status'))
-									<div class="alert alert-success" role="alert">
-										{{ session('status') }}
-									</div>
-									@endif
-									@error('title')
-									<div class="alert alert-danger" role="alert">
-										{{ $message }}
-									</div>
-									@enderror
-									<input type="text" name="title" class="form-control @error('title') is-invalid @enderror" value="{{ $gallery->title }}">
-								</div>
-								<div class="form-group">
-									<label>Category</label>
-									@if (session('status'))
-									<div class="alert alert-success" role="alert">
-										{{ session('status') }}
-									</div>
-									@endif
-									@error('category')
-									<div class="alert alert-danger" role="alert">
-										{{ $message }}
-									</div>
-									@enderror
-									<select type="text" name="category" class="form-control select2 @error('category') is-invalid @enderror" value="{{old('category')}}">
-										@foreach($categories as $result)
-										<option value="{{ $result->id }}"
-											@if ($result->id == $gallery->category_id)
-												selected=""
-											@endif
-											>{{ $result->name }} </option>
-										@endforeach
-									</select>
-								</div>
-								<div class="form-group">
-									<label>Tags</label>
-									@if (session('status'))
-									<div class="alert alert-success" role="alert">
-										{{ session('status') }}
-									</div>
-									@endif
-									@error('tags')
-									<div class="alert alert-danger" role="alert">
-										{{ $message }}
-									</div>
-									@enderror
-									<select type="text" name="tags[]" class="form-control select2 @error('tags') is-invalid @enderror" multiple="" value="{{old('tags')}}">
-										@foreach($tags as $result2)
-										<option value="{{ $result2->id }}"
-										@foreach($gallery->tags as $tag)
-											@if($result2->id == $tag->id)
-												selected
-											@endif
-										@endforeach
-											> {{ $result2->name }} </option>
-										@endforeach
-									</select>
-								</div>
-								<div class="form-group">
-									<label>Content</label>
-									@if (session('status'))
-									<div class="alert alert-success" role="alert">
-										{{ session('status') }}
-									</div>
-									@endif
-									@error('content')
-									<div class="alert alert-danger" role="alert">
-										{{ $message }}
-									</div>
-									@enderror
-									<textarea type="text" id="editor" name="content" class="form-control">{{ $gallery->content }}</textarea>
-								</div>
-								<div class="form-group">
-									<label>Thumbnail</label>
-									@if (session('status'))
-									<div class="alert alert-success" role="alert">
-										{{ session('status') }}
-									</div>
-									@endif
-									@error('thumbnail')
-									<div class="alert alert-danger" role="alert">
-										{{ $message }}
-									</div>
-									@enderror
-									<input type="file" name="thumbnail" class="form-control @error('thumbnail') is-invalid @enderror" value="{{old('thumbnail')}}">
+									<label>Caption</label>
+									<input type="text" name="caption" class="form-control @error('caption') is-invalid @enderror" value="{{ $gallery->caption }}">
 								</div>
 								<div class="form-group">
 									<button class="btn btn-success btn-icon btn-icon-left btn-block">
 										<i class="fas fa-flag"></i>
-										<span class="text">Update Post</span>
+										<span class="text">Update Caption</span>
 									</button>
 								</div>
 							</form>
@@ -129,16 +55,5 @@
 		</div>
 	</section>
 </div>
-
-<!-- CKEditor -->
-<script>
-  CKEDITOR.replace('editor', {
-  	language: 'en',
-    filebrowserImageBrowseUrl: '/filemanager?type=Images',
-    filebrowserImageUploadUrl: '/filemanager/upload?type=Images&_token=',
-    filebrowserBrowseUrl: '/filemanager?type=Files',
-    filebrowserUploadUrl: '/filemanager/upload?type=Files&_token='
-  });
-</script>
 
 @endsection
