@@ -20,7 +20,7 @@
                      <h2>{{ $content->title }}</h2>
                      <ul class="blog-info-link mt-3 mb-4">
                         <li><a href="#"><i class="far fa-bookmark"></i> {{ $content->category->name }}</a></li>
-                        <li><a href="#"><i class="far fa-comment-alt"></i> 03 Comments</a></li>
+                        <li><a href="#"><i class="fas fa-tags"></i> Digae, tags, ae, pye?</a></li>
                      </ul>
                      {!! $content->content !!}
                   </div>
