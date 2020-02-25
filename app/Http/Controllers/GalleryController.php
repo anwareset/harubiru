@@ -51,7 +51,7 @@ class GalleryController extends Controller
         ]);
 
         $photo_data = [
-            'caption' => $request->gallery,
+            'caption' => $request->caption,
         ];
 
         Gallery::whereId($id)->update($photo_data);
