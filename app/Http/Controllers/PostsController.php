@@ -31,7 +31,7 @@ class PostsController extends Controller
         $request->validate([
             'title'     => 'required|min:15',
             'content'   => 'required',
-            'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'thumbnail' => 'required|image|mimes:jpeg,png,jpg',
             'category'  => 'required'
         ]);
 
