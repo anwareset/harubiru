@@ -62,7 +62,7 @@
                             <li><a href="#" class="single_social_icon"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="#" class="single_social_icon"><i class="fab fa-telegram"></i></a></li>
                             <li><a href="#" class="single_social_icon"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#" class="single_social_icon"><i class="fab fa-github"></i></a></li>
+                            <li><a href="https://github.com/ledleledle" class="single_social_icon"><i class="fab fa-github"></i></a></li>
                         </ul>
                     </div>
                 </div>
