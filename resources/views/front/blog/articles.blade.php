@@ -24,7 +24,7 @@
                                 <a class="d-inline-block" href="{{ route('blog.details', $article->slug) }}">
                                     <h2>{{ $article->title }}</h2>
                                 </a>
-                                <p>{!! Str::limit($article->content, 150, '...') !!}</p>
+                                <p>{!! Str::limit($article->content, 20, '...') !!}</p>
                                 <ul class="blog-info-link">
                                     <li><a href="{{ route('blog.details', $article->slug) }}"><i class="far fa-bookmark"></i> {{ $article->category->name }}</a></li>
                                     <li><a href="{{ route('blog.details', $article->slug) }}"><i class="fas fa-tags"></i> Digae, tags, ae, pye?</a></li>
