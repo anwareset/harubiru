@@ -113,7 +113,7 @@
 										{{ $message }}
 									</div>
 									@enderror
-									<input type="file" name="thumbnail" class="form-control @error('thumbnail') is-invalid @enderror" value="{{old('thumbnail')}}">
+									<input type="file" name="thumbnail" class="form-control">
 								</div>
 								<div class="form-group">
 									<button class="btn btn-success btn-icon btn-icon-left btn-block">

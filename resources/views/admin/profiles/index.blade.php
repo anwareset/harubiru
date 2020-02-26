@@ -7,7 +7,7 @@
 <style>
   input[type="file"] {
     display: none;
-}
+  }
 </style>
 <!-- Page Heading -->
 <div class="main-content">
@@ -28,24 +28,30 @@
       <div class="row">
         <div class="col-12 col-sm-6 col-lg-6">
           <div class="card">
-            <form method="POST" action=" {{ route('webmanager.profiles.update', $users->id) }} ">
+            <form method="POST" enctype="multipart/form-data" action=" {{ route('webmanager.profiles.update', $users->id) }} ">
               @csrf
-              @method('put')
+              @method('PATCH')
               <div class="card-header" style="margin-top: -20px">
                 <h4>Avatar</h4>
                 <div class="card-header-action">
                   <div class="form-group">
                     <label for="file-upload" class="btn btn-primary" style="margin-top: 25px;color: #fff;">Change</label>
                     <input id="file-upload" type="file"/>
+                    <input id="file-upload" name="avatar" type="file" />
                   </div>
                 </div>
               </div>
               <div class="card-body">
+                @error('success')
+                <div class="alert alert-danger" role="alert">
+                  {{ $message }}
+                </div>
+                @enderror
                 <div class="mb-2 text-muted">Click the picture below to see the full size.</div>
                 <div class="chocolat-parent">
-                  <a href="{{ asset('assets/img/example-image.jpg') }}" class="chocolat-image" title="">
+                  <a href="{{ asset($users->avatar) }}" class="chocolat-image" title="">
                     <div data-crop-image="285">
-                      <img alt="image" src="{{ asset('assets/img/example-image.jpg') }}" class="img-fluid">
+                      <img alt="image" src="{{ asset($users->avatar) }}" class="img-fluid">
                     </div>
                   </a>
                 </div>
@@ -110,6 +116,22 @@
                       </div>
                     </div>
                     <input name="password" type="password" class="form-control" placeholder="Password">
+                  </div>
+                </div>
+                <div class="form-group">
+                  @error('bio')
+                  <div class="alert alert-danger" role="alert">
+                    {{ $message }}
+                  </div>
+                  @enderror
+                  <label>Bio</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fas fa-feather-alt"></i>
+                      </div>
+                    </div>
+                    <input name="bio" type="text" class="form-control @error('bio') is-invalid @enderror" value="{{ $users->bio }}" placeholder="Bio">
                   </div>
                 </div>
                 <div class="form-group">
