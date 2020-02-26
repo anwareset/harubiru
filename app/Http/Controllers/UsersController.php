@@ -31,7 +31,9 @@ class UsersController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'level' => $request->level,
-            'password' => bcrypt($request->password)
+            'password' => bcrypt($request->password),
+            'bio' => 'Ini adalah bio dari '.$request->name,
+            'avatar' => 'assets/img/avatar/avatar-1.png'
         ]);
 
         return redirect()->back()->with('success', 'New User Saved!');

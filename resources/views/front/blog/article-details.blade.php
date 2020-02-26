@@ -73,13 +73,12 @@
                <div class="blog-author">
                   <div class="media align-items-center">
                      @foreach ($contents as $content)
-                     <img src="{{ asset('front/img/blog/author.png') }}" alt="">
+                     <img src="{{ asset(App\User::findorfail($content->users->id)->avatar) }}" alt="">
                      <div class="media-body">
                         <a href="#">
                            <h4>{{ $content->users->name }} </h4>
                         </a>
-                        <p>Second divided from form fish beast made. Every of seas all gathered use saying you're, he
-                           our dominion twon Second divided from</p>
+                        <p>{{ $content->users->bio }}</p>
                      </div>
                      @endforeach
                   </div>
