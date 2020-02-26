@@ -37,7 +37,6 @@
                   <div class="form-group">
                     <label for="file-upload" class="btn btn-primary" style="margin-top: 25px;color: #fff;">Change</label>
                     <input id="file-upload" type="file"/>
-                    <!--<a href="#" class="btn btn-primary" style="margin-top: 25px">Change</a> -->
                   </div>
                 </div>
               </div>
