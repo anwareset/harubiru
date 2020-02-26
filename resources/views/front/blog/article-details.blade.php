@@ -20,7 +20,7 @@
                      <h2>{{ $content->title }}</h2>
                      <ul class="blog-info-link mt-3 mb-4">
                         <li><a href="#"><i class="far fa-bookmark"></i> {{ $content->category->name }}</a></li>
-                        <li><a href="#"><i class="far fa-comment-alt"></i> 03 Comments</a></li>
+                        <li><a href="#"><i class="fas fa-tags"></i> Digae, tags, ae, pye?</a></li>
                      </ul>
                      {!! $content->content !!}
                   </div>
@@ -84,7 +84,7 @@
                      @endforeach
                   </div>
                </div>
-               <div class="comments-area">
+               <!--<div class="comments-area">
                   <h4>05 Comments</h4>
                   <div class="comment-list">
                      <div class="single-comment justify-content-between d-flex">
@@ -138,10 +138,27 @@
                         </div>
                      </div>
                   </div>
-               </div>
+               </div> -->
                <div class="comment-form">
                   <h4>Leave a Reply</h4>
-                  <form class="form-contact comment_form" action="#" id="commentForm">
+                  <div id="disqus_thread"></div>
+                     <script>
+                     /*
+                     var disqus_config = function () {
+                        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                     };
+                     */
+                     (function() { // DON'T EDIT BELOW THIS LINE
+                     var d = document, s = d.createElement('script');
+                     s.src = 'https://portaljati.disqus.com/embed.js';
+                     s.setAttribute('data-timestamp', +new Date());
+                     (d.head || d.body).appendChild(s);
+                     })();
+                     </script>
+                     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+                  <!--<form class="form-contact comment_form" action="#" id="commentForm">
                      <div class="row">
                         <div class="col-12">
                            <div class="form-group">
@@ -169,7 +186,7 @@
                         <button type="submit" class="button button-contactForm btn_1">Send Message <i
                               class="flaticon-right-arrow"></i> </button>
                      </div>
-                  </form>
+                  </form>-->
                </div>
             </div>
             @include('front-template.widgets')

@@ -2,6 +2,13 @@
 @section('title', 'Profile')
 @section('activeprofile', 'active')
 @section('content')
+
+<!-- input none -->
+<style>
+  input[type="file"] {
+    display: none;
+}
+</style>
 <!-- Page Heading -->
 <div class="main-content">
   <section class="section">
@@ -28,7 +35,9 @@
                 <h4>Avatar</h4>
                 <div class="card-header-action">
                   <div class="form-group">
-                    <a href="#" class="btn btn-primary" style="margin-top: 25px">Change</a>
+                    <label for="file-upload" class="btn btn-primary" style="margin-top: 25px;color: #fff;">Change</label>
+                    <input id="file-upload" type="file"/>
+                    <!--<a href="#" class="btn btn-primary" style="margin-top: 25px">Change</a> -->
                   </div>
                 </div>
               </div>

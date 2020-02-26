@@ -27,7 +27,7 @@
                                 <p>{!! Str::limit($article->content, 150, '...') !!}</p>
                                 <ul class="blog-info-link">
                                     <li><a href="{{ route('blog.details', $article->slug) }}"><i class="far fa-bookmark"></i> {{ $article->category->name }}</a></li>
-                                    <li><a href="{{ route('blog.details', $article->slug) }}"><i class="far fa-comment-alt"></i> 03 Comments</a></li>
+                                    <li><a href="{{ route('blog.details', $article->slug) }}"><i class="fas fa-tags"></i> Digae, tags, ae, pye?</a></li>
                                 </ul>
                             </div>
                         </article>
