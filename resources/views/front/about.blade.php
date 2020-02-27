@@ -1,7 +1,7 @@
 @extends('front-template.page')
-@section('title', 'Tentang Kami')
-@section('breadcrumb1', 'Tentang Kami')
-@section('breadcrumb2', 'Tentang Kami')
+@section('title', 'Tentang Desa Kami')
+@section('breadcrumb1', 'Tentang Desa Kami')
+@section('breadcrumb2', 'Tentang Desa Kami')
 @section('content')
 <section class="sample-text-area">
     <div class="container box_1170">

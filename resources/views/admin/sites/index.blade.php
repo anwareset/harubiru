@@ -1,12 +1,12 @@
 @extends('admin-template.page')
-@section('title', 'Configurations')
+@section('title', 'Konfigurasi Website')
 @section('activeconfigurations', 'active')
 @section('content')
 <!-- Page Heading -->
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1>Site Configurations</h1>
+      <h1>Konfigurasi Website</h1>
     </div>
     <div class="section-body">
       <div class="row">
@@ -27,7 +27,7 @@
                 <span class="icon text-white-50">
                   <i class="fas fa-chevron-circle-left"></i>
                 </span>
-                <span class="text">Back</span>
+                <span class="text">Kembali</span>
               </a>  
             </div>
             <div class="card-body">
@@ -35,7 +35,7 @@
                 @csrf
                 @method('post')
                 <div class="form-group">
-                  <label>Site Name</label>
+                  <label>Nama Website</label>
                   @if (session('status'))
                   <div class="alert alert-success" role="alert">
                     {{ session('status') }}
@@ -58,7 +58,7 @@
                 <div class="form-group">
                   <button class="btn btn-success btn-icon btn-icon-left btn-block">
                     <i class="fas fa-flag"></i>
-                    <span class="text">Update Configuration</span>
+                    <span class="text">Update Konfigurasi</span>
                   </button>
                 </div>
               </form>

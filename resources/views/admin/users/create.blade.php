@@ -1,5 +1,5 @@
 @extends('admin-template.page')
-@section('title', 'Accounts')
+@section('title', 'Buat Akun')
 @section('activeaccounts', 'active')
 @section('active_a_create', 'active')
 @section('content')
@@ -7,7 +7,7 @@
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1>Create Account</h1>
+      <h1>Buat Akun</h1>
     </div>
     <div class="section-body">
       <div class="row">
@@ -35,7 +35,7 @@
               <form method="POST" action=" {{ route('webmanager.users.store') }} ">
                 @csrf
                 <div class="form-group">
-                  <label>Name</label>
+                  <label>Nama</label>
                   @if (session('status'))
                   <div class="alert alert-success" role="alert">
                     {{ session('status') }}
@@ -102,7 +102,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label>New Password</label>
+                  <label>Password</label>
                   <div class="input-group">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
@@ -129,7 +129,7 @@
                 <div class="form-group">
                   <button class="btn btn-success btn-icon btn-icon-left btn-block">
                     <i class="fas fa-flag"></i>
-                    <span class="text">Create New Account</span>
+                    <span class="text">Buat Akun Baru</span>
                   </button>
                 </div>
               </form>

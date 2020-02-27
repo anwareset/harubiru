@@ -24,20 +24,20 @@
                                     <a class="nav-link" href="{{ url('') }}">beranda</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('blog') }}">Blog</a>
+                                    <a class="nav-link" href="{{ url('blog') }}">Artikel & Berita</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ url('gallery') }}">Galeri</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('about') }}">tentang kami</a>
+                                    <a class="nav-link" href="{{ url('about') }}">tentang desa kami</a>
                                 </li>
-                                <li class="nav-item">
+                                <!--<li class="nav-item">
                                     <a class="nav-link" href="{{ url('contact') }}">hubungi kami</a>
-                                </li>
+                                </li>-->
                             </ul>
                         </div>
-                        <a href="#" class="d-none d-sm-block btn_1 home_page_btn">Sedang Beruntung?</a>
+                        <a href="{{ url('login') }}" class="d-none d-sm-block btn_1 home_page_btn">login / daftar</a>
                     </nav>
                 </div>
             </div>

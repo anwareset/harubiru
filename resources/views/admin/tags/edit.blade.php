@@ -18,7 +18,7 @@
 								<span class="icon text-white-50">
 									<i class="fas fa-chevron-circle-left"></i>
 								</span>
-								<span class="text">Back</span>
+								<span class="text">Kembali</span>
 							</a>  
 						</div>
 						<div class="card-body">
@@ -26,7 +26,7 @@
 								@csrf
 								@method('patch')
 								<div class="form-group">
-									<label>Tag Name</label>
+									<label>Nama Tag</label>
 									@error('name')
 									<div class="alert alert-danger" role="alert">
 										{{ $message }}

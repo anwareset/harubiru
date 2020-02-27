@@ -26,13 +26,13 @@
 									<span class="icon text-white-50">
 										<i class="fas fa-chevron-circle-left"></i>
 									</span>
-									<span class="text">Back</span>
+									<span class="text">Kembali</span>
 								</a>
 								<button type="submit" class="btn btn-sm btn-danger btn-icon">
 									<span class="icon text-white-50">
 										<i class="fas fa-trash"></i>
 									</span>
-									<span class="text">Clean All Archive</span>
+									<span class="text">Hapus Semua Archive</span>
 								</button>
 							</form>
 						</div>
@@ -42,21 +42,21 @@
 									<thead>
 										<tr>
 											<th width="5%" class="text-center">#</th>
-											<th>Title</th>
-											<th width="20%" class="text-center">Category</th>
+											<th>Judul</th>
+											<th width="20%" class="text-center">Kategori</th>
 											<th width="20%" class="text-center">Tags</th>
-											<th width="15%" class="text-center">Thumbnail</th>
-											<th width="10%" class="text-center">Action</th>
+											<th width="15%" class="text-center">Gambar</th>
+											<th width="10%" class="text-center">Aksi</th>
 										</tr>
 									</thead>
 									<tfoot>
 										<tr>
 											<th width="5%" class="text-center">#</th>
-											<th class="text-center">Title</th>
-											<th width="20%" class="text-center">Category</th>
+											<th>Judul</th>
+											<th width="20%" class="text-center">Kategori</th>
 											<th width="20%" class="text-center">Tags</th>
-											<th width="15%" class="text-center">Thumbnail</th>
-											<th width="10%" class="text-center">Action</th>
+											<th width="15%" class="text-center">Gambar</th>
+											<th width="10%" class="text-center">Aksi</th>
 										</tr>
 									</tfoot>
 									<tbody>

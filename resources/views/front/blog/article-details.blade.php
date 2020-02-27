@@ -3,7 +3,7 @@
 @section('title', $content->title)
 @endforeach
 @section('breadcrumb1', 'Detail Artikel')
-@section('breadcrumb2', 'Blog')
+@section('breadcrumb2', 'Artikel')
 @section('breadcrumb-link', url('blog'))
 @section('content')
    <!--================Blog Area =================-->
