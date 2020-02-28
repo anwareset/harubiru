@@ -20,7 +20,7 @@
 								<span class="icon text-white-50">
 									<i class="fas fa-chevron-circle-left"></i>
 								</span>
-								<span class="text">Back</span>
+								<span class="text">Kembali</span>
 							</a>  
 						</div>
 						<div class="card-body">
@@ -28,7 +28,7 @@
 								@csrf
 								@method('PATCH')
 								<div class="form-group">
-									<label>Title</label>
+									<label>Judul</label>
 									@if (session('status'))
 									<div class="alert alert-success" role="alert">
 										{{ session('status') }}
@@ -42,7 +42,7 @@
 									<input type="text" name="title" class="form-control @error('title') is-invalid @enderror" value="{{ $posts->title }}">
 								</div>
 								<div class="form-group">
-									<label>Category</label>
+									<label>Kategori</label>
 									@if (session('status'))
 									<div class="alert alert-success" role="alert">
 										{{ session('status') }}
@@ -88,7 +88,7 @@
 									</select>
 								</div>
 								<div class="form-group">
-									<label>Content</label>
+									<label>Konten</label>
 									@if (session('status'))
 									<div class="alert alert-success" role="alert">
 										{{ session('status') }}
@@ -102,7 +102,7 @@
 									<textarea type="text" id="editor" name="content" class="form-control">{{ $posts->content }}</textarea>
 								</div>
 								<div class="form-group">
-									<label>Thumbnail</label>
+									<label>Foto</label>
 									@if (session('status'))
 									<div class="alert alert-success" role="alert">
 										{{ session('status') }}

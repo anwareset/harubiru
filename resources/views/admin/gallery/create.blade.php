@@ -1,5 +1,5 @@
 @extends('admin-template.page')
-@section('title', 'New Photo')
+@section('title', 'Foto Baru')
 @section('activegallery', 'active')
 @section('active_g_new', 'active')
 @section('content')
@@ -8,7 +8,7 @@
 <div class="main-content">
 	<section class="section">
 		<div class="section-header">
-			<h1>Upload Photo</h1>
+			<h1>Upload Foto</h1>
 		</div>
 
 		<div class="section-body">
@@ -20,14 +20,14 @@
 								<span class="icon text-white-50">
 									<i class="fas fa-chevron-circle-left"></i>
 								</span>
-								<span class="text">Back</span>
+								<span class="text">Kembali</span>
 							</a>  
 						</div>
 						<div class="card-body">
 							<form method="POST" enctype="multipart/form-data" action=" {{ route('webmanager.gallery.store') }} ">
 								@csrf
 								<div class="form-group">
-									<label>Photo</label>
+									<label>Pilih Foto</label>
 									@error('photo')
 									<div class="alert alert-danger" role="alert">
 										{{ $message }}
@@ -47,7 +47,7 @@
 								<div class="form-group">
 									<button class="btn btn-success btn-icon btn-icon-left btn-block">
 										<i class="fas fa-flag"></i>
-										<span class="text">Upload Photo</span>
+										<span class="text">Upload Foto</span>
 									</button>
 								</div>
 							</form>

@@ -1,12 +1,12 @@
 @extends('admin-template.page')
-@section('title', 'Edit Category')
+@section('title', 'Edit Kategori')
 @section('activecategories', 'active')
 @section('content')
 <!-- Page Heading -->
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1>Edit Category</h1>
+      <h1>Edit Kategori</h1>
     </div>
     <div class="section-body">
       <div class="row">
@@ -17,7 +17,7 @@
                 <span class="icon text-white-50">
                   <i class="fas fa-chevron-circle-left"></i>
                 </span>
-                <span class="text">Back</span>
+                <span class="text">Kembali</span>
               </a>  
             </div>
             <div class="card-body">
@@ -25,7 +25,7 @@
                 @csrf
                 @method('patch')
                 <div class="form-group">
-                  <label>Category Name</label>
+                  <label>Edit Nama Kategori</label>
                   @error('name')
                   <div class="alert alert-danger" role="alert">
                     {{ $message }}
@@ -36,7 +36,7 @@
                 <div class="form-group">
                   <button class="btn btn-success btn-icon btn-icon-left btn-block">
                     <i class="fas fa-flag"></i>
-                    <span class="text">Update Category</span>
+                    <span class="text">Perbarui Kategori</span>
                   </button>
                 </div>
               </form>

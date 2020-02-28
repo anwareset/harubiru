@@ -16,20 +16,20 @@
                                     <a class="nav-link" href="{{ url('') }}">BERANDA</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('blog')}}">Blog</a>
+                                    <a class="nav-link" href="{{ url('blog')}}">Artikel & Berita</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ url('gallery') }}">Galeri</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('about') }}">TENTANG KAMI</a>
+                                    <a class="nav-link" href="{{ url('about') }}">TENTANG desa KAMI</a>
                                 </li>
-                                <li class="nav-item">
+                                <!--<li class="nav-item">
                                     <a class="nav-link" href="{{ url('contact') }}">HUBUNGI KAMI</a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
-                        <a href="#" class="d-none d-sm-block btn_1">Sedang Beruntung?</a>
+                        <a href="{{ url('login') }}" class="d-none d-sm-block btn_1">login / daftar</a>
                     </nav>
                 </div>
             </div>

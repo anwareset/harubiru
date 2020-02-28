@@ -23,7 +23,7 @@
 								<span class="icon text-white-50">
 									<i class="fas fa-flag"></i>
 								</span>
-								<span class="text">Add Photo</span>
+								<span class="text">Tambah Foto</span>
 							</a>
 						</div>
 						<div class="card-body">
@@ -34,7 +34,7 @@
 											<th width="5%" class="text-center">#</th>
 											<th>Caption</th>
 											<th width="15%" class="text-center">Thumbnail</th>
-											<th width="10%" class="text-center">Action</th>
+											<th width="10%" class="text-center">Aksi</th>
 										</tr>
 									</thead>
 									<tfoot>
@@ -42,7 +42,7 @@
 											<th width="5%" class="text-center">#</th>
 											<th class="text-center">Caption</th>
 											<th width="15%" class="text-center">Thumbnail</th>
-											<th width="10%" class="text-center">Action</th>
+											<th width="10%" class="text-center">Aksi</th>
 										</tr>
 									</tfoot>
 									<tbody>

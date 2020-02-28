@@ -4,8 +4,7 @@
             <div class="col-sm-8 col-md-4 col-lg-5">
                 <div class="single_footer_part">
                     <a href="{{ url('') }}" class="footer_logo_iner"> <img src="{{asset('front/img/HaruBiru_footer.png')}}" alt="#"> </a>
-                    <p>Didedikasikan untuk semua yang ingin belajar tentang
-                        pengetahuan dan teknologi. Ketidaktahuan memperbudak, pengetahuan membebaskan.
+                    <p>Web Profil untuk Desa Jati dan Portal informasi seputar Desa Jati, Tarokan.
                     </p>
                 </div>
             </div>
@@ -16,11 +15,11 @@
             </div>
             <div class="col-sm-4 col-md-4 col-lg-2">
                 <div class="single_footer_part">
-                    <h4>Hall Of Fame</h4>
+                    <h4>Untuk Kami</h4>
                     <ul class="list-unstyled">
-                        <li><a href="{{ url('report-bug') }}">Report Bug</a></li>
-                        <li><a href="{{ url('heroes') }}">Heroes</a></li>
-                        <li><a href="{{ url('patched') }}">Patched</a></li>
+                        <li><a href="{{ url('report-bug') }}">Laporkan Bug</a></li>
+                        <li><a href="{{ url('heroes') }}">Saran Anda</a></li>
+                        <li><a href="{{ url('contribute') }}">Kontribusi</a></li>
                     </ul>
                 </div>
             </div>
@@ -29,8 +28,7 @@
                     <h4>Quick Links</h4>
                     <ul class="list-unstyled">
                         <li><a href="{{ url('licensed') }}">License</a></li>
-                        <li><a href="{{ url('privacy-policy') }}">Privacy & Policy</a></li>
-                        <li><a href="{{ url('contribute') }}">Contribute</a></li>
+                        <li><a href="{{ url('help') }}">Panduan</a></li>
                     </ul>
                 </div>
             </div>
@@ -38,8 +36,8 @@
                 <div class="single_footer_part">
                     <h4>Resources</h4>
                     <ul class="list-unstyled">
-                        <li><a href="http://owrt.ddns.my.id:8080/webui-aria2/">Aria2 Downloader</a></li>
-                        <li><a href="ftp://owrt.ddns.my.id">FTP Server</a></li>
+                        <li><a href="https://kedirikab.go.id/">Situs Resmi Kab. Kediri</a></li>
+                        <li><a href="https://id.wikipedia.org/wiki/Jati,_Tarokan,_Kediri">Wikipedia</a></li>
                         <li><a href="http://www.onlinux.me">OnLinux</a></li>
                     </ul>
                 </div>

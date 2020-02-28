@@ -32,12 +32,11 @@
               @csrf
               @method('PATCH')
               <div class="card-header" style="margin-top: -20px">
-                <h4>Avatar</h4>
+                <h4>Foto Profil</h4>
                 <div class="card-header-action">
                   <div class="form-group">
-                    <label for="file-upload" class="btn btn-primary" style="margin-top: 25px;color: #fff;">Change</label>
+                    <label for="file-upload" class="btn btn-primary" style="margin-top: 25px;color: #fff;">Ganti Foto</label>
                     <input id="file-upload" name="avatar" type="file" />
-                    <!--<a href="#" class="btn btn-primary" style="margin-top: 25px">Change</a> -->
                   </div>
                 </div>
               </div>
@@ -47,7 +46,7 @@
                   {{ $message }}
                 </div>
                 @enderror
-                <div class="mb-2 text-muted">Click the picture below to see the full size.</div>
+                <div class="mb-2 text-muted">Klik Foto Untuk Menampilkan Ukuran Penuh.</div>
                 <div class="chocolat-parent">
                   <a href="{{ asset($users->avatar) }}" class="chocolat-image" title="">
                     <div data-crop-image="285">
@@ -69,14 +68,14 @@
                 <h4>Profile</h4>
               </div>
               <div class="card-body pb-0">
-                <p class="text-muted">You can update your account information here.</p>
+                <p class="text-muted">Anda Bisa Memperbarui Informasi Anda Disini.</p>
                 <div class="form-group">
                   @error('name')
                   <div class="alert alert-danger" role="alert">
                     {{ $message }}
                   </div>
                   @enderror
-                  <label>Name</label>
+                  <label>Nama</label>
                   <div class="input-group">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
@@ -108,7 +107,7 @@
                     {{ $message }}
                   </div>
                   @enderror
-                  <label>New Password</label>
+                  <label>Password Baru</label>
                   <div class="input-group">
                     <div class="input-group-prepend">
                       <div class="input-group-text">

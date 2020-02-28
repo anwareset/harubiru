@@ -24,20 +24,20 @@
                                     <a class="nav-link" href="{{ url('') }}">beranda</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('blog') }}">Blog</a>
+                                    <a class="nav-link" href="{{ url('blog') }}">Artikel & Berita</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ url('gallery') }}">Galeri</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('about') }}">tentang kami</a>
+                                    <a class="nav-link" href="{{ url('about') }}">tentang desa kami</a>
                                 </li>
-                                <li class="nav-item">
+                                <!--<li class="nav-item">
                                     <a class="nav-link" href="{{ url('contact') }}">hubungi kami</a>
-                                </li>
+                                </li>-->
                             </ul>
                         </div>
-                        <a href="#" class="d-none d-sm-block btn_1 home_page_btn">Sedang Beruntung?</a>
+                        <a href="{{ url('login') }}" class="d-none d-sm-block btn_1 home_page_btn">login / daftar</a>
                     </nav>
                 </div>
             </div>
@@ -84,8 +84,8 @@
                         <div class="single_feature_part">
                             <!-- <img src="{{asset('front/img/icon/feature_icon_1.png') }}" alt=""> -->
                             <li class="fas fa-leaf" style="font-size: 30px; margin-bottom: 20px;"></li>
-                            <h4>Tanah yang subur</h4>
-                            <p>Desa ini cocok untuk lahan pertanian dan perkebunan. </p>
+                            <h4>Lahan Desa</h4>
+                            <p>Desa ini cocok untuk lahan pertanian dan perkebunan. Dengan luas sebesar <strong>3,7338 km²</strong></p>
                         </div>
                     </div>
                 </div>
@@ -93,10 +93,9 @@
                     <div class="single_feature">
                         <div class="single_feature_part">
                             <!-- <img src="{{asset('front/img/icon/feature_icon_2.png') }}" alt=""> -->
-                            <li class="fas fa-cloud"  style="font-size: 30px; margin-bottom: 20px;"></li>
-                            <h4>Cuaca yang bersahabat</h4>
-                            <p>Desa Jati memiliki cuaca yang berawan dan terkadang hujan, yang menjadikan
-                            desa ini memiliki udara bersih dan sejuk. </p>
+                            <li class="fas fa-users"  style="font-size: 30px; margin-bottom: 20px;"></li>
+                            <h4>Jumlah Penduduk</h4>
+                            <p>Tercatat Desa Jati memiliki 7.736 Penduduk, dengan kepadatan +- 2.000 jiwa/km²</p>
                         </div>
                     </div>
                 </div>
@@ -157,7 +156,7 @@
                         <h2>Anda memiliki info dan ingin membagikannya?</h2>
                         <p>Lelah menjadi individu kesepian? Mulailah menulis artikel anda sendiri, dan berbagilah informasi
                         kepada teman-teman anda.</p>
-                        <a href="{{ url('login') }}" class="btn_2">Bergabung</a>
+                        <a href="{{ url('register') }}" class="btn_2">Bergabung</a>
                     </div>
                 </div>
             </div>

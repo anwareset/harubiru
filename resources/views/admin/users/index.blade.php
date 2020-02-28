@@ -1,5 +1,5 @@
 @extends('admin-template.page')
-@section('title', 'Accounts')
+@section('title', 'Akun')
 @section('activeaccounts', 'active')
 @section('active_a_lists', 'active')
 @section('content')
@@ -8,7 +8,7 @@
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1>Accounts</h1>
+      <h1>Akun</h1>
     </div>
     <div class="section-body">
       <div class="row">
@@ -24,7 +24,7 @@
                 <span class="icon text-white-50">
                   <i class="fas fa-user-plus"></i>
                 </span>
-                <span class="text">Create New Account</span>
+                <span class="text">Buat Akun Baru</span>
               </a>
             </div>
             <div class="card-body">
@@ -33,19 +33,19 @@
                   <thead>
                     <tr>
                       <th width="5%" class="text-center">#</th>
-                      <th>Name</th>
+                      <th>Nama</th>
                       <th>Email</th>
                       <th class="text-center">Level</th>
-                      <th width="10%" class="text-center">Action</th>
+                      <th width="10%" class="text-center">Aksi</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
                       <th width="5%" class="text-center">#</th>
-                      <th>Name</th>
+                      <th>Nama</th>
                       <th>Email</th>
                       <th class="text-center">Level</th>
-                      <th width="10%" class="text-center">Action</th>
+                      <th width="10%" class="text-center">Aksi</th>
                     </tr>
                   </tfoot>
                   <tbody>

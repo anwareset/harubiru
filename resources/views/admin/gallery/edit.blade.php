@@ -8,7 +8,7 @@
 <div class="main-content">
 	<section class="section">
 		<div class="section-header">
-			<h1>Edit Post</h1>
+			<h1>Edit Caption</h1>
 		</div>
 
 		<div class="section-body">
@@ -20,7 +20,7 @@
 								<span class="icon text-white-50">
 									<i class="fas fa-chevron-circle-left"></i>
 								</span>
-								<span class="text">Back</span>
+								<span class="text">Kembali</span>
 							</a>  
 						</div>
 						<div class="card-body">

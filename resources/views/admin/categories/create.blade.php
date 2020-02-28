@@ -1,5 +1,5 @@
 @extends('admin-template.page')
-@section('title', 'Add New Category')
+@section('title', 'Tambah Kategori')
 @section('activecategories', 'active')
 @section('active_c_add', 'active')
 @section('content')
@@ -7,7 +7,7 @@
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1>Add New Category</h1>
+      <h1>Tambah Kategori Baru</h1>
     </div>
     <div class="section-body">
       <div class="row">
@@ -28,14 +28,14 @@
                 <span class="icon text-white-50">
                   <i class="fas fa-chevron-circle-left"></i>
                 </span>
-                <span class="text">Back</span>
+                <span class="text">Kembali</span>
               </a>  
             </div>
             <div class="card-body">
               <form method="POST" action=" {{ route('webmanager.categories.store') }} ">
                 @csrf
                 <div class="form-group">
-                  <label>Category Name</label>
+                  <label>Nama Kategori Baru</label>
                   @if (session('status'))
                   <div class="alert alert-success" role="alert">
                     {{ session('status') }}
@@ -51,7 +51,7 @@
                 <div class="form-group">
                   <button class="btn btn-success btn-icon btn-icon-left btn btn-block">
                     <i class="fas fa-flag"></i>
-                    <span class="text">Add New Category</span>
+                    <span class="text">Tambah Kategori Baru</span>
                   </button>
                 </div>
               </form>

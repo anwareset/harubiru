@@ -1,5 +1,5 @@
 @extends('admin-template.page')
-@section('title', 'New Post')
+@section('title', 'Post Baru')
 @section('activeposts', 'active')
 @section('active_p_new', 'active')
 @section('content')
@@ -20,14 +20,14 @@
 								<span class="icon text-white-50">
 									<i class="fas fa-chevron-circle-left"></i>
 								</span>
-								<span class="text">Back</span>
+								<span class="text">Kembali</span>
 							</a>  
 						</div>
 						<div class="card-body">
 							<form method="POST" enctype="multipart/form-data" action=" {{ route('webmanager.posts.store') }} ">
 								@csrf
 								<div class="form-group">
-									<label>Title</label>
+									<label>Judul</label>
 									@if (session('status'))
 									<div class="alert alert-success" role="alert">
 										{{ session('status') }}
@@ -41,7 +41,7 @@
 									<input type="text" name="title" class="form-control @error('title') is-invalid @enderror" value="{{old('title')}}">
 								</div>
 								<div class="form-group">
-									<label>Category</label>
+									<label>Kategori</label>
 									@if (session('status'))
 									<div class="alert alert-success" role="alert">
 										{{ session('status') }}
@@ -78,7 +78,7 @@
 									</select>
 								</div>
 								<div class="form-group">
-									<label>Content</label>
+									<label>Isi Konten</label>
 									@if (session('status'))
 									<div class="alert alert-success" role="alert">
 										{{ session('status') }}
@@ -92,7 +92,7 @@
 									<textarea id="editor" name="content" class="@error('content') is-invalid @enderror" value="{{old('content')}}"></textarea>
 								</div>
 								<div class="form-group">
-									<label>Thumbnail</label>
+									<label>Foto</label>
 									@error('thumbnail')
 									<div class="alert alert-danger" role="alert">
 										{{ $message }}
@@ -103,7 +103,7 @@
 								<div class="form-group">
 									<button class="btn btn-success btn-icon btn-icon-left btn-block">
 										<i class="fas fa-flag"></i>
-										<span class="text">Add New Post</span>
+										<span class="text">Tambah Post Baru</span>
 									</button>
 								</div>
 							</form>
