@@ -36,7 +36,6 @@
                 <div class="card-header-action">
                   <div class="form-group">
                     <label for="file-upload" class="btn btn-primary" style="margin-top: 25px;color: #fff;">Ganti Foto</label>
-                    <input id="file-upload" type="file"/>
                     <input id="file-upload" name="avatar" type="file" />
                   </div>
                 </div>
