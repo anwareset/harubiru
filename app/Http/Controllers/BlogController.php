@@ -24,10 +24,7 @@ class BlogController extends Controller
         $widgets =  Posts::latest()->take(5)->get();
         $categories = Categories::get();
         $tags = Tags::get();
-
     	$contents = Posts::where('slug', $slug)->get();
-        //$idPost = Posts::select('id')->where('slug', $slug)->get();
-    	
         $previousPost = Posts::where('id', '<', $contents[0]->id)->orderBy('id','desc')->first();
         $nextPost = Posts::where('id', '>', $contents[0]->id)->orderBy('id','asc')->first();
 
