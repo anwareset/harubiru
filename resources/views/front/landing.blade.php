@@ -33,7 +33,7 @@
                                     <a class="nav-link" href="{{ url('about') }}">tentang desa kami</a>
                                 </li>
                                 <!--<li class="nav-item">
-                                    <a class="nav-link" href="{{ url('contact') }}">hubungi kami</a>
+                                    <a class="nav-link" href="{{ url('contact') }}">Panduan</a>
                                 </li>-->
                             </ul>
                         </div>

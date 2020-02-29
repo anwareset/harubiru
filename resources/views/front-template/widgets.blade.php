@@ -4,21 +4,21 @@
             <form action="#">
                 <div class="form-group">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder='Find Something'
+                        <input type="text" class="form-control" placeholder='Cari Artikel'
                         onfocus="this.placeholder = ''"
-                        onblur="this.placeholder = 'Find Something'">
+                        onblur="this.placeholder = 'Cari Artikel'">
                         <div class="input-group-append">
                             <button class="btn" type="button"><i class="ti-search"></i></button>
                         </div>
                     </div>
                 </div>
                 <button class="button rounded-0 primary-bg text-white w-100 btn_1"
-                type="submit">Search</button>
+                type="submit">Cari</button>
             </form>
         </aside>
 
         <aside class="single_sidebar_widget post_category_widget">
-            <h4 class="widget_title">Category</h4>
+            <h4 class="widget_title">Kategori</h4>
             <ul class="list cat-list">
                 @foreach($categories as $category)
                 <li>
@@ -31,7 +31,7 @@
         </aside>
 
         <aside class="single_sidebar_widget popular_post_widget">
-            <h3 class="widget_title">Popular Post</h3>
+            <h3 class="widget_title">Artikel Terpopuler</h3>
             @foreach($widgets as $widget)
             <div class="media post_item">
                 <img src="{{ asset($widget->thumbnail) }}" style="width: 85px; height: 85px; object-fit: cover;" alt="post">
