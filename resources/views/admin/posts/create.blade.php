@@ -28,11 +28,6 @@
 								@csrf
 								<div class="form-group">
 									<label>Judul</label>
-									@if (session('status'))
-									<div class="alert alert-success" role="alert">
-										{{ session('status') }}
-									</div>
-									@endif
 									@error('title')
 									<div class="alert alert-danger" role="alert">
 										{{ $message }}
@@ -42,11 +37,6 @@
 								</div>
 								<div class="form-group">
 									<label>Kategori</label>
-									@if (session('status'))
-									<div class="alert alert-success" role="alert">
-										{{ session('status') }}
-									</div>
-									@endif
 									@error('category')
 									<div class="alert alert-danger" role="alert">
 										{{ $message }}
@@ -61,11 +51,6 @@
 								</div>
 								<div class="form-group">
 									<label>Tags</label>
-									@if (session('status'))
-									<div class="alert alert-success" role="alert">
-										{{ session('status') }}
-									</div>
-									@endif
 									@error('tags')
 									<div class="alert alert-danger" role="alert">
 										{{ $message }}
@@ -79,17 +64,16 @@
 								</div>
 								<div class="form-group">
 									<label>Isi Konten</label>
-									@if (session('status'))
-									<div class="alert alert-success" role="alert">
-										{{ session('status') }}
-									</div>
-									@endif
 									@error('content')
 									<div class="alert alert-danger" role="alert">
 										{{ $message }}
 									</div>
 									@enderror
-									<textarea id="editor" name="content" class="@error('content') is-invalid @enderror" value="{{old('content')}}"></textarea>
+									<textarea id="editor" name="content" class="form-control">
+										@if($errors->any())
+											{{ old('content') }}
+										@endif
+									</textarea>
 								</div>
 								<div class="form-group">
 									<label>Foto</label>

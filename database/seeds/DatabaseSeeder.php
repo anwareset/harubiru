@@ -8,7 +8,10 @@ class DatabaseSeeder extends Seeder
     {
 	    $this->call([
 	    	UsersTableSeederAddDefaultAdmin::class,
-	        SiteconfigTableSeederAddSiteName::class
+	        SiteconfigTableSeederAddSiteName::class,
+	        TagsTableSeeder::class,
+	        CategoryTableSeeder::class,
+	        PostTableSeeder::class
 	    ]);
     }
 }
