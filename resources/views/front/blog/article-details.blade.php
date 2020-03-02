@@ -54,7 +54,7 @@
                         <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
                            <div class="thumb">
                               <a href="#">
-                                 <img class="img-fluid" style="height: 60px; width: 60px; object-fit: cover;" src="#" alt="">
+                                 
                               </a>
                            </div>
                            <div class="arrow">
@@ -74,7 +74,7 @@
                         <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
                            <div class="thumb">
                               <a href="#">
-                                 <img class="img-fluid" style="height: 60px; width: 60px; object-fit: cover;" src="#" alt="">
+                                 
                               </a>
                            </div>
                            <div class="arrow">
