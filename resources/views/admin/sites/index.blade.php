@@ -14,15 +14,15 @@
     <div class="section-header">
       <h1>Konfigurasi Website</h1>
     </div>
+    @if (session('status'))
+    <div class="alert alert-success" role="alert">
+      {{ session('status') }}
+    </div>
+    @endif
     <div class="section-body">
       <div class="row">
         <div class="col-6">
           <div class="card">
-            @if (session('success'))
-            <div class="alert alert-success" role="alert">
-              {{ session('success') }}
-            </div>
-            @endif
             @error('success')
             <div class="alert alert-danger" role="alert">
               {{ $message }}
@@ -32,16 +32,11 @@
               <h4>Konfigurasi Nama Website</h4>
             </div>
             <div class="card-body">
-              <form method="POST" action=" {{ route('webmanager.sites.store') }} ">
+              <form method="POST" enctype="multipart/form-data" action="{{ route('webmanager.sites.update', '1') }}">
                 @csrf
-                @method('post')
+                @method('PATCH')
                 <div class="form-group">
                   <label>Nama Website</label>
-                  @if (session('status'))
-                  <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
-                  </div>
-                  @endif
                   @error('appname')
                   <div class="alert alert-danger" role="alert">
                     {{ $message }}
@@ -62,22 +57,17 @@
                     <span class="text">Update Nama Website</span>
                   </button>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-6">
-          <div class="card">
-            <form method="POST" enctype="multipart/form-data" action="">
-              @csrf
-              @method('PATCH')
+          <div class="col-6">
+            <div class="card">
               <div class="card-header" style="margin-top: -20px">
                 <h4>Ubah Logo Website</h4>
                 <div class="card-header-action">
                   <div class="form-group">
                     <label for="file-upload" class="btn btn-primary" style="margin-top: 25px;color: #fff;">Ganti Logo</label>
-                    <input id="file-upload" type="file"/>
-                    <input id="file-upload" name="avatar" type="file" />
+                    <input id="file-upload" name="logo" type="file" />
                   </div>
                 </div>
               </div>
@@ -89,9 +79,9 @@
                 @enderror
                 <div class="mb-2 text-muted">Klik Foto Untuk Menampilkan Ukuran Penuh.</div>
                 <div class="chocolat-parent">
-                  <a href="" class="chocolat-image" title="">
+                  <a href="{{ asset($sites->logo) }}" class="chocolat-image" title="{{ $sites->sitename }}">
                     <div data-crop-image="285">
-                      <img alt="image" src="" class="img-fluid">
+                      <img alt="image" src="{{ asset($sites->logo) }}" class="img-fluid">
                     </div>
                   </a>
                 </div>
@@ -99,24 +89,25 @@
             </div>
           </div>
         </div>
-      <div class="row">
-        <div class="col-12">
-          <div class="card">
-            <div class="card-header py-3">
-              <h4>Konfigurasi Tentang Desa</h4>
-            </div>
-            <div class="card-body">
-              <div class="form-group">
-              <label>Ubah Info Tentang Desa</label>
-              <textarea id="editor" name="content" class="@error('content') is-invalid @enderror" value=""></textarea>
-            </div>
-            <div class="form-group">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header py-3">
+                <h4>Konfigurasi Tentang Desa</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Ubah Info Tentang Desa</label>
+                  <textarea id="editor" name="about">{{ $sites->about }}</textarea>
+                </div>
+                <div class="form-group">
                   <button class="btn btn-success btn-icon btn-icon-left btn-block">
                     <i class="fas fa-flag"></i>
-                    <span class="text">Update Info tentang Desa</span>
+                    <span class="text">Update Info Tentang Desa</span>
                   </button>
                 </div>
-            </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
