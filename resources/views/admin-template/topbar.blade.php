@@ -7,10 +7,8 @@
         </form>
         <ul class="navbar-nav navbar-right">
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            <!-- commented for now cuz its not work
-              <img alt="image" src="{{ asset(App\User::findorfail(Auth::user()->id)->avatar) }}" class="rounded-circle mr-1">-->
-              <i class="far fa-user rounded-circle mr-1"></i>
-            <div class="d-sm-none d-lg-inline-block">{{ Auth::user()->name }}</div></a>
+              <img alt="image" src="{{ asset(App\User::findorfail(Auth::user()->id)->avatar) }}" class="rounded-circle mr-1" style="width: 30px; height: 30px;">
+                <div class="d-sm-none d-lg-inline-block">{{ Auth::user()->name }}</div></a>
             <div class="dropdown-menu dropdown-menu-right">
               <a href="{{ route('webmanager.profiles.index') }}" class="dropdown-item has-icon">
                 <i class="far fa-user"></i> Profil
