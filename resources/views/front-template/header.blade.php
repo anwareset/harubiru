@@ -3,7 +3,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="{{ url('') }}"> <img src="{{asset('front/img/HaruBiru.png') }}" alt="logo"> </a>
+                        <a class="navbar-brand" href="{{ url('') }}"> <img src="{{asset('front/img/image10.png') }}" alt="logo" width="120px"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -24,12 +24,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ url('about') }}">TENTANG desa KAMI</a>
                                 </li>
-                                <!--<li class="nav-item">
-                                    <a class="nav-link" href="{{ url('contact') }}">HUBUNGI KAMI</a>
-                                </li> -->
                             </ul>
                         </div>
-                        <a href="{{ url('login') }}" class="d-none d-sm-block btn_1">login / daftar</a>
+                        <a href="{{ url('contact') }}" class="d-none d-sm-block btn_1"><i class="fas fa-phone"></i> HUBUNGI KAMI</a>
                     </nav>
                 </div>
             </div>

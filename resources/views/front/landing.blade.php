@@ -32,12 +32,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ url('about') }}">tentang desa kami</a>
                                 </li>
-                                <!--<li class="nav-item">
-                                    <a class="nav-link" href="{{ url('contact') }}">hubungi kami</a>
-                                </li>-->
                             </ul>
                         </div>
-                        <a href="{{ url('login') }}" class="d-none d-sm-block btn_1 home_page_btn">login / daftar</a>
+                        <a href="{{ url('contact') }}" class="d-none d-sm-block btn_1 home_page_btn"><i class="fas fa-phone"></i> HUBUNGI KAMI</a>
                     </nav>
                 </div>
             </div>
