@@ -11,6 +11,7 @@ Route::get('/', function () {
 
 // Blog
 Route::get('/blog', 'BlogController@index');
+Route::get('/blog/search', 'BlogController@search')->name('blog.search');
 Route::get('/blog/{slug}', 'BlogController@show')->name('blog.details');
 
 // Main Menu

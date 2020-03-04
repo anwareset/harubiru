@@ -8,6 +8,7 @@
             <div class="row">
                 <div class="col-lg-8 mb-5 mb-lg-0">
                     <div class="blog_left_sidebar">
+                        @if(count($articles))
                         @foreach ($articles as $article)
                         <article class="blog_item">
                             <div class="blog_item_img">
@@ -40,6 +41,13 @@
                                 </div>
                             </ul>
                         </nav>
+                        @else
+                        <center>
+                            <img style="max-width: 260px; object-fit: cover;" src="{{ asset('assets/img/sadly-not-found.jpg') }}">
+                            <h2>Oops!</h2>
+                            <p>Artikel tidak ditemukan</p>
+                        </center>
+                        @endif
                     </div>
                 </div>
                 @include('front-template.widgets')

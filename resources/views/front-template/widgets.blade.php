@@ -1,10 +1,10 @@
 <div class="col-lg-4">
     <div class="blog_right_sidebar">
         <aside class="single_sidebar_widget search_widget">
-            <form action="#">
+            <form method="GET" action="{{ route('blog.search') }}">
                 <div class="form-group">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder='Cari Artikel'
+                        <input name="search" type="text" class="form-control" placeholder='Cari Artikel'
                         onfocus="this.placeholder = ''"
                         onblur="this.placeholder = 'Cari Artikel'">
                         <div class="input-group-append">
