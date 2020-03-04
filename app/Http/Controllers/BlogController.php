@@ -44,9 +44,10 @@ class BlogController extends Controller
 
     public function category($slug)
     {
-        $categories = Categories::where('slug', $slug)->get();
-        $articles =  Posts::where('category_id', $categories[0]->id)->latest()->paginate(3);
+        $categoryId = Categories::where('slug', $slug)->get();
+        $articles =  Posts::where('category_id', $categoryId[0]->id)->latest()->paginate(3);
         $widgets =  Posts::orderBy('hits', 'desc')->take(5)->get();
+        $categories = Categories::get();
         $tags = Tags::get();
         return view('front.blog.articles', compact('articles', 'widgets', 'categories', 'tags'));
     }
