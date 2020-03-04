@@ -18,6 +18,7 @@ class BlogController extends Controller
     	$tags = Tags::get();
         return view('front.blog.articles', compact('articles', 'widgets', 'categories', 'tags'));
     }
+
     public function show($slug)
     {
     	$articles =  Posts::latest()->paginate(3);
@@ -30,12 +31,22 @@ class BlogController extends Controller
         Posts::where('slug', $slug)->increment('hits');
         return view('front.blog.article-details', compact('contents', 'widgets', 'articles', 'categories', 'tags', 'nextPost', 'previousPost'));
     }
+
     public function search(Request $request)
     {
         $searchQuery = strtolower($request->search);
         $articles =  Posts::whereRaw('lower(title) like (?)', ["%{$searchQuery}%"])->latest()->paginate(3);
         $widgets =  Posts::orderBy('hits', 'desc')->take(5)->get();
         $categories = Categories::get();
+        $tags = Tags::get();
+        return view('front.blog.articles', compact('articles', 'widgets', 'categories', 'tags'));
+    }
+
+    public function category($slug)
+    {
+        $categories = Categories::where('slug', $slug)->get();
+        $articles =  Posts::where('category_id', $categories[0]->id)->latest()->paginate(3);
+        $widgets =  Posts::orderBy('hits', 'desc')->take(5)->get();
         $tags = Tags::get();
         return view('front.blog.articles', compact('articles', 'widgets', 'categories', 'tags'));
     }

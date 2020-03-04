@@ -22,7 +22,7 @@
             <ul class="list cat-list">
                 @foreach($categories as $category)
                 <li>
-                    <a href="#" class="d-flex">
+                    <a href="{{ route('blog.category', $category->slug) }}" class="d-flex">
                         <p>{{ $category->name }}</p>
                     </a>
                 </li>
