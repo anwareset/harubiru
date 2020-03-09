@@ -1,5 +1,5 @@
 @extends('admin-template.page')
-@section('title', 'Konfigurasi Website')
+@section('title', 'Sites Configuration')
 @section('activeconfigurations', 'active')
 @section('content')
 
@@ -12,7 +12,7 @@
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1>Konfigurasi Website</h1>
+      <h1>Sites Configuration</h1>
     </div>
     @if (session('status'))
     <div class="alert alert-success" role="alert">
@@ -29,14 +29,14 @@
             </div>
             @enderror
             <div class="card-header py-3">
-              <h4>Konfigurasi Nama Website</h4>
+              <h4>Site's Name</h4>
             </div>
             <div class="card-body">
               <form method="POST" enctype="multipart/form-data" action="{{ route('webmanager.sites.update', '1') }}">
                 @csrf
                 @method('PATCH')
                 <div class="form-group">
-                  <label>Nama Website</label>
+                  <label>Name</label>
                   @error('appname')
                   <div class="alert alert-danger" role="alert">
                     {{ $message }}
@@ -63,10 +63,10 @@
           <div class="col-6">
             <div class="card">
               <div class="card-header" style="margin-top: -20px">
-                <h4>Ubah Logo Website</h4>
+                <h4>Change Website's Logo</h4>
                 <div class="card-header-action">
                   <div class="form-group">
-                    <label for="file-upload" class="btn btn-primary" style="margin-top: 25px;color: #fff;">Ganti Logo</label>
+                    <label for="file-upload" class="btn btn-primary" style="margin-top: 25px;color: #fff;">Change Logo</label>
                     <input id="file-upload" name="logo" type="file" />
                   </div>
                 </div>
@@ -77,7 +77,7 @@
                   {{ $message }}
                 </div>
                 @enderror
-                <div class="mb-2 text-muted">Klik Foto Untuk Menampilkan Ukuran Penuh.</div>
+                <div class="mb-2 text-muted">Click the image to display full size.</div>
                 <div class="chocolat-parent">
                   <a href="{{ asset($sites->logo) }}" class="chocolat-image" title="{{ $sites->sitename }}">
                     <div data-crop-image="285">
@@ -93,17 +93,17 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header py-3">
-                <h4>Konfigurasi Tentang Desa</h4>
+                <h4>About</h4>
               </div>
               <div class="card-body">
                 <div class="form-group">
-                  <label>Ubah Info Tentang Desa</label>
+                  <label>Change information about the site.</label>
                   <textarea id="editor" name="about">{{ $sites->about }}</textarea>
                 </div>
                 <div class="form-group">
                   <button class="btn btn-success btn-icon btn-icon-left btn-block">
                     <i class="fas fa-flag"></i>
-                    <span class="text">Update Info Tentang Desa</span>
+                    <span class="text">Save Changes</span>
                   </button>
                 </div>
               </div>

@@ -23,7 +23,7 @@
 								<span class="icon text-white-50">
 									<i class="fas fa-flag"></i>
 								</span>
-								<span class="text">Tambah Post Baru</span>
+								<span class="text">Add New Post</span>
 							</a>
 						</div>
 						<div class="card-body">
@@ -32,23 +32,23 @@
 									<thead>
 										<tr>
 											<th width="5%" class="text-center">#</th>
-											<th>Judul</th>
-											<th width="15%" class="text-center">Penulis</th>
-											<th width="20%" class="text-center">Kategori</th>
+											<th>Title</th>
+											<th width="15%" class="text-center">Author</th>
+											<th width="20%" class="text-center">Category</th>
 											<th width="20%" class="text-center">Tags</th>
-											<th width="15%" class="text-center">Gambar</th>
-											<th width="10%" class="text-center">Aksi</th>
+											<th width="15%" class="text-center">Thumbnail</th>
+											<th width="10%" class="text-center">Action</th>
 										</tr>
 									</thead>
 									<tfoot>
 										<tr>
 											<th width="5%" class="text-center">#</th>
-											<th>Judul</th>
-											<th width="15%" class="text-center">Penulis</th>
-											<th width="20%" class="text-center">Kategori</th>
+											<th>Title</th>
+											<th width="15%" class="text-center">Author</th>
+											<th width="20%" class="text-center">Category</th>
 											<th width="20%" class="text-center">Tags</th>
-											<th width="15%" class="text-center">Gambar</th>
-											<th width="10%" class="text-center">Aksi</th>
+											<th width="15%" class="text-center">Thumbnail</th>
+											<th width="10%" class="text-center">Action</th>
 										</tr>
 									</tfoot>
 									<tbody>

@@ -1,12 +1,12 @@
 @extends('admin-template.page')
-@section('title', 'Beranda')
+@section('title', 'Dashboard')
 @section('activedashboard', 'active')
 @section('content')
 <!-- Page Heading -->
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Beranda</h1>
+            <h1>Dashboard</h1>
         </div>
         <div class="section-body">
             <div class="container">
@@ -22,7 +22,7 @@
                                 </div>
                                 @endif
 
-                                Selamat datang anda telah masuk!
+                                Welcome, you're logged in!
                             </div>
                         </div>
                     </div>
