@@ -28,4 +28,6 @@
     <link rel="stylesheet" href="{{asset('front/css/slick.css')}}">
     <!-- style CSS -->
     <link rel="stylesheet" href="{{asset('front/css/style.css')}}">
+    <!-- lightbox CSS -->
+    <link rel="stylesheet" href="{{asset('front/lightbox2-2.11.1/css/lightbox.css')}}">
 </head>

@@ -1,5 +1,5 @@
 @extends('admin-template.page')
-@section('title', 'New Post')
+@section('title', 'Post Baru')
 @section('activeposts', 'active')
 @section('active_p_new', 'active')
 @section('content')
@@ -20,19 +20,14 @@
 								<span class="icon text-white-50">
 									<i class="fas fa-chevron-circle-left"></i>
 								</span>
-								<span class="text">Back</span>
+								<span class="text">Kembali</span>
 							</a>  
 						</div>
 						<div class="card-body">
 							<form method="POST" enctype="multipart/form-data" action=" {{ route('webmanager.posts.store') }} ">
 								@csrf
 								<div class="form-group">
-									<label>Title</label>
-									@if (session('status'))
-									<div class="alert alert-success" role="alert">
-										{{ session('status') }}
-									</div>
-									@endif
+									<label>Judul</label>
 									@error('title')
 									<div class="alert alert-danger" role="alert">
 										{{ $message }}
@@ -41,12 +36,7 @@
 									<input type="text" name="title" class="form-control @error('title') is-invalid @enderror" value="{{old('title')}}">
 								</div>
 								<div class="form-group">
-									<label>Category</label>
-									@if (session('status'))
-									<div class="alert alert-success" role="alert">
-										{{ session('status') }}
-									</div>
-									@endif
+									<label>Kategori</label>
 									@error('category')
 									<div class="alert alert-danger" role="alert">
 										{{ $message }}
@@ -61,11 +51,6 @@
 								</div>
 								<div class="form-group">
 									<label>Tags</label>
-									@if (session('status'))
-									<div class="alert alert-success" role="alert">
-										{{ session('status') }}
-									</div>
-									@endif
 									@error('tags')
 									<div class="alert alert-danger" role="alert">
 										{{ $message }}
@@ -78,26 +63,20 @@
 									</select>
 								</div>
 								<div class="form-group">
-									<label>Content</label>
-									@if (session('status'))
-									<div class="alert alert-success" role="alert">
-										{{ session('status') }}
-									</div>
-									@endif
+									<label>Isi Konten</label>
 									@error('content')
 									<div class="alert alert-danger" role="alert">
 										{{ $message }}
 									</div>
 									@enderror
-									<textarea id="editor" name="content" class="@error('content') is-invalid @enderror" value="{{old('content')}}"></textarea>
+									<textarea id="editor" name="content" class="form-control">
+										@if($errors->any())
+											{{ old('content') }}
+										@endif
+									</textarea>
 								</div>
 								<div class="form-group">
-									<label>Thumbnail</label>
-									@if (session('status'))
-									<div class="alert alert-success" role="alert">
-										{{ session('status') }}
-									</div>
-									@endif
+									<label>Foto</label>
 									@error('thumbnail')
 									<div class="alert alert-danger" role="alert">
 										{{ $message }}
@@ -108,7 +87,7 @@
 								<div class="form-group">
 									<button class="btn btn-success btn-icon btn-icon-left btn-block">
 										<i class="fas fa-flag"></i>
-										<span class="text">Add New Post</span>
+										<span class="text">Tambah Post Baru</span>
 									</button>
 								</div>
 							</form>

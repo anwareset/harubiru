@@ -1,12 +1,12 @@
 @extends('admin-template.page')
-@section('title', 'Accounts')
+@section('title', 'Edit Akun')
 @section('activeaccounts', 'active')
 @section('content')
 <!-- Page Heading -->
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1>Edit Account</h1>
+      <h1>Edit Akun</h1>
     </div>
     <div class="section-body">
       <div class="row">
@@ -27,7 +27,7 @@
                 <span class="icon text-white-50">
                   <i class="fas fa-chevron-circle-left"></i>
                 </span>
-                <span class="text">Back</span>
+                <span class="text">Kembali</span>
               </a>  
             </div>
             <div class="card-body">
@@ -35,7 +35,7 @@
                 @csrf
                 @method('put')
                 <div class="form-group">
-                  <label>Name</label>
+                  <label>Nama</label>
                   @if (session('status'))
                   <div class="alert alert-success" role="alert">
                     {{ session('status') }}
@@ -106,7 +106,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label>New Password</label>
+                  <label>Password Baru</label>
                   <div class="input-group">
                     <div class="input-group-prepend">
                       <div class="input-group-text">

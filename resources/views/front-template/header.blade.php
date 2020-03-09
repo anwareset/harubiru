@@ -3,7 +3,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="{{ url('') }}"> <img src="{{asset('front/img/HaruBiru.png') }}" alt="logo"> </a>
+                        <a class="navbar-brand" href="{{ url('') }}"> <img src="{{asset('front/img/image10.png') }}" alt="logo" width="120px"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -13,33 +13,20 @@
                         <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('') }}">Home</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Blog
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ url('blog') }}"> blog</a>
-                                        <a class="dropdown-item" href="{{ url('contribute') }}">Ingin Menulis?</a>
-                                    </div>
+                                    <a class="nav-link" href="{{ url('') }}">BERANDA</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="https://youtube.com">Video</a>
+                                    <a class="nav-link" href="{{ url('blog')}}">Artikel & Berita</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('portofolio') }}">Portofolio</a>
+                                    <a class="nav-link" href="{{ url('gallery') }}">Galeri</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('about') }}">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('contact') }}">Contact</a>
+                                    <a class="nav-link" href="{{ url('about') }}">TENTANG desa KAMI</a>
                                 </li>
                             </ul>
                         </div>
-                        <a href="#" class="d-none d-sm-block btn_1">Sedang Beruntung?</a>
+                        <a href="{{ url('contact') }}" class="d-none d-sm-block btn_1"><i class="fas fa-phone"></i> HUBUNGI KAMI</a>
                     </nav>
                 </div>
             </div>

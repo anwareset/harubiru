@@ -11,12 +11,13 @@ Route::get('/', function () {
 
 // Blog
 Route::get('/blog', 'BlogController@index');
+Route::get('/blog/search', 'BlogController@search')->name('blog.search');
+Route::get('/blog/category/{slug}', 'BlogController@category')->name('blog.category');
 Route::get('/blog/{slug}', 'BlogController@show')->name('blog.details');
 
 // Main Menu
-Route::get('/portofolio', function () {
-	return view('front.portofolio');
-});
+Route::get('/gallery', 'FrontGalleryController@index');
+
 Route::get('/about', function () {
 	return view('front.about');
 });
@@ -65,6 +66,10 @@ Route::group(['middleware' => 'auth'], function()
 
 	Route::prefix('webmanager')->name('webmanager.')->group(function() {
    		Route::resource('categories','CategoriesController');
+	});
+
+	Route::prefix('webmanager')->name('webmanager.')->group(function() {
+   		Route::resource('gallery','GalleryController');
 	});
 
 	Route::prefix('webmanager')->name('webmanager.')->group(function() {

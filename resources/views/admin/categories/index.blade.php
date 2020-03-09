@@ -1,5 +1,5 @@
 @extends('admin-template.page')
-@section('title', 'Categories')
+@section('title', 'Kategori')
 @section('activecategories', 'active')
 @section('active_c_lists', 'active')
 @section('content')
@@ -8,7 +8,7 @@
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1>Category</h1>
+      <h1>Kategori</h1>
     </div>
     <div class="section-body">
       <div class="row">
@@ -24,7 +24,7 @@
                 <span class="icon text-white-50">
                   <i class="fas fa-flag"></i>
                 </span>
-                <span class="text">Add New Category</span>
+                <span class="text">Tambah Kategori Baru</span>
               </a>
             </div>
             <div class="card-body">
@@ -33,15 +33,15 @@
                   <thead>
                     <tr>
                       <th width="5%" class="text-center">#</th>
-                      <th>Name</th>
-                      <th width="10%" class="text-center">Action</th>
+                      <th>Nama</th>
+                      <th width="10%" class="text-center">Aksi</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
                       <th width="5%" class="text-center">#</th>
-                      <th>Name</th>
-                      <th width="10%" class="text-center">Action</th>
+                      <th>Nama</th>
+                      <th width="10%" class="text-center">Aksi</th>
                     </tr>
                   </tfoot>
                   <tbody>

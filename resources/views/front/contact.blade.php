@@ -1,30 +1,34 @@
 @extends('front-template.page')
-@section('title', 'Contact')
-@section('breadcrumb1', 'Contact Us')
-@section('breadcrumb2', 'Contact')
+@section('title', 'Hubungi Kami')
+@section('breadcrumb1', 'Hubungi Kami')
+@section('breadcrumb2', 'Hubungi Kami')
 @section('content')
 <section class="sample-text-area">
-    <div class="container box_1170">
-        <h3 class="text-heading">Text Sample</h3>
-        <p class="sample-text">
-            Every avid independent filmmaker has <b>Bold</b> about making that <i>Italic</i> interest documentary,
-            or short
-            film to show off their creative prowess. Many have great ideas and want to “wow”
-            the<sup>Superscript</sup> scene,
-            or video renters with their big project. But once you have the<sub>Subscript</sub> “in the can” (no easy
-            feat), how
-            do you move from a <del>Strike</del> through of master DVDs with the <u>“Underline”</u> marked
-            hand-written title
-            inside a secondhand CD case, to a pile of cardboard boxes full of shiny new, retail-ready DVDs, with UPC
-            barcodes
-            and polywrap sitting on your doorstep? You need to create eye-popping artwork and have your project
-            replicated.
-            Using a reputable full service DVD Replication company like PacificDisc, Inc. to partner with is
-            certainly a
-            helpful option to ensure a professional end result, but to help with your DVD replication project, here
-            are 4 easy
-            steps to follow for good DVD replication results:
-        </p>
+    <div class="container">
+        <section class="testimonials text-center bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3" src="assets/img/testimonials-1.jpg">
+                            <h5>Hj. Dr. Leon</h5>
+                            <p class="font-weight-light mb-0">Bu Kades</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3" src="assets/img/testimonials-2.jpg">
+                            <h5>Hj. Leon</h5>
+                            <p class="font-weight-light mb-0">Wakil Bu Kades</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3" src="assets/img/testimonials-3.jpg">
+                            <h5>Dr. Leon</h5>
+                            <p class="font-weight-light mb-0">Ibu Carik</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </section>
 @endsection

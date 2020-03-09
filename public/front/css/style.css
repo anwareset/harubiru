@@ -720,6 +720,15 @@ ul {
   background-color: transparent;
 }
 
+/* hover button 'lanjutkan membaca' on landing page */
+.rotate{
+  margin-right: 10px;
+}
+.rotate:hover{
+  transform: rotate(-90deg);
+  transition-duration: 0.5s;
+}
+
 @media (max-width: 576px) {
   /* line 58, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_button.scss */
   .btn_2 {
@@ -6334,3 +6343,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* Galeri */
+.fixgaleri{
+  height: 375px; width: 450px; object-fit: cover;
+  margin: 10px;
+}
+.boxym{
+  height: 375px; width: 450px;
+}
+.boxym:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+  opacity: 0.9; 
+}
+
+/*TypeWriter*/
+span.cursor {
+  display: inline-block;
+  background-color: #373737;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0%  { background-color: #373737; }
+  49% { background-color: #373737; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #373737; }
+}

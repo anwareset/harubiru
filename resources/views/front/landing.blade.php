@@ -21,33 +21,20 @@
                         <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('') }}">Home</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Blog
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ url('blog') }}"> blog</a>
-                                        <a class="dropdown-item" href="{{ url('contribute') }}">Ingin Menulis?</a>
-                                    </div>
+                                    <a class="nav-link" href="{{ url('') }}">beranda</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="https://youtube.com">Video</a>
+                                    <a class="nav-link" href="{{ url('blog') }}">Artikel & Berita</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('portofolio') }}">Portofolio</a>
+                                    <a class="nav-link" href="{{ url('gallery') }}">Galeri</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('about') }}">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('contact') }}">Contact</a>
+                                    <a class="nav-link" href="{{ url('about') }}">tentang desa kami</a>
                                 </li>
                             </ul>
                         </div>
-                        <a href="#" class="d-none d-sm-block btn_1 home_page_btn">Sedang Beruntung?</a>
+                        <a href="{{ url('contact') }}" class="d-none d-sm-block btn_1 home_page_btn"><i class="fas fa-phone"></i> HUBUNGI KAMI</a>
                     </nav>
                 </div>
             </div>
@@ -67,12 +54,10 @@
                 <div class="col-lg-6">
                     <div class="banner_text">
                         <div class="banner_text_iner">
-                            <h1>Hadirkan Teknologi
-                                Untuk <a class="typewrite" data-period="2000" data-type='[ "Aku", "Kamu", "Semua" ]'></a></h1>
-                            <p>Anda sedang berada dalam mesin inkubator,
-                                dan mesin ini akan membantu anda tetap bertahan
-                                hidup. Lalu bertumbuh kembang menghadapi dunia teknologi.</p>
-                            <a href="{{ url('blog') }}" class="btn_2">Ayo Mempelajarinya</a>
+                            <h1>Desa Jati, <br>
+                                Untuk <span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
+                            <p>Jati adalah desa yang mayoritas penduduknya petani, tempat pendidikannya SD, MI dan SMPN Tarokan serta. beberapa Ponpes yang berada di kecamatan Tarokan, Kabupaten Kediri, Jawa Timur, Indonesia. Di desa ini terdapat industri rumah tangga yaitu tahu tempe bengkel pembuat alat pertanian seperti mesin perontok padi/jagung yang bergerak dalam pembuatan tempe.</p>
+                            <a href="{{ url('#fuck') }}" class="btn_2" style="text-align: center;"><li class="fas fa-angle-double-down rotate"></li> Lanjutkan Membaca</a>
                         </div>
                     </div>
                 </div>
@@ -88,39 +73,36 @@
     <!--::banner part start::-->
 
     <!--::use sasu part end::-->
-    <section class="use_sasu padding_top">
+    <section class="use_sasu padding_top" id="fuck">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-sm-6">
                     <div class="single_feature">
                         <div class="single_feature_part">
-                            <img src="{{asset('front/img/icon/feature_icon_1.png') }}" alt="">
-                            <h4>Amankan Diri</h4>
-                            <p>Mari mencari tahu bagaimana suatu hal dapat bekerja lalu belajar
-                            cara mengamankannya agar tetap terlindungi dari berbagai kemungkinan
-                            buruk. </p>
+                            <!-- <img src="{{asset('front/img/icon/feature_icon_1.png') }}" alt=""> -->
+                            <li class="fas fa-leaf" style="font-size: 30px; margin-bottom: 20px;"></li>
+                            <h4>Lahan Desa</h4>
+                            <p>Desa ini cocok untuk lahan pertanian dan perkebunan. Dengan luas sebesar <strong>3,7338 km²</strong></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="single_feature">
                         <div class="single_feature_part">
-                            <img src="{{asset('front/img/icon/feature_icon_2.png') }}" alt="">
-                            <h4>Bebaskan Diri</h4>
-                            <p>Melepaskan diri dari hal mainstream.
-                            Tuangkan ide ke suatu hal, dan temukan sebuah
-                            inovasi. Karena setiap individu adalah unik. </p>
+                            <!-- <img src="{{asset('front/img/icon/feature_icon_2.png') }}" alt=""> -->
+                            <li class="fas fa-users"  style="font-size: 30px; margin-bottom: 20px;"></li>
+                            <h4>Jumlah Penduduk</h4>
+                            <p>Tercatat Desa Jati memiliki 7.736 Penduduk, dengan kepadatan +- 2.000 jiwa/km²</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="single_feature">
                         <div class="single_feature_part">
-                            <img src="{{asset('front/img/icon/feature_icon_3.png') }}" alt="">
-                            <h4>Tumpukan Teknologi</h4>
-                            <p>Sudahi kebiasaan konsumeris, karena diluar sana
-                            ada banyak tumpukan teknologi yang dapat digunakan untuk membangun
-                            kebutuhanmu sendiri. </p>
+                            <!-- <img src="{{asset('front/img/icon/feature_icon_3.png') }}" alt=""> -->
+                            <li class="fas fa-book"  style="font-size: 30px; margin-bottom: 20px;"></li>
+                            <h4>Desa Pendidikan</h4>
+                            <p>Lebih dari 1 sekolah tersebar di desa ini. </p>
                         </div>
                     </div>
                 </div>
@@ -168,10 +150,10 @@
                 <div class="col-md-6 col-lg-5">
                     <div class="about_us_text">
                         <img src="{{asset('front/img/icon/Icon_2.png')}}" alt="">
-                        <h2>Berkumpul dan berdiskusi bersama</h2>
-                        <p>Lelah menjadi individu kesepian? Ayo berkumpul dalam lingkungan diskusi komunal.
-                        Bertukar pikiran pada komune bersama-sama di Telegram.</p>
-                        <a href="#" class="btn_2">Bergabung</a>
+                        <h2>Anda memiliki info dan ingin membagikannya?</h2>
+                        <p>Lelah menjadi individu kesepian? Mulailah menulis artikel anda sendiri, dan berbagilah informasi
+                        kepada teman-teman anda.</p>
+                        <a href="{{ url('register') }}" class="btn_2">Bergabung</a>
                     </div>
                 </div>
             </div>
@@ -207,14 +189,14 @@
                             <img src="{{asset('front/img/client_logo/nginx.png')}}" alt="">
                         </div>
                         <div class="single_client_logo">
+                            <img src="{{asset('front/img/client_logo/mariadb.png')}}" alt="">
+                        </div>
+                        <!-- <div class="single_client_logo">
                             <img src="{{asset('front/img/client_logo/heroku.png')}}" alt="">
                         </div>
                         <div class="single_client_logo">
-                            <img src="{{asset('front/img/client_logo/mariadb.png')}}" alt="">
-                        </div>
-                        <div class="single_client_logo">
                             <img src="{{asset('front/img/client_logo/docker.png')}}" alt="">
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -228,6 +210,14 @@
 
     <!-- JavaScript -->
     @include('front-template.js')
+    <script>
+        $('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+});
+    </script>
 </body>
 
 </html>
