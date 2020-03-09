@@ -1,7 +1,7 @@
 @extends('front-template.page')
-@section('title', 'Artikel')
-@section('breadcrumb1', 'Artikel')
-@section('breadcrumb2', 'Artikel')
+@section('title', 'Articles')
+@section('breadcrumb1', 'Articles')
+@section('breadcrumb2', 'Articles')
 @section('content')
 <section class="blog_area section_padding">
         <div class="container">
@@ -45,7 +45,7 @@
                         <center>
                             <img style="max-width: 260px; object-fit: cover;" src="{{ asset('assets/img/sadly-not-found.jpg') }}">
                             <h2>Oops!</h2>
-                            <p>Artikel tidak ditemukan</p>
+                            <p>Article Not Found</p>
                         </center>
                         @endif
                     </div>
