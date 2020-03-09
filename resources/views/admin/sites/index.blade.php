@@ -54,7 +54,7 @@
                 <div class="form-group">
                   <button class="btn btn-success btn-icon btn-icon-left btn-block">
                     <i class="fas fa-flag"></i>
-                    <span class="text">Update Nama Website</span>
+                    <span class="text">Save Changes</span>
                   </button>
                 </div>
               </div>
@@ -80,7 +80,7 @@
                 <div class="mb-2 text-muted">Click the image to display full size.</div>
                 <div class="chocolat-parent">
                   <a href="{{ asset($sites->logo) }}" class="chocolat-image" title="{{ $sites->sitename }}">
-                    <div data-crop-image="285">
+                    <div data-crop-image="100">
                       <img alt="image" src="{{ asset($sites->logo) }}" class="img-fluid">
                     </div>
                   </a>
