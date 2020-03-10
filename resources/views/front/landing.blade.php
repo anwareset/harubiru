@@ -40,7 +40,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <a href="#" class="d-none d-sm-block btn_1 home_page_btn">Sedang Beruntung?</a>
+                        <a href="{{ route('blog.luck') }}" class="d-none d-sm-block btn_1 home_page_btn">Sedang Beruntung?</a>
                     </nav>
                 </div>
             </div>
