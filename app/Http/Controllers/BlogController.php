@@ -76,13 +76,7 @@ class BlogController extends Controller
 
     public function luck()
     {
-        $widgets =  Posts::orderBy('hits', 'desc')->take(5)->get();
-        $categories = Categories::get();
-        $tags = Tags::all();
-        $contents = Posts::inRandomOrder()->get();
-        $previousPost = Posts::where('id', '<', $contents[0]->id)->orderBy('id','desc')->first();
-        $nextPost = Posts::where('id', '>', $contents[0]->id)->orderBy('id','asc')->first();
-        Posts::where('slug', $contents[0]->slug)->increment('hits');
-        return view('front.blog.article-details', compact('contents', 'widgets', 'categories', 'tags', 'nextPost', 'previousPost'));
+        $contents = Posts::inRandomOrder()->first();
+        return redirect()->route('blog.details', $contents->slug);
     }
 }
