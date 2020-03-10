@@ -28,7 +28,7 @@
                 <div class="single_footer_part">
                     <h4>Quick Links</h4>
                     <ul class="list-unstyled">
-                        <li><a href="{{ url('licensed') }}">License</a></li>
+                        <li><a href="{{ url('license') }}">License</a></li>
                         <li><a href="{{ url('privacy-policy') }}">Privacy & Policy</a></li>
                         <li><a href="{{ url('contribute') }}">Contribute</a></li>
                     </ul>
@@ -62,7 +62,7 @@
                             <li><a href="#" class="single_social_icon"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="#" class="single_social_icon"><i class="fab fa-telegram"></i></a></li>
                             <li><a href="#" class="single_social_icon"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#" class="single_social_icon"><i class="fab fa-github"></i></a></li>
+                            <li><a href="https://github.com/anwareset/harubiru" class="single_social_icon"><i class="fab fa-github"></i></a></li>
                         </ul>
                     </div>
                 </div>

@@ -15,15 +15,8 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ url('') }}">Home</a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Blog
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ url('blog') }}"> blog</a>
-                                        <a class="dropdown-item" href="{{ url('contribute') }}">Ingin Menulis?</a>
-                                    </div>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url('blog') }}">Blog</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="https://youtube.com">Video</a>
@@ -39,7 +32,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <a href="#" class="d-none d-sm-block btn_1">Sedang Beruntung?</a>
+                        <a href="{{ route('blog.luck') }}" class="d-none d-sm-block btn_1">Sedang Beruntung?</a>
                     </nav>
                 </div>
             </div>

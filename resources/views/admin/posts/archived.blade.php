@@ -1,5 +1,5 @@
 @extends('admin-template.page')
-@section('title', 'Posts')
+@section('title', 'Archived Posts')
 @section('activeposts', 'active')
 @section('active_p_archived', 'active')
 @section('content')
@@ -32,7 +32,7 @@
 									<span class="icon text-white-50">
 										<i class="fas fa-trash"></i>
 									</span>
-									<span class="text">Clean All Archive</span>
+									<span class="text">Delete All</span>
 								</button>
 							</form>
 						</div>
@@ -52,7 +52,7 @@
 									<tfoot>
 										<tr>
 											<th width="5%" class="text-center">#</th>
-											<th class="text-center">Title</th>
+											<th>Title</th>
 											<th width="20%" class="text-center">Category</th>
 											<th width="20%" class="text-center">Tags</th>
 											<th width="15%" class="text-center">Thumbnail</th>

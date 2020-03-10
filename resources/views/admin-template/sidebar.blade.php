@@ -1,19 +1,18 @@
 <div class="main-sidebar sidebar-style-2">
   <aside id="sidebar-wrapper">
     <div class="sidebar-brand">
-      <a href="index.html">{{ App\Sites::first()->sitename }}</a>
+      <a href="{{ route('webmanager') }}">{{ App\Sites::first()->sitename }}</a>
     </div>
     <div class="sidebar-brand sidebar-brand-sm">
-      <a href="index.html">St</a>
     </div>
     <ul class="sidebar-menu">
       <li class="@yield('activedashboard')"><a class="nav-link" href="{{ route('webmanager') }}"><i class="fas fa-fire"></i> <span>Dashboard</span></a>
       </li>
-      <li class="menu-header">Articles</li>
+      <li class="menu-header">Artikel</li>
       <li class="dropdown @yield('activeposts')">
         <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-alt"></i><span>Posts</span></a>
         <ul class="dropdown-menu">
-          <li class="@yield('active_p_new')"><a class="nav-link" href="{{ route('webmanager.posts.create') }}">New Posts</a></li>
+          <li class="@yield('active_p_new')"><a class="nav-link" href="{{ route('webmanager.posts.create') }}">New Post</a></li>
           <li class="@yield('active_p_lists')"><a class="nav-link" href="{{ route('webmanager.posts.index') }}">Lists</a></li>
           <li class="@yield('active_p_archived')"><a class="nav-link" href="{{ route('webmanager.posts.archived') }}">Archived</a></li>
         </ul>
@@ -22,7 +21,7 @@
       <li class="dropdown @yield('activecategories')">
         <a href="#" class="nav-link has-dropdown"><i class="fas fa-book"></i><span>Category</span></a>
         <ul class="dropdown-menu">
-          <li class="@yield('active_c_add')"><a class="nav-link" href="{{ route('webmanager.categories.create') }}">Add Category</a></li>
+          <li class="@yield('active_c_add')"><a class="nav-link" href="{{ route('webmanager.categories.create') }}">Add Kategori</a></li>
           <li class="@yield('active_c_lists')"><a class="nav-link" href="{{ route('webmanager.categories.index') }}">Lists</a></li>
         </ul>
       </li>

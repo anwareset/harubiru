@@ -18,20 +18,47 @@ class ProfilesController extends Controller
     {
         $request->validate([
             'name' => 'required|min:3|max:40',
-            'email' => 'required|email'
+            'avatar' => 'image|mimes:jpeg,png,jpg',
+            'email' => 'required|email',
+            'bio' => 'required|min:15|max:150'
         ]);
 
         if ($request->input('password')) {
-            $user_data = [
-                'name' => $request->name,
-                'email' => $request->email,
-                'password' => bcrypt($request->password)
-            ];
+            if ($request->has('avatar')) {
+                $tmp_avatar =  time().$request->avatar->getClientOriginalName();
+                $request->avatar->move(public_path('upload/img/avatar/'), $tmp_avatar);
+                $user_data = [
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'password' => bcrypt($request->password),
+                    'bio' => $request->bio,
+                    'avatar' => 'upload/img/avatar/'.$tmp_avatar
+                ];
+            } else {
+                $user_data = [
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'bio' => $request->bio,
+                    'password' => bcrypt($request->password)
+                ];
+            }
         } else {
-            $user_data = [
-                'name' => $request->name,
-                'email' => $request->email
-            ];
+            if ($request->has('avatar')) {
+                $tmp_avatar =  time().$request->avatar->getClientOriginalName();
+                $request->avatar->move(public_path('upload/img/avatar/'), $tmp_avatar);
+                $user_data = [
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'bio' => $request->bio,
+                    'avatar' => 'upload/img/avatar/'.$tmp_avatar
+                ];
+            } else {
+                $user_data = [
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'bio' => $request->bio
+                ];
+            }
         }
         User::whereId($id)->update($user_data);
         return redirect()->route('webmanager.profiles.index')->with('status', 'Profile Updated!');

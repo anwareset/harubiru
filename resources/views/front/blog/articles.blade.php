@@ -1,13 +1,14 @@
 @extends('front-template.page')
-@section('title', 'Blog')
+@section('title', 'Articles')
 @section('breadcrumb1', 'Articles')
-@section('breadcrumb2', 'Blog')
+@section('breadcrumb2', 'Articles')
 @section('content')
 <section class="blog_area section_padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mb-5 mb-lg-0">
                     <div class="blog_left_sidebar">
+                        @if(count($articles))
                         @foreach ($articles as $article)
                         <article class="blog_item">
                             <div class="blog_item_img">
@@ -24,10 +25,10 @@
                                 <a class="d-inline-block" href="{{ route('blog.details', $article->slug) }}">
                                     <h2>{{ $article->title }}</h2>
                                 </a>
-                                <p>{!! Str::limit($article->content, 150, '...') !!}</p>
+                                <p>{!! Str::limit($article->content, 250, '...') !!}</p>
                                 <ul class="blog-info-link">
-                                    <li><a href="{{ route('blog.details', $article->slug) }}"><i class="far fa-bookmark"></i> {{ $article->category->name }}</a></li>
-                                    <li><a href="{{ route('blog.details', $article->slug) }}"><i class="far fa-comment-alt"></i> 03 Comments</a></li>
+                                    <li><a href="{{ route('blog.category', $article->category->slug) }}"><i class="far fa-bookmark"></i> {{ $article->category->name }}</a></li>
+                                    <li><a href="{{ route('blog.author', $article->users->id) }}"><i class="fas fa-user-alt"></i> {{ $article->users->name }}</a></li>
                                 </ul>
                             </div>
                         </article>
@@ -40,6 +41,13 @@
                                 </div>
                             </ul>
                         </nav>
+                        @else
+                        <center>
+                            <img style="max-width: 260px; object-fit: cover;" src="{{ asset('assets/img/sadly-not-found.jpg') }}">
+                            <h2>Oops!</h2>
+                            <p>Article Not Found</p>
+                        </center>
+                        @endif
                     </div>
                 </div>
                 @include('front-template.widgets')

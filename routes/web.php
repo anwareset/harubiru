@@ -11,12 +11,13 @@ Route::get('/', function () {
 
 // Blog
 Route::get('/blog', 'BlogController@index');
+Route::get('/blog/search', 'BlogController@search')->name('blog.search');
+Route::get('/blog/luck', 'BlogController@luck')->name('blog.luck');
+Route::get('/blog/category/{slug}', 'BlogController@category')->name('blog.category');
+Route::get('/blog/tag/{slug}', 'BlogController@tag')->name('blog.tag');
+Route::get('/blog/author/{id}', 'BlogController@author')->name('blog.author');
 Route::get('/blog/{slug}', 'BlogController@show')->name('blog.details');
 
-// Main Menu
-Route::get('/portofolio', function () {
-	return view('front.portofolio');
-});
 Route::get('/about', function () {
 	return view('front.about');
 });

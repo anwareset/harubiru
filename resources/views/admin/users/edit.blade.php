@@ -1,12 +1,12 @@
 @extends('admin-template.page')
-@section('title', 'Accounts')
+@section('title', 'Accounts Edit')
 @section('activeaccounts', 'active')
 @section('content')
 <!-- Page Heading -->
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1>Edit Account</h1>
+      <h1>Accounts Edit</h1>
     </div>
     <div class="section-body">
       <div class="row">
@@ -123,7 +123,7 @@
                 <div class="form-group">
                   <button class="btn btn-success btn-icon btn-icon-left btn-block">
                     <i class="fas fa-flag"></i>
-                    <span class="text">Update User</span>
+                    <span class="text">Save Changes</span>
                   </button>
                 </div>
               </form>

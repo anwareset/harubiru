@@ -43,7 +43,7 @@
 									<tfoot>
 										<tr>
 											<th width="5%" class="text-center">#</th>
-											<th class="text-center">Title</th>
+											<th>Title</th>
 											<th width="15%" class="text-center">Author</th>
 											<th width="20%" class="text-center">Category</th>
 											<th width="20%" class="text-center">Tags</th>

@@ -22,7 +22,7 @@
                                 </div>
                                 @endif
 
-                                You are logged in!
+                                Welcome, you're logged in!
                             </div>
                         </div>
                     </div>

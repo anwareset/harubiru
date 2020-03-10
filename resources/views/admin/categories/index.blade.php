@@ -1,5 +1,5 @@
 @extends('admin-template.page')
-@section('title', 'Categories')
+@section('title', 'Caregory')
 @section('activecategories', 'active')
 @section('active_c_lists', 'active')
 @section('content')
@@ -24,7 +24,7 @@
                 <span class="icon text-white-50">
                   <i class="fas fa-flag"></i>
                 </span>
-                <span class="text">Add New Category</span>
+                <span class="text">Add New</span>
               </a>
             </div>
             <div class="card-body">

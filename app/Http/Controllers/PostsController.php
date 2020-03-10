@@ -29,9 +29,9 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title'     => 'required|min:15',
+            'title'     => 'required|min:13',
             'content'   => 'required',
-            'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'thumbnail' => 'required|image|mimes:jpeg,png,jpg',
             'category'  => 'required'
         ]);
 
@@ -40,6 +40,7 @@ class PostsController extends Controller
         Posts::create([
             'title' => $request->title,
             'content' => $request->content,
+            'hits' => '1',
             'thumbnail' => 'upload/img/thumb/'.$tmp_thumbnail,
             'category_id' => $request->category,
             'slug' => Str::slug($request->title),
@@ -64,6 +65,12 @@ class PostsController extends Controller
     public function update(Request $request, $id)
     {
         $posts = Posts::findorfail($id);
+
+        $request->validate([
+            'title'     => 'required|min:13',
+            'content'   => 'required',
+            'category'  => 'required'
+        ]);
 
         if($request->has('thumbnail')){
             $tmp_thumbnail =  time().$request->thumbnail->getClientOriginalName();

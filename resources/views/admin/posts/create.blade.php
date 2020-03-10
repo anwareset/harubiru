@@ -28,11 +28,6 @@
 								@csrf
 								<div class="form-group">
 									<label>Title</label>
-									@if (session('status'))
-									<div class="alert alert-success" role="alert">
-										{{ session('status') }}
-									</div>
-									@endif
 									@error('title')
 									<div class="alert alert-danger" role="alert">
 										{{ $message }}
@@ -42,11 +37,6 @@
 								</div>
 								<div class="form-group">
 									<label>Category</label>
-									@if (session('status'))
-									<div class="alert alert-success" role="alert">
-										{{ session('status') }}
-									</div>
-									@endif
 									@error('category')
 									<div class="alert alert-danger" role="alert">
 										{{ $message }}
@@ -61,11 +51,6 @@
 								</div>
 								<div class="form-group">
 									<label>Tags</label>
-									@if (session('status'))
-									<div class="alert alert-success" role="alert">
-										{{ session('status') }}
-									</div>
-									@endif
 									@error('tags')
 									<div class="alert alert-danger" role="alert">
 										{{ $message }}
@@ -79,25 +64,19 @@
 								</div>
 								<div class="form-group">
 									<label>Content</label>
-									@if (session('status'))
-									<div class="alert alert-success" role="alert">
-										{{ session('status') }}
-									</div>
-									@endif
 									@error('content')
 									<div class="alert alert-danger" role="alert">
 										{{ $message }}
 									</div>
 									@enderror
-									<textarea id="editor" name="content" class="@error('content') is-invalid @enderror" value="{{old('content')}}"></textarea>
+									<textarea id="editor" name="content" class="form-control">
+										@if($errors->any())
+											{{ old('content') }}
+										@endif
+									</textarea>
 								</div>
 								<div class="form-group">
 									<label>Thumbnail</label>
-									@if (session('status'))
-									<div class="alert alert-success" role="alert">
-										{{ session('status') }}
-									</div>
-									@endif
 									@error('thumbnail')
 									<div class="alert alert-danger" role="alert">
 										{{ $message }}
@@ -108,7 +87,7 @@
 								<div class="form-group">
 									<button class="btn btn-success btn-icon btn-icon-left btn-block">
 										<i class="fas fa-flag"></i>
-										<span class="text">Add New Post</span>
+										<span class="text">Publish New Post</span>
 									</button>
 								</div>
 							</form>

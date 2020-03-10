@@ -1,12 +1,12 @@
 <div class="col-lg-4">
     <div class="blog_right_sidebar">
         <aside class="single_sidebar_widget search_widget">
-            <form action="#">
+            <form method="GET" action="{{ route('blog.search') }}">
                 <div class="form-group">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder='Find Something'
+                        <input name="search" type="text" class="form-control" placeholder='Find Articles'
                         onfocus="this.placeholder = ''"
-                        onblur="this.placeholder = 'Find Something'">
+                        onblur="this.placeholder = 'Find Articles'">
                         <div class="input-group-append">
                             <button class="btn" type="button"><i class="ti-search"></i></button>
                         </div>
@@ -22,7 +22,7 @@
             <ul class="list cat-list">
                 @foreach($categories as $category)
                 <li>
-                    <a href="#" class="d-flex">
+                    <a href="{{ route('blog.category', $category->slug) }}" class="d-flex">
                         <p>{{ $category->name }}</p>
                     </a>
                 </li>
@@ -31,7 +31,7 @@
         </aside>
 
         <aside class="single_sidebar_widget popular_post_widget">
-            <h3 class="widget_title">Popular Post</h3>
+            <h3 class="widget_title">Popular Posts</h3>
             @foreach($widgets as $widget)
             <div class="media post_item">
                 <img src="{{ asset($widget->thumbnail) }}" style="width: 85px; height: 85px; object-fit: cover;" alt="post">
@@ -49,7 +49,7 @@
             <ul class="list">
                 @foreach($tags as $tag)
                 <li>
-                    <a href="#">{{ $tag->name }}</a>
+                    <a href="{{ route('blog.tag', $tag->slug) }}">{{ $tag->name }}</a>
                 </li>
                 @endforeach
             </ul>

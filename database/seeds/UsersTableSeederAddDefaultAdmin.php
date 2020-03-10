@@ -6,18 +6,15 @@ use Illuminate\Support\Facades\DB;
 
 class UsersTableSeederAddDefaultAdmin extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
         DB::table('users')->insert([
             'name' => 'administrator',
             'email' => 'admin@harubiru.test',
             'level' => '1',
-            'password' => bcrypt('admin')
+            'password' => bcrypt('admin'),
+            'bio' => 'Dominate nobody but yourself',
+            'avatar' => 'assets/img/avatar/avatar-1.png'
         ]);
     }
 }

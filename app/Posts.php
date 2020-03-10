@@ -9,7 +9,7 @@ class Posts extends Model
 {
 	use SoftDeletes;
 
-	protected $fillable = ['title', 'category_id', 'content', 'thumbnail', 'slug', 'users_id'];
+	protected $fillable = ['title', 'category_id', 'content', 'thumbnail', 'slug', 'users_id', 'hits'];
 
     public function category(){
     	return $this->belongsTo('App\Categories');

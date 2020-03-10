@@ -24,7 +24,7 @@
                 <span class="icon text-white-50">
                   <i class="fas fa-user-plus"></i>
                 </span>
-                <span class="text">Create New Account</span>
+                <span class="text">Add New</span>
               </a>
             </div>
             <div class="card-body">
