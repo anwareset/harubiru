@@ -7,9 +7,13 @@ class CategoryTableSeeder extends Seeder
 
     public function run()
     {
-        DB::table('categories')->insert([
-            'name' => 'News',
-            'slug' => 'news'
-        ]);
+        $categories = [
+        	['name' => 'News', 'slug' => 'news'],
+        	['name' => 'GNU/Linux', 'slug' => 'gnu-linux'],
+        	['name' => 'Networking', 'slug' => 'networking'],
+        	['name' => 'Programming', 'slug' => 'programming']
+        ];
+
+        DB::table('categories')->insert($categories);
     }
 }

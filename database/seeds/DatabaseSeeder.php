@@ -11,7 +11,9 @@ class DatabaseSeeder extends Seeder
 	        SiteconfigTableSeederAddSiteName::class,
 	        TagsTableSeeder::class,
 	        CategoryTableSeeder::class,
-	        PostTableSeeder::class
+	        PostTableSeeder::class,
+	        PostsTagsTableSeeder::class
+
 	    ]);
     }
 }

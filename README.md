@@ -9,8 +9,9 @@ A simple CMS (Content Management System) for blogging that builded with Laravel 
 Run this command
 ```text
 mysqladmin -uroot -p create harubiru
-composer install
 cp .env.example .env
+composer install
+composer dump-autoload
 php artisan key:generate
 php artisan migrate:fresh --seed
 ```
