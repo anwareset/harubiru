@@ -60,7 +60,15 @@ class BlogController extends Controller
                 $join->on('posts.id', '=', 'posts_tags.posts_id')
                 ->where('posts_tags.tags_id', '=', $idTag[0]->id);
         })->latest()->paginate(3);
-        //$articles =  Posts::where('category_id', $categoryId[0]->id)->latest()->paginate(3);
+        $widgets =  Posts::orderBy('hits', 'desc')->take(5)->get();
+        $categories = Categories::get();
+        $tags = Tags::get();
+        return view('front.blog.articles', compact('articles', 'widgets', 'categories', 'tags'));
+    }
+
+    public function author($id)
+    {
+        $articles =  Posts::where('users_id', $id)->latest()->paginate(3);
         $widgets =  Posts::orderBy('hits', 'desc')->take(5)->get();
         $categories = Categories::get();
         $tags = Tags::get();

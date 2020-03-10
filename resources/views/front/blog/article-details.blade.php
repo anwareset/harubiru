@@ -123,7 +123,7 @@
                      @foreach ($contents as $content)
                      <img src="{{ asset(App\User::findorfail($content->users->id)->avatar) }}" alt="">
                      <div class="media-body">
-                        <a href="#">
+                        <a href="{{ route('blog.author', $content->users->id) }}">
                            <h4>{{ $content->users->name }} </h4>
                         </a>
                         <p>{{ $content->users->bio }}</p>

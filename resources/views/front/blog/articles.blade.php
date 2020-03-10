@@ -27,8 +27,8 @@
                                 </a>
                                 <p>{!! Str::limit($article->content, 250, '...') !!}</p>
                                 <ul class="blog-info-link">
-                                    <li><a href="{{ route('blog.details', $article->slug) }}"><i class="far fa-bookmark"></i> {{ $article->category->name }}</a></li>
-                                    <li><a href="{{ route('blog.details', $article->slug) }}"><i class="fas fa-user-alt"></i> {{ $article->users->name }}</a></li>
+                                    <li><a href="{{ route('blog.category', $article->category->slug) }}"><i class="far fa-bookmark"></i> {{ $article->category->name }}</a></li>
+                                    <li><a href="{{ route('blog.author', $article->users->id) }}"><i class="fas fa-user-alt"></i> {{ $article->users->name }}</a></li>
                                 </ul>
                             </div>
                         </article>
