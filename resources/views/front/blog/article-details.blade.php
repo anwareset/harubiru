@@ -19,8 +19,12 @@
                   <div class="blog_details">
                      <h2>{{ $content->title }}</h2>
                      <ul class="blog-info-link mt-3 mb-4">
-                        <li><a href="#"><i class="far fa-bookmark"></i> {{ $content->category->name }}</a></li>
-                        <li><a href="#"><i class="fas fa-tags"></i> Digae, tags, ae, pye?</a></li>
+                        <li><a href="{{ route('blog.category', $content->category->slug) }}"><i class="far fa-bookmark"></i> {{ $content->category->name }}</a></li>
+                        <li><i class="fas fa-tags"></i>
+                           @foreach($content->tags as $tag)
+                           <a href="{{ route('blog.tag', $tag->slug) }}">{{ $tag->name }}&nbsp;</a>
+                           @endforeach
+                        </li>
                      </ul>
                      {!! $content->content !!}
                   </div>
