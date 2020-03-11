@@ -43,3 +43,8 @@ You can access the <b>landing page</b> by visit <b>http://harubiru.test</b>
 
 ## Admin Page
 You can access the <b>manager page</b> by visit <b>http://harubiru.test/webmanager</b>
+
+## To Do
+- [x] Pull <b>desajati</b> to <b>master</b> and adjustment
+- [ ] Add some textbox form in Site Settings (BackEnd)
+- [ ] Create Dashboard items
