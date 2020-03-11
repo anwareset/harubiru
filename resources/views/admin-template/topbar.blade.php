@@ -13,9 +13,11 @@
               <a href="{{ route('webmanager.profiles.index') }}" class="dropdown-item has-icon">
                 <i class="far fa-user"></i> Profile
               </a>
+              @if(Auth::user()->level == 1)
               <a href="{{ route('webmanager.sites.index') }}" class="dropdown-item has-icon">
                 <i class="fas fa-cog"></i> Settings
               </a>
+              @endif
               <div class="dropdown-divider"></div>
               <a class="dropdown-item has-icon text-danger" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 <i class="fas fa-sign-out-alt"></i>{{ __('Log Out') }}

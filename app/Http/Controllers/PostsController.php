@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Posts;
 use App\Categories;
 use App\Tags;
+use App\User;
 use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -15,7 +16,11 @@ class PostsController extends Controller
 
     public function index()
     {
-        $posts =  Posts::latest()->paginate();
+        if (Auth::user()->level == 1) {
+            $posts =  Posts::latest()->paginate();
+        } else {
+            $posts =  Posts::where('users_id', '=', Auth::id())->latest()->paginate();
+        }
         return view('admin.posts.index', compact('posts'));
     }
 
