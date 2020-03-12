@@ -76,7 +76,7 @@ class PostTableSeeder extends Seeder
 					<p><em><strong>id est laborum.</strong></em></p>',
 				'thumbnail' => 'front/img/blog/single_blog_1.png',
 				'category_id' => '3',
-				'slug' => 'the-second-post',
+				'slug' => 'ini-post-ketiga',
 				'users_id' => '2',
 				'hits' => '5'
     		],
@@ -100,7 +100,7 @@ class PostTableSeeder extends Seeder
 					<p><em><strong>id est laborum.</strong></em></p>',
 				'thumbnail' => 'front/img/blog/single_blog_4.png',
 				'category_id' => '1',
-				'slug' => 'the-second-post',
+				'slug' => 'wow-harubiru-berhasil-terpasang',
 				'users_id' => '4',
 				'hits' => '2'
     		]

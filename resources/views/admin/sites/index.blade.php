@@ -98,7 +98,154 @@
               <div class="card-body">
                 <div class="form-group">
                   <label>Change information about the site.</label>
-                  <textarea id="editor" name="about">{{ $sites->about }}</textarea>
+                  <textarea class="editor" id="editorAbout" name="about">{{ $sites->about }}</textarea>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-success btn-icon btn-icon-left btn-block">
+                    <i class="fas fa-flag"></i>
+                    <span class="text">Save Changes</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header py-3">
+                <h4>Contact</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Change information about the site's contacts.</label>
+                  <textarea class="editor" id="editorContact" name="contact">{{ $sites->contact }}</textarea>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-success btn-icon btn-icon-left btn-block">
+                    <i class="fas fa-flag"></i>
+                    <span class="text">Save Changes</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header py-3">
+                <h4>Privacy & Policy</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Change information about the site's privacy and policy.</label>
+                  <textarea class="editor" id="editorPrivacyPolicy" name="privacypolicy">{{ $sites->privacypolicy }}</textarea>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-success btn-icon btn-icon-left btn-block">
+                    <i class="fas fa-flag"></i>
+                    <span class="text">Save Changes</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header py-3">
+                <h4>License</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Change information about the site's licenses.</label>
+                  <textarea class="editor" id="editorLicense" name="license">{{ $sites->license }}</textarea>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-success btn-icon btn-icon-left btn-block">
+                    <i class="fas fa-flag"></i>
+                    <span class="text">Save Changes</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header py-3">
+                <h4>Contribute</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Change information about the how to contribute.</label>
+                  <textarea class="editor" id="editorContribute" name="contribute">{{ $sites->contribute }}</textarea>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-success btn-icon btn-icon-left btn-block">
+                    <i class="fas fa-flag"></i>
+                    <span class="text">Save Changes</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header py-3">
+                <h4>Report</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Change information about how to report a but.</label>
+                  <textarea class="editor" id="editorReport" name="report">{{ $sites->report }}</textarea>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-success btn-icon btn-icon-left btn-block">
+                    <i class="fas fa-flag"></i>
+                    <span class="text">Save Changes</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header py-3">
+                <h4>Heroes</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Change information about the heroes that report any bugs.</label>
+                  <textarea class="editor" id="editorHeroes" name="heroes">{{ $sites->heroes }}</textarea>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-success btn-icon btn-icon-left btn-block">
+                    <i class="fas fa-flag"></i>
+                    <span class="text">Save Changes</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header py-3">
+                <h4>Patched</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Change information about patched bugs.</label>
+                  <textarea class="editor" id="editorPatched" name="patched">{{ $sites->patched }}</textarea>
                 </div>
                 <div class="form-group">
                   <button class="btn btn-success btn-icon btn-icon-left btn-block">
@@ -108,20 +255,11 @@
                 </div>
               </div>
             </form>
+            </div>
           </div>
         </div>
-      </div>
     </div>
   </section>
 </div>
-<!-- CKEditor -->
-<script>
-  CKEDITOR.replace('editor', {
-    language: 'en',
-    filebrowserImageBrowseUrl: '/filemanager?type=Images',
-    filebrowserImageUploadUrl: '/filemanager/upload?type=Images&_token=',
-    filebrowserBrowseUrl: '/filemanager?type=Files',
-    filebrowserUploadUrl: '/filemanager/upload?type=Files&_token='
-  });
-</script>
+
 @endsection

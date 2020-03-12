@@ -46,5 +46,5 @@ You can access the <b>manager page</b> by visit <b>http://harubiru.test/webmanag
 
 ## To Do
 - [x] Pull <b>desajati</b> to <b>master</b> and adjustment
-- [ ] Add some textbox form in Site Settings (BackEnd)
+- [x] Add some textbox form in Site Settings (BackEnd)
 - [ ] Create Dashboard items

@@ -69,7 +69,7 @@
 										{{ $message }}
 									</div>
 									@enderror
-									<textarea id="editor" name="content" class="form-control">
+									<textarea name="content" id="editorPostCreate" class="form-control editor">
 										@if($errors->any())
 											{{ old('content') }}
 										@endif
@@ -98,16 +98,5 @@
 		</div>
 	</section>
 </div>
-
-<!-- CKEditor -->
-<script>
-  CKEDITOR.replace('editor', {
-  	language: 'en',
-    filebrowserImageBrowseUrl: '/filemanager?type=Images',
-    filebrowserImageUploadUrl: '/filemanager/upload?type=Images&_token=',
-    filebrowserBrowseUrl: '/filemanager?type=Files',
-    filebrowserUploadUrl: '/filemanager/upload?type=Files&_token='
-  });
-</script>
 
 @endsection
