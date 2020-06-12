@@ -29,7 +29,7 @@ jobs:
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.ci', '.env');"
     - name: Install Dependencies
-      run: composer install --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+      run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
     - name: Generate key
       run: php artisan key:generate
     - name: Directory Permissions
@@ -37,6 +37,8 @@ jobs:
     - name: Dump Autoload
       run: composer dump-autoload
     - name: Migrate and Seed DB
+      env:
+        DB_PASSWORD: ${{ secrets.HARUBIRU_DB_PASSWORD }}
       run: php artisan migrate:fresh --seed
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
