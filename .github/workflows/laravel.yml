@@ -25,7 +25,7 @@ jobs:
           --health-timeout=5s
           --health-retries=3  
     steps:
-    - uses: actions/checkout@test
+    - uses: actions/checkout@v2
     - name: Verify MariaDB connection
       env:
         PORT: ${{ job.services.mariadb.ports[33306] }}
