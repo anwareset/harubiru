@@ -1,4 +1,5 @@
 # HaruBiru
+![tests](https://github.com/anwareset/harubiru/workflows/Continuous%20Integration%20HaruBiru/badge.svg?branch=master)
 A simple CMS (Content Management System) for blogging that builded with Laravel Framework
 
 <p align="center">
