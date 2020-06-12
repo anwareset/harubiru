@@ -25,14 +25,7 @@ jobs:
           --health-timeout=5s
           --health-retries=3  
     steps:
-    - uses: actions/checkout@test
-    - name: Verify MariaDB connection
-      env:
-        PORT: ${{ job.services.mariadb.ports[33306] }}
-      run: |
-          while ! mysqladmin ping -h"127.0.0.1" -P"$PORT" --silent; do
-            sleep 1
-          done
+    - uses: actions/checkout@v2
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.ci', '.env');"
     - name: Install Dependencies
