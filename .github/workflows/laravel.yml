@@ -9,6 +9,7 @@ on:
 jobs:
   automated-unit-test:
     runs-on: ubuntu-latest
+
     services:
       mysql-service:
         image: mariadb:latest
@@ -16,6 +17,7 @@ jobs:
           MYSQL_DATABASE: harubiru
           MYSQL_USER: harubiru
           MYSQL_PASSWORD: ${{ secrets.HARUBIRU_DB_PASSWORD }}
+          MYSQL_ROOT_PASSWORD: ${{ secrets.HARUBIRU_DB_PASSWORD }}
         ports:
           - 33306:3306
         options: >-
@@ -23,6 +25,7 @@ jobs:
           --health-interval=10s
           --health-timeout=5s
           --health-retries=3  
+
     steps:
     - uses: actions/checkout@v2
     - name: Copy .env
