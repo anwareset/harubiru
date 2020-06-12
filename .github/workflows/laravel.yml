@@ -29,7 +29,7 @@ jobs:
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.ci', '.env');"
     - name: Install Dependencies
-      run: composer install --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+      run: composer install --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
     - name: Generate key
       run: php artisan key:generate
     - name: Directory Permissions
@@ -43,7 +43,7 @@ jobs:
         DB_CONNECTION: mysql
         DB_DATABASE: harubiru
         DB_PORT: 33306
-        DB_USER: root
+        DB_USER: harubiru
         DB_PASSWORD: ${{ secrets.HARUBIRU_DB_PASSWORD }}
       run: vendor/bin/phpunit
 
