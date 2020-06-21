@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Database\Seeder;
+use Illuminate\Database\Seederx;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 
