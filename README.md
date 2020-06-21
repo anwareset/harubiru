@@ -9,6 +9,9 @@ A simple CMS (Content Management System) for blogging that builded with Laravel 
 	<a name="top" href="https://github.com/anwareset/harubiru"><img src="https://github.com/anwareset/harubiru/raw/master/harubiru1.png"></a>
 </p>
 
+## Demo
+You can access the <b>demo</b> by visit <b>http://harubiru.herokuapp.com</b>
+
 ## Requirements
 Run this command
 ```text
