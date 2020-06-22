@@ -4,7 +4,7 @@ php:
   - 7.2
 
 before_script:
-  - apt update && apt -y install memcached 
+  - pecl install memcached 
   - travis_retry composer self-update
   - travis_retry composer install --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist 
   - travis_retry composer dump-autoload
