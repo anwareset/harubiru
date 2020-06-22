@@ -1,13 +1,13 @@
 # HaruBiru
 <p>
-<a href="https://github.com/anwareset/harubiru/actions"><img src="https://github.com/anwareset/harubiru/workflows/buildtest/badge.svg?branch=master" alt="Build Status"></a>
+    <a href="https://github.com/anwareset/harubiru/actions"><img src="https://github.com/anwareset/harubiru/workflows/buildtest/badge.svg?branch=master" alt="Github Action"></a>
+    <a href="https://travis-ci.com/anwareset/harubiru"><img src="https://travis-ci.com/anwareset/harubiru.svg?branch=master" alt="Travis CI"></a>
 </p>
 
 A simple CMS (Content Management System) for blogging that builded with Laravel Framework
 
 <p align="center">
 	<a name="top" href="https://github.com/anwareset/harubiru"><img src="https://github.com/anwareset/harubiru/raw/master/harubiru1.png"></a>
-    <a name="top" href="https://travis-ci.com/anwareset/harubiru"><img src="https://travis-ci.com/anwareset/harubiru.svg?branch=master"></a>
 </p>
 
 ## Requirements
