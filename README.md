@@ -7,6 +7,7 @@ A simple CMS (Content Management System) for blogging that builded with Laravel 
 
 <p align="center">
 	<a name="top" href="https://github.com/anwareset/harubiru"><img src="https://github.com/anwareset/harubiru/raw/master/harubiru1.png"></a>
+    <a name="top" href="https://travis-ci.com/anwareset/harubiru"><img src="https://travis-ci.com/anwareset/harubiru.svg?branch=master"></a>
 </p>
 
 ## Requirements
