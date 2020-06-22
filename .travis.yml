@@ -1,11 +1,12 @@
 language: php
 
 php:
-  - 7.3
+  - 7.2
 
 before_script:
+  - apt update && apt -y install memcached 
   - travis_retry composer self-update
-  - travis_retry composer install --prefer-dist --no-interaction
+  - travis_retry composer install --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist 
   - travis_retry composer dump-autoload
   - cp .env.ci .env
   - php artisan key:generate
