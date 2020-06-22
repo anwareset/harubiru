@@ -86,7 +86,7 @@ return [
         ],
 
         'testing' => [
-            'driver' => mysql,
+            'driver' => 'mysql',
             'database' => env('DB_DATABASE', 'homestead'),
             'username' => env('DB_USERNAME', 'homestead'),
             'password' => env('DB_PASSWORD', 'secret'),
