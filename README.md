@@ -6,6 +6,9 @@
     <a href="https://travis-ci.com/anwareset/harubiru">
         <img src="https://travis-ci.com/anwareset/harubiru.svg?branch=master" alt="Travis CI">
     </a>
+    <a href="https://github.com/anwareset/harubiru/blob/master/LICENSE">
+        <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="LICENSE">
+    </a>
 </p>
 <h5 align="center">A simple CMS for blogging that builded with Laravel Framework</h5>
 
