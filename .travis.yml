@@ -3,13 +3,22 @@ language: php
 php:
   - 7.2
 
+services:
+  - mysql
+
+cache:
+  directories:
+    - node_modules
+    - vendor
+
 before_script:
-  - pecl install memcached 
-  - travis_retry composer self-update
-  - travis_retry composer install --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist 
-  - travis_retry composer dump-autoload
-  - cp .env.ci .env
+  - cp .env.travisci .env
+  - sudo mysql -e "create database homestead;"
+  - composer self-update
+  - composer install --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist 
+  - composer dump-autoload
   - php artisan key:generate
+  - php artisan storage:link
   - chmod -R 777 storage bootstrap/cache
 
 script:
