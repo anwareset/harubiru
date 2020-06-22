@@ -1,5 +1,4 @@
 <h1 align="center">HaruBiru</h1>
-<h4 align="center">A simple CMS for blogging that builded with Laravel Framework</h4>
 <p align="center">
     <a href="https://github.com/anwareset/harubiru/actions">
         <img src="https://github.com/anwareset/harubiru/workflows/buildtest/badge.svg?branch=master" alt="Github Action">
@@ -8,6 +7,7 @@
         <img src="https://travis-ci.com/anwareset/harubiru.svg?branch=master" alt="Travis CI">
     </a>
 </p>
+<h5 align="center">A simple CMS for blogging that builded with Laravel Framework</h5>
 
 ---
 
