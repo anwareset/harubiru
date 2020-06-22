@@ -1,0 +1,17 @@
+language: php
+
+php:
+  - 7.0
+
+before_script:
+  - php artisan key:generate
+  - travis_retry composer self-update
+  - travis_retry composer install --prefer-dist --no-interaction
+  - travis_retry composer dump-autoload
+  - cp .env.ci .env
+  - chmod -R 777 storage bootstrap/cache
+
+script:
+  - vendor/bin/phpunit
+
+
