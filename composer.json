@@ -10,7 +10,6 @@
     "require": {
         "php": "^7.2",
         "ext-bcmath": "*",
-        "ext-memcached": "*",
         "ext-gd": "*",
         "doctrine/dbal": "^2.10",
         "fideloper/proxy": "^4.0",
