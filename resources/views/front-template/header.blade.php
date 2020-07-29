@@ -22,7 +22,7 @@
                                     <a class="nav-link" href="https://youtube.com">Video</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('portofolio') }}">Portofolio</a>
+                                    <a class="nav-link" href="https://anwareset.github.io">Portofolio</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ url('about') }}">About</a>
