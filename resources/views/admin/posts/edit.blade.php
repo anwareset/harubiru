@@ -88,6 +88,15 @@
 									</select>
 								</div>
 								<div class="form-group">
+									<label>Description</label>
+									@error('description')
+									<div class="alert alert-danger" role="alert">
+										{{ $message }}
+									</div>
+									@enderror
+									<input type="text" name="description" class="form-control @error('title') is-invalid @enderror" value="{{old('description')}}">
+								</div>
+								<div class="form-group">
 									<label>Content</label>
 									@if (session('status'))
 									<div class="alert alert-success" role="alert">

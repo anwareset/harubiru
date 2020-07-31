@@ -34,22 +34,24 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title'     => 'required|min:13',
-            'content'   => 'required',
-            'thumbnail' => 'required|image|mimes:jpeg,png,jpg',
-            'category'  => 'required'
+            'title'         => 'required|min:13',
+            'description'   => 'required',
+            'content'       => 'required',
+            'thumbnail'     => 'required|image|mimes:jpeg,png,jpg',
+            'category'      => 'required'
         ]);
 
         $tmp_thumbnail =  time().$request->thumbnail->getClientOriginalName();
         
         Posts::create([
-            'title' => $request->title,
-            'content' => $request->content,
-            'hits' => '1',
-            'thumbnail' => 'upload/img/thumb/'.$tmp_thumbnail,
-            'category_id' => $request->category,
-            'slug' => Str::slug($request->title),
-            'users_id' => Auth::id()
+            'title'         => $request->title,
+            'description'   => $request->description,
+            'content'       => $request->content,
+            'hits'          => '1',
+            'thumbnail'     => 'upload/img/thumb/'.$tmp_thumbnail,
+            'category_id'   => $request->category,
+            'slug'          => Str::slug($request->title),
+            'users_id'      => Auth::id()
         ])->tags()->attach($request->tags);
 
         $request->thumbnail->move(public_path('upload/img/thumb/'), $tmp_thumbnail);
@@ -72,9 +74,10 @@ class PostsController extends Controller
         $posts = Posts::findorfail($id);
 
         $request->validate([
-            'title'     => 'required|min:13',
-            'content'   => 'required',
-            'category'  => 'required'
+            'title'         => 'required|min:13',
+            'description'   => 'required',
+            'content'       => 'required',
+            'category'      => 'required'
         ]);
 
         if($request->has('thumbnail')){
@@ -82,18 +85,20 @@ class PostsController extends Controller
             $request->thumbnail->move(public_path('upload/img/thumb/'), $tmp_thumbnail);
 
             $posts_data = [
-                'title' => $request->title,
-                'content' => $request->content,
-                'thumbnail' => 'upload/img/thumb/'.$tmp_thumbnail,
-                'category_id' => $request->category,
-                'slug' => Str::slug($request->title)
+                'title'         => $request->title,
+                'description'   => $require->description,
+                'content'       => $request->content,
+                'thumbnail'     => 'upload/img/thumb/'.$tmp_thumbnail,
+                'category_id'   => $request->category,
+                'slug'          => Str::slug($request->title)
             ];
         } else {
             $posts_data = [
-                'title' => $request->title,
-                'content' => $request->content,
-                'category_id' => $request->category,
-                'slug' => Str::slug($request->title)
+                'title'         => $request->title,
+                'description'   => $request->description,
+                'content'       => $request->content,
+                'category_id'   => $request->category,
+                'slug'          => Str::slug($request->title)
             ];
         }
         $posts->tags()->sync($request->tags);
