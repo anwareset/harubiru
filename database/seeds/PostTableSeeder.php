@@ -10,7 +10,7 @@ class PostTableSeeder extends Seeder
     	$posts = [
     		[
     			'title' => 'Hello, World!',
-    			'description' => 'Ini adalah deskripsi dari artikel yang akan anda baca. String dari deskripsi ini akan otomatis dipotong setelah 300 karakter.'
+    			'description' => 'Ini adalah deskripsi dari artikel yang akan anda baca. String dari deskripsi ini akan otomatis dipotong setelah 300 karakter.',
 	            'content' => '
 	            	<p><strong>Lorem ipsum dolor sit amet</strong></p>
 
@@ -35,7 +35,7 @@ class PostTableSeeder extends Seeder
     		],
     		[
     			'title' => 'The Second Post',
-    			'description' => 'String dari deskripsi ini akan otomatis dipotong setelah 300 karakter. Ini adalah deskripsi dari artikel yang akan anda baca.'
+    			'description' => 'String dari deskripsi ini akan otomatis dipotong setelah 300 karakter. Ini adalah deskripsi dari artikel yang akan anda baca.',
 	            'content' => '
 	            	<p><strong>Lorem ipsum dolor sit amet</strong></p>
 
@@ -60,7 +60,7 @@ class PostTableSeeder extends Seeder
     		],
     		[
     			'title' => 'Ini Post Ketiga',
-    			'description' => 'Oke, saya kira menggunakan deskripsi dengan kolom yang berbeda memang terlihat kurang cerdas. Tapi apa daya, baru ini jalan yang saya temukan.'
+    			'description' => 'Oke, saya kira menggunakan deskripsi dengan kolom yang berbeda memang terlihat kurang cerdas. Tapi apa daya, baru ini jalan yang saya temukan.',
 	            'content' => '
 	            	<p><strong>Lorem ipsum dolor sit amet</strong></p>
 
@@ -85,7 +85,7 @@ class PostTableSeeder extends Seeder
     		],
     		[
     			'title' => 'Wow HaruBiru Berhasil Terpasang',
-    			'description' => 'HaruBiru adalah sebuah CMS sederhana yang dibangun menggunakan PHP Web Framework Laravel.'
+    			'description' => 'HaruBiru adalah sebuah CMS sederhana yang dibangun menggunakan PHP Web Framework Laravel.',
 	            'content' => '
 	            	<p><strong>Lorem ipsum dolor sit amet</strong></p>
 
