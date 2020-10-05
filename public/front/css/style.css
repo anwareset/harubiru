@@ -2409,6 +2409,7 @@ ul {
   .navbar-nav {
     margin-left: 0 !important;
     text-align: center;
+    background-color: #562fc7;
   }
   /* line 120, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_menu.scss */
   .main_logo {
@@ -2434,7 +2435,7 @@ ul {
   /* line 136, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_menu.scss */
   .main_menu .main-menu-item .nav-item .nav-link {
     padding: 5px 15px !important;
-    color: #000;
+    color: #fff;
   }
   /* line 143, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_menu.scss */
   .navbar-collapse {

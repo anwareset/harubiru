@@ -1,7 +1,5 @@
 @extends('front-template.page')
-@foreach ($contents as $content)
-@section('title', $content->title)
-@endforeach
+@section('title', $contents[0]->title)
 @section('breadcrumb1', 'Detail Artikel')
 @section('breadcrumb2', 'Artikel')
 @section('breadcrumb-link', url('blog'))
@@ -19,8 +17,12 @@
                   <div class="blog_details">
                      <h2>{{ $content->title }}</h2>
                      <ul class="blog-info-link mt-3 mb-4">
-                        <li><a href="#"><i class="far fa-bookmark"></i> {{ $content->category->name }}</a></li>
-                        <li><a href="#"><i class="fas fa-tags"></i> Digae, tags, ae, pye?</a></li>
+                        <li><a href="{{ route('blog.category', $content->category->slug) }}"><i class="far fa-bookmark"></i> {{ $content->category->name }}</a></li>
+                        <li><i class="fas fa-tags"></i>
+                           @foreach($content->tags as $tag)
+                           <a href="{{ route('blog.tag', $tag->slug) }}">{{ $tag->name }}&nbsp;</a>
+                           @endforeach
+                        </li>
                      </ul>
                      {!! $content->content !!}
                   </div>
@@ -119,7 +121,7 @@
                      @foreach ($contents as $content)
                      <img src="{{ asset(App\User::findorfail($content->users->id)->avatar) }}" alt="">
                      <div class="media-body">
-                        <a href="#">
+                        <a href="{{ route('blog.author', $content->users->id) }}">
                            <h4>{{ $content->users->name }} </h4>
                         </a>
                         <p>{{ $content->users->bio }}</p>
@@ -185,21 +187,27 @@
                <div class="comment-form">
                   <h4>Leave a Reply</h4>
                   <div id="disqus_thread"></div>
-                     <script>
-                     /*
-                     var disqus_config = function () {
-                        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                     };
-                     */
-                     (function() { // DON'T EDIT BELOW THIS LINE
-                     var d = document, s = d.createElement('script');
-                     s.src = 'https://portaljati.disqus.com/embed.js';
-                     s.setAttribute('data-timestamp', +new Date());
-                     (d.head || d.body).appendChild(s);
-                     })();
-                     </script>
-                     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                  <script>
+
+                  /**
+                  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                  /**
+                  var disqus_config = function () {
+                  this.page.url = {{ Request::url() }};
+                  this.page.identifier = {{ route('blog.details', $contents[0]->slug) }};
+                  };
+                  **/
+                  
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+                  s.src = 'https://harubiru.disqus.com/embed.js';
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                  </script>
+                  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                              
                             
                   <!--<form class="form-contact comment_form" action="#" id="commentForm">
                      <div class="row">

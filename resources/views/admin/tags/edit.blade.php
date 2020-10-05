@@ -1,12 +1,12 @@
 @extends('admin-template.page')
-@section('title', 'Edit Tag')
+@section('title', 'Tag Edit')
 @section('activetags', 'active')
 @section('content')
 <!-- Page Heading -->
 <div class="main-content">
 	<section class="section">
 		<div class="section-header">
-			<h1>Edit Tag</h1>
+			<h1>Tag Edit</h1>
 		</div>
 
 		<div class="section-body">
@@ -18,7 +18,7 @@
 								<span class="icon text-white-50">
 									<i class="fas fa-chevron-circle-left"></i>
 								</span>
-								<span class="text">Kembali</span>
+								<span class="text">Back</span>
 							</a>  
 						</div>
 						<div class="card-body">
@@ -26,7 +26,7 @@
 								@csrf
 								@method('patch')
 								<div class="form-group">
-									<label>Nama Tag</label>
+									<label>Tag's Name</label>
 									@error('name')
 									<div class="alert alert-danger" role="alert">
 										{{ $message }}
@@ -37,7 +37,7 @@
 								<div class="form-group">
 									<button class="btn btn-success btn-icon btn-icon-left btn-block">
 										<i class="fas fa-flag"></i>
-										<span class="text">Update Tag</span>
+										<span class="text">Save Changes</span>
 									</button>
 								</div>
 							</form>

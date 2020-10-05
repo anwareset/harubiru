@@ -1,5 +1,5 @@
 @extends('admin-template.page')
-@section('title', 'Posts')
+@section('title', 'Archived Posts')
 @section('activeposts', 'active')
 @section('active_p_archived', 'active')
 @section('content')
@@ -26,13 +26,13 @@
 									<span class="icon text-white-50">
 										<i class="fas fa-chevron-circle-left"></i>
 									</span>
-									<span class="text">Kembali</span>
+									<span class="text">Back</span>
 								</a>
 								<button type="submit" class="btn btn-sm btn-danger btn-icon">
 									<span class="icon text-white-50">
 										<i class="fas fa-trash"></i>
 									</span>
-									<span class="text">Hapus Semua Archive</span>
+									<span class="text">Delete All</span>
 								</button>
 							</form>
 						</div>
@@ -42,21 +42,21 @@
 									<thead>
 										<tr>
 											<th width="5%" class="text-center">#</th>
-											<th>Judul</th>
-											<th width="20%" class="text-center">Kategori</th>
+											<th>Title</th>
+											<th width="20%" class="text-center">Category</th>
 											<th width="20%" class="text-center">Tags</th>
-											<th width="15%" class="text-center">Gambar</th>
-											<th width="10%" class="text-center">Aksi</th>
+											<th width="15%" class="text-center">Thumbnail</th>
+											<th width="10%" class="text-center">Action</th>
 										</tr>
 									</thead>
 									<tfoot>
 										<tr>
 											<th width="5%" class="text-center">#</th>
-											<th>Judul</th>
-											<th width="20%" class="text-center">Kategori</th>
+											<th>Title</th>
+											<th width="20%" class="text-center">Category</th>
 											<th width="20%" class="text-center">Tags</th>
-											<th width="15%" class="text-center">Gambar</th>
-											<th width="10%" class="text-center">Aksi</th>
+											<th width="15%" class="text-center">Thumbnail</th>
+											<th width="10%" class="text-center">Action</th>
 										</tr>
 									</tfoot>
 									<tbody>

@@ -32,10 +32,10 @@
               @csrf
               @method('PATCH')
               <div class="card-header" style="margin-top: -20px">
-                <h4>Foto Profil</h4>
+                <h4>Avatar</h4>
                 <div class="card-header-action">
                   <div class="form-group">
-                    <label for="file-upload" class="btn btn-primary" style="margin-top: 25px;color: #fff;">Ganti Foto</label>
+                    <label for="file-upload" class="btn btn-primary" style="margin-top: 25px;color: #fff;">Change Avatar</label>
                     <input id="file-upload" name="avatar" type="file" />
                   </div>
                 </div>
@@ -46,7 +46,7 @@
                   {{ $message }}
                 </div>
                 @enderror
-                <div class="mb-2 text-muted">Klik Foto Untuk Menampilkan Ukuran Penuh.</div>
+                <div class="mb-2 text-muted">Click the image to display full size.</div>
                 <div class="chocolat-parent">
                   <a href="{{ asset($users->avatar) }}" class="chocolat-image" title="">
                     <div data-crop-image="285">
@@ -68,14 +68,14 @@
                 <h4>Profile</h4>
               </div>
               <div class="card-body pb-0">
-                <p class="text-muted">Anda Bisa Memperbarui Informasi Anda Disini.</p>
+                <p class="text-muted">You can update your personal information here.</p>
                 <div class="form-group">
                   @error('name')
                   <div class="alert alert-danger" role="alert">
                     {{ $message }}
                   </div>
                   @enderror
-                  <label>Nama</label>
+                  <label>Name</label>
                   <div class="input-group">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
@@ -107,7 +107,7 @@
                     {{ $message }}
                   </div>
                   @enderror
-                  <label>Password Baru</label>
+                  <label>New Password</label>
                   <div class="input-group">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
@@ -136,7 +136,7 @@
                 <div class="form-group">
                   <button class="btn btn-success btn-icon btn-icon-left btn-block">
                     <i class="fas fa-flag"></i>
-                    <span class="text">Update User</span>
+                    <span class="text">Save Changes</span>
                   </button>
                 </div>
               </form>

@@ -27,3 +27,5 @@
 <script src="{{asset('front/js/typewriter.js')}}"></script>
 <!-- lightbox js -->
 <script src="{{asset('front/lightbox2-2.11.1/js/lightbox.js')}}"></script>
+<!-- disqus comments count -->
+<script id="dsq-count-scr" src="//harubiru.disqus.com/count.js" async></script>

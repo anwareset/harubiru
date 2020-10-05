@@ -20,7 +20,7 @@
 								<span class="icon text-white-50">
 									<i class="fas fa-chevron-circle-left"></i>
 								</span>
-								<span class="text">Kembali</span>
+								<span class="text">Back</span>
 							</a>  
 						</div>
 						<div class="card-body">
@@ -28,7 +28,7 @@
 								@csrf
 								@method('PATCH')
 								<div class="form-group">
-									<label>Judul</label>
+									<label>Title</label>
 									@if (session('status'))
 									<div class="alert alert-success" role="alert">
 										{{ session('status') }}
@@ -42,7 +42,7 @@
 									<input type="text" name="title" class="form-control @error('title') is-invalid @enderror" value="{{ $posts->title }}">
 								</div>
 								<div class="form-group">
-									<label>Kategori</label>
+									<label>Category</label>
 									@if (session('status'))
 									<div class="alert alert-success" role="alert">
 										{{ session('status') }}
@@ -88,7 +88,16 @@
 									</select>
 								</div>
 								<div class="form-group">
-									<label>Konten</label>
+									<label>Description</label>
+									@error('description')
+									<div class="alert alert-danger" role="alert">
+										{{ $message }}
+									</div>
+									@enderror
+									<input type="text" name="description" class="form-control @error('title') is-invalid @enderror" value="{{old('description')}}">
+								</div>
+								<div class="form-group">
+									<label>Content</label>
 									@if (session('status'))
 									<div class="alert alert-success" role="alert">
 										{{ session('status') }}
@@ -99,10 +108,10 @@
 										{{ $message }}
 									</div>
 									@enderror
-									<textarea type="text" id="editor" name="content" class="form-control">{{ $posts->content }}</textarea>
+									<textarea type="text" id="editorPostEdit" name="content" class="form-control editor">{{ $posts->content }}</textarea>
 								</div>
 								<div class="form-group">
-									<label>Foto</label>
+									<label>Thumbnail</label>
 									@if (session('status'))
 									<div class="alert alert-success" role="alert">
 										{{ session('status') }}
@@ -118,7 +127,7 @@
 								<div class="form-group">
 									<button class="btn btn-success btn-icon btn-icon-left btn-block">
 										<i class="fas fa-flag"></i>
-										<span class="text">Update Post</span>
+										<span class="text">Publish Post Update</span>
 									</button>
 								</div>
 							</form>
@@ -129,16 +138,5 @@
 		</div>
 	</section>
 </div>
-
-<!-- CKEditor -->
-<script>
-  CKEDITOR.replace('editor', {
-  	language: 'en',
-    filebrowserImageBrowseUrl: '/filemanager?type=Images',
-    filebrowserImageUploadUrl: '/filemanager/upload?type=Images&_token=',
-    filebrowserBrowseUrl: '/filemanager?type=Files',
-    filebrowserUploadUrl: '/filemanager/upload?type=Files&_token='
-  });
-</script>
 
 @endsection

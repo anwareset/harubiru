@@ -11,14 +11,16 @@
                 <div class="d-sm-none d-lg-inline-block">{{ Auth::user()->name }}</div></a>
             <div class="dropdown-menu dropdown-menu-right">
               <a href="{{ route('webmanager.profiles.index') }}" class="dropdown-item has-icon">
-                <i class="far fa-user"></i> Profil
+                <i class="far fa-user"></i> Profile
               </a>
+              @if(Auth::user()->level == 1)
               <a href="{{ route('webmanager.sites.index') }}" class="dropdown-item has-icon">
-                <i class="fas fa-cog"></i> Konfigurasi Website
+                <i class="fas fa-cog"></i> Settings
               </a>
+              @endif
               <div class="dropdown-divider"></div>
               <a class="dropdown-item has-icon text-danger" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                <i class="fas fa-sign-out-alt"></i>{{ __('Keluar') }}
+                <i class="fas fa-sign-out-alt"></i>{{ __('Log Out') }}
               </a>
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf

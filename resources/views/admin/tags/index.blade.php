@@ -24,7 +24,7 @@
 								<span class="icon text-white-50">
 									<i class="fas fa-flag"></i>
 								</span>
-								<span class="text">Tambah Tag Baru</span>
+								<span class="text">Add New</span>
 							</a>
 						</div>
 						<div class="card-body">
@@ -33,15 +33,15 @@
 									<thead>
 										<tr>
 											<th width="5%" class="text-center">#</th>
-											<th>Nama</th>
-											<th width="10%" class="text-center">Aksi</th>
+											<th>Name</th>
+											<th width="10%" class="text-center">Action</th>
 										</tr>
 									</thead>
 									<tfoot>
 										<tr>
 											<th width="5%" class="text-center">#</th>
-											<th>Nama</th>
-											<th width="10%" class="text-center">Aksi</th>
+											<th>Name</th>
+											<th width="10%" class="text-center">Action</th>
 										</tr>
 									</tfoot>
 									<tbody>

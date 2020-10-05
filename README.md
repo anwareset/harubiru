@@ -1,18 +1,33 @@
-# HaruBiru
-A simple CMS (Content Management System) for blogging that builded with Laravel Framework
+<h1 align="center">HaruBiru</h1>
+<p align="center">
+    <a href="https://github.com/anwareset/harubiru/actions">
+        <img src="https://github.com/anwareset/harubiru/workflows/buildtest/badge.svg?branch=master" alt="Github Action">
+    </a>
+    <a href="https://travis-ci.com/anwareset/harubiru">
+        <img src="https://travis-ci.com/anwareset/harubiru.svg?branch=master" alt="Travis CI">
+    </a>
+    <a href="https://github.com/anwareset/harubiru/blob/master/LICENSE">
+        <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="LICENSE">
+    </a>
+</p>
+<h5 align="center">A simple CMS for blogging that builded with Laravel Framework</h5>
+
+---
 
 <p align="center">
-	<a name="top" href="https://github.com/anwareset/harubiru"><img src="https://github.com/anwareset/harubiru/raw/master/harubiru1.png"></a>
+	<a name="top" href="http://harubiru.herokuapp.com"><img src="harubirupic.png"></a>
 </p>
 
 ## Requirements
 Run this command
 ```text
 mysqladmin -uroot -p create harubiru
-composer install
 cp .env.example .env
+composer install
+composer dump-autoload
 php artisan key:generate
 php artisan migrate:fresh --seed
+php artisan storage:link
 ```
 
 ## Configuration
@@ -42,3 +57,11 @@ You can access the <b>landing page</b> by visit <b>http://harubiru.test</b>
 
 ## Admin Page
 You can access the <b>manager page</b> by visit <b>http://harubiru.test/webmanager</b>
+
+## To Do
+- [x] Pull <b>desajati</b> to <b>master</b> and adjustment
+- [x] Add some textbox form in Site Settings (BackEnd)
+- [ ] Google Analytic Implementation
+- [ ] Create Dashboard items
+- [ ] Forgot password feature
+- [ ] Improvment on User Interface

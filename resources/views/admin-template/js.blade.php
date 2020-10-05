@@ -29,3 +29,18 @@
   <!-- Template JS File -->
   <script src="{{ asset('assets/js/scripts.js') }}"></script>
   <script src="{{ asset('assets/js/custom.js') }}"></script>
+
+  <!-- Script JS CKEditor -->
+  <script>
+    $(document).ready(function(){
+      $('.editor').each(function(e){
+        CKEDITOR.replace( this.id, {
+          language: 'en',
+          filebrowserImageBrowseUrl: '/filemanager?type=Images',
+          filebrowserImageUploadUrl: '/filemanager/upload?type=Images&_token=',
+          filebrowserBrowseUrl: '/filemanager?type=Files',
+          filebrowserUploadUrl: '/filemanager/upload?type=Files&_token='
+        });
+      });
+    });
+  </script>

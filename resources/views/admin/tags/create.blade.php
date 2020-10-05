@@ -1,5 +1,5 @@
 @extends('admin-template.page')
-@section('title', 'Tambah Tag Baru')
+@section('title', 'New Tag')
 @section('activetags', 'active')
 @section('active_t_add', 'active')
 @section('content')
@@ -7,7 +7,7 @@
 <div class="main-content">
 	<section class="section">
 		<div class="section-header">
-			<h1>Tag Baru</h1>
+			<h1>New Tag</h1>
 		</div>
 		<div class="section-body">
 			<div class="row">
@@ -28,14 +28,14 @@
 								<span class="icon text-white-50">
 									<i class="fas fa-chevron-circle-left"></i>
 								</span>
-								<span class="text">Kembali</span>
+								<span class="text">Back</span>
 							</a>  
 						</div>
 						<div class="card-body">
 							<form method="POST" action=" {{ route('webmanager.tags.store') }} ">
 								@csrf
 								<div class="form-group">
-									<label>Nama Tag</label>
+									<label>Tag's Name</label>
 									@if (session('status'))
 									<div class="alert alert-success" role="alert">
 										{{ session('status') }}
@@ -51,7 +51,7 @@
 								<div class="form-group">
 									<button class="btn btn-success btn-icon btn-icon-left btn-block">
 										<i class="fas fa-flag"></i>
-										<span class="text">Tambah Tag Baru</span>
+										<span class="text">Save New Tag</span>
 									</button>
 								</div>
 							</form>

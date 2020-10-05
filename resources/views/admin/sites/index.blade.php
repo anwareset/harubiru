@@ -1,5 +1,5 @@
 @extends('admin-template.page')
-@section('title', 'Konfigurasi Website')
+@section('title', 'Sites Configuration')
 @section('activeconfigurations', 'active')
 @section('content')
 
@@ -12,7 +12,7 @@
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1>Konfigurasi Website</h1>
+      <h1>Sites Configuration</h1>
     </div>
     @if (session('status'))
     <div class="alert alert-success" role="alert">
@@ -29,14 +29,14 @@
             </div>
             @enderror
             <div class="card-header py-3">
-              <h4>Konfigurasi Nama Website</h4>
+              <h4>Site's Name</h4>
             </div>
             <div class="card-body">
               <form method="POST" enctype="multipart/form-data" action="{{ route('webmanager.sites.update', '1') }}">
                 @csrf
                 @method('PATCH')
                 <div class="form-group">
-                  <label>Nama Website</label>
+                  <label>Name</label>
                   @error('appname')
                   <div class="alert alert-danger" role="alert">
                     {{ $message }}
@@ -54,7 +54,7 @@
                 <div class="form-group">
                   <button class="btn btn-success btn-icon btn-icon-left btn-block">
                     <i class="fas fa-flag"></i>
-                    <span class="text">Update Nama Website</span>
+                    <span class="text">Save Changes</span>
                   </button>
                 </div>
               </div>
@@ -63,10 +63,10 @@
           <div class="col-6">
             <div class="card">
               <div class="card-header" style="margin-top: -20px">
-                <h4>Ubah Logo Website</h4>
+                <h4>Change Website's Logo</h4>
                 <div class="card-header-action">
                   <div class="form-group">
-                    <label for="file-upload" class="btn btn-primary" style="margin-top: 25px;color: #fff;">Ganti Logo</label>
+                    <label for="file-upload" class="btn btn-primary" style="margin-top: 25px;color: #fff;">Change Logo</label>
                     <input id="file-upload" name="logo" type="file" />
                   </div>
                 </div>
@@ -77,10 +77,10 @@
                   {{ $message }}
                 </div>
                 @enderror
-                <div class="mb-2 text-muted">Klik Foto Untuk Menampilkan Ukuran Penuh.</div>
+                <div class="mb-2 text-muted">Click the image to display full size.</div>
                 <div class="chocolat-parent">
                   <a href="{{ asset($sites->logo) }}" class="chocolat-image" title="{{ $sites->sitename }}">
-                    <div data-crop-image="285">
+                    <div data-crop-image="100">
                       <img alt="image" src="{{ asset($sites->logo) }}" class="img-fluid">
                     </div>
                   </a>
@@ -93,35 +93,173 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header py-3">
-                <h4>Konfigurasi Tentang Desa</h4>
+                <h4>About</h4>
               </div>
               <div class="card-body">
                 <div class="form-group">
-                  <label>Ubah Info Tentang Desa</label>
-                  <textarea id="editor" name="about">{{ $sites->about }}</textarea>
+                  <label>Change information about the site.</label>
+                  <textarea class="editor" id="editorAbout" name="about">{{ $sites->about }}</textarea>
                 </div>
                 <div class="form-group">
                   <button class="btn btn-success btn-icon btn-icon-left btn-block">
                     <i class="fas fa-flag"></i>
-                    <span class="text">Update Info Tentang Desa</span>
+                    <span class="text">Save Changes</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header py-3">
+                <h4>Contact</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Change information about the site's contacts.</label>
+                  <textarea class="editor" id="editorContact" name="contact">{{ $sites->contact }}</textarea>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-success btn-icon btn-icon-left btn-block">
+                    <i class="fas fa-flag"></i>
+                    <span class="text">Save Changes</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header py-3">
+                <h4>Privacy & Policy</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Change information about the site's privacy and policy.</label>
+                  <textarea class="editor" id="editorPrivacyPolicy" name="privacypolicy">{{ $sites->privacypolicy }}</textarea>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-success btn-icon btn-icon-left btn-block">
+                    <i class="fas fa-flag"></i>
+                    <span class="text">Save Changes</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header py-3">
+                <h4>License</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Change information about the site's licenses.</label>
+                  <textarea class="editor" id="editorLicense" name="license">{{ $sites->license }}</textarea>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-success btn-icon btn-icon-left btn-block">
+                    <i class="fas fa-flag"></i>
+                    <span class="text">Save Changes</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header py-3">
+                <h4>Contribute</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Change information about the how to contribute.</label>
+                  <textarea class="editor" id="editorContribute" name="contribute">{{ $sites->contribute }}</textarea>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-success btn-icon btn-icon-left btn-block">
+                    <i class="fas fa-flag"></i>
+                    <span class="text">Save Changes</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header py-3">
+                <h4>Report</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Change information about how to report a but.</label>
+                  <textarea class="editor" id="editorReport" name="report">{{ $sites->report }}</textarea>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-success btn-icon btn-icon-left btn-block">
+                    <i class="fas fa-flag"></i>
+                    <span class="text">Save Changes</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header py-3">
+                <h4>Heroes</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Change information about the heroes that report any bugs.</label>
+                  <textarea class="editor" id="editorHeroes" name="heroes">{{ $sites->heroes }}</textarea>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-success btn-icon btn-icon-left btn-block">
+                    <i class="fas fa-flag"></i>
+                    <span class="text">Save Changes</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header py-3">
+                <h4>Patched</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Change information about patched bugs.</label>
+                  <textarea class="editor" id="editorPatched" name="patched">{{ $sites->patched }}</textarea>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-success btn-icon btn-icon-left btn-block">
+                    <i class="fas fa-flag"></i>
+                    <span class="text">Save Changes</span>
                   </button>
                 </div>
               </div>
             </form>
+            </div>
           </div>
         </div>
-      </div>
     </div>
   </section>
 </div>
-<!-- CKEditor -->
-<script>
-  CKEDITOR.replace('editor', {
-    language: 'en',
-    filebrowserImageBrowseUrl: '/filemanager?type=Images',
-    filebrowserImageUploadUrl: '/filemanager/upload?type=Images&_token=',
-    filebrowserBrowseUrl: '/filemanager?type=Files',
-    filebrowserUploadUrl: '/filemanager/upload?type=Files&_token='
-  });
-</script>
+
 @endsection

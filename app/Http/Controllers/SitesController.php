@@ -27,7 +27,14 @@ class SitesController extends Controller
             $site_data = [
                 'sitename' => $request->sitename,
                 'logo' => 'upload/img/logo/'.$tmp_logo,
-                'about' => $request->about
+                'about' => $request->about,
+                'contact' => $request->contact,
+                'contribute' => $request->contribute,
+                'heroes' => $request->heroes,
+                'license' => $request->license,
+                'privacypolicy' => $request->privacypolicy,
+                'report' => $request->report,
+                'patched' => $request->patched
             ];
         } else {
             $request->validate([
@@ -35,7 +42,14 @@ class SitesController extends Controller
             ]);
             $site_data = [
                 'sitename' => $request->sitename,
-                'about' => $request->about
+                'about' => $request->about,
+                'contact' => $request->contact,
+                'contribute' => $request->contribute,
+                'heroes' => $request->heroes,
+                'license' => $request->license,
+                'privacypolicy' => $request->privacypolicy,
+                'report' => $request->report,
+                'patched' => $request->patched
             ];
         }
 

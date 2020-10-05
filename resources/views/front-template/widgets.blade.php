@@ -4,21 +4,21 @@
             <form method="GET" action="{{ route('blog.search') }}">
                 <div class="form-group">
                     <div class="input-group mb-3">
-                        <input name="search" type="text" class="form-control" placeholder='Cari Artikel'
+                        <input name="search" type="text" class="form-control" placeholder='Find Articles'
                         onfocus="this.placeholder = ''"
-                        onblur="this.placeholder = 'Cari Artikel'">
+                        onblur="this.placeholder = 'Find Articles'">
                         <div class="input-group-append">
                             <button class="btn" type="button"><i class="ti-search"></i></button>
                         </div>
                     </div>
                 </div>
                 <button class="button rounded-0 primary-bg text-white w-100 btn_1"
-                type="submit">Cari</button>
+                type="submit">Search</button>
             </form>
         </aside>
 
         <aside class="single_sidebar_widget post_category_widget">
-            <h4 class="widget_title">Kategori</h4>
+            <h4 class="widget_title">Category</h4>
             <ul class="list cat-list">
                 @foreach($categories as $category)
                 <li>
@@ -31,7 +31,7 @@
         </aside>
 
         <aside class="single_sidebar_widget popular_post_widget">
-            <h3 class="widget_title">Artikel Terpopuler</h3>
+            <h3 class="widget_title">Popular Posts</h3>
             @foreach($widgets as $widget)
             <div class="media post_item">
                 <img src="{{ asset($widget->thumbnail) }}" style="width: 85px; height: 85px; object-fit: cover;" alt="post">
@@ -49,7 +49,7 @@
             <ul class="list">
                 @foreach($tags as $tag)
                 <li>
-                    <a href="#">{{ $tag->name }}</a>
+                    <a href="{{ route('blog.tag', $tag->slug) }}">{{ $tag->name }}</a>
                 </li>
                 @endforeach
             </ul>

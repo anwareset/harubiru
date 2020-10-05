@@ -1,0 +1,27 @@
+language: php
+
+php:
+  - 7.3
+
+services:
+  - mysql
+
+cache:
+  directories:
+    - node_modules
+    - vendor
+
+before_script:
+  - cp .env.travisci .env
+  - sudo mysql -e "create database homestead;"
+  - composer self-update
+  - composer install --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist 
+  - composer dump-autoload
+  - php artisan key:generate
+  - php artisan storage:link
+  - chmod -R 777 storage bootstrap/cache
+
+script:
+  - vendor/bin/phpunit
+
+
