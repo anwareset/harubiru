@@ -64,3 +64,4 @@ You can access the <b>manager page</b> by visit <b>http://harubiru.test/webmanag
 - [ ] Google Analytic Implementation
 - [ ] Create Dashboard items
 - [ ] Forgot password feature
+- [ ] Improvment on User Interface
