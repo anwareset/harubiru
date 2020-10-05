@@ -15,7 +15,7 @@
 ---
 
 <p align="center">
-	<a name="top" href="http://harubiru.herokuapp.com"><img src="master/harubirupic.png"></a>
+	<a name="top" href="http://harubiru.herokuapp.com"><img src="harubirupic.png"></a>
 </p>
 
 ## Requirements
