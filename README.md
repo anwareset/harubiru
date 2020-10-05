@@ -15,7 +15,7 @@
 ---
 
 <p align="center">
-	<a name="top" href="http://harubiru.herokuapp.com"><img src="https://github.com/anwareset/harubiru/raw/master/harubiru.png"></a>
+	<a name="top" href="http://harubiru.herokuapp.com"><img src="https://github.com/anwareset/harubiru/raw/master/harubirupic.png"></a>
 </p>
 
 ## Requirements
