@@ -27,8 +27,8 @@ jobs:
           --health-retries=3  
 
     steps:
-    - uses: actions/checkout@v2
     - name: Copy .env
+      uses: actions/checkout@v2
       run: php -r "file_exists('.env') || copy('.env.ci', '.env');"
     - name: Update Composer lockfile
       uses: shivammathur/setup-php@v2
