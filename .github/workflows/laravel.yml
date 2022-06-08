@@ -8,7 +8,7 @@ on:
 
 jobs:
   continuous-integration:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     services:
       mysql-service:
@@ -31,7 +31,7 @@ jobs:
     - name: PHP Setup
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '7.4'
+        php-version: '7.2'
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.ci', '.env');"
     - name: Update Composer lockfile
