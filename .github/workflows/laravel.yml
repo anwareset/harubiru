@@ -28,7 +28,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Update Composer lockfile
+    - name: PHP Setup
       uses: shivammathur/setup-php@v2
       with:
         php-version: '7.4'
