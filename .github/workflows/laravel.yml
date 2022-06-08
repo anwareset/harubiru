@@ -28,22 +28,38 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      with:
-        php-version: '7.4'
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.ci', '.env');"
     - name: Update Composer lockfile
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
     - name: Install Dependencies
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
       run: composer install --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
     - name: Generate key
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
       run: php artisan key:generate
     - name: Directory Permissions
       run: chmod -R 777 storage bootstrap/cache
     - name: Storage Link
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
       run: php artisan storage:link
     - name: Dump Autoload
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
       run: composer dump-autoload
     - name: Execute tests
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
       env:
         DB_CONNECTION: mysql
         DB_DATABASE: harubiru
