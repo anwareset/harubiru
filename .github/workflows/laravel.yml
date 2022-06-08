@@ -30,6 +30,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.ci', '.env');"
+    - name: Check composer version
+      run: composer --version
     - name: Update Composer lockfile
       run: composer update
     - name: Install Dependencies
