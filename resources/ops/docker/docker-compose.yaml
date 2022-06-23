@@ -1,0 +1,26 @@
+version: '3'
+services:
+  harubiru-fpm:
+    image: trianwar/harubiru-fpm:alpine
+    container_name: harubiru-fpm
+    restart: unless-stopped
+    tty: true
+    env_file: ../../../.env
+    networks:
+      - harubiru
+
+  harubiru-nginx:
+    image: trianwar/harubiru-nginx:latest
+    container_name: harubiru-nginx
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "8080:80"
+    depends_on:
+      - harubiru-fpm
+    networks:
+      - harubiru
+
+networks:
+  harubiru:
+    driver: bridge

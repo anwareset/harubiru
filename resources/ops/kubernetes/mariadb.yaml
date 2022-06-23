@@ -1,0 +1,68 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: harubiru-mariadb
+  labels:
+    app: harubiru
+type: Opaque
+data:
+  MARIADB_USER: aGFydWJpcnU=
+  MARIADB_PASSWORD: cmFoYXNpYWJhbmdldA==
+  MARIADB_ROOT_PASSWORD: aW5panVnYXJhaGFzaWFiYW5nZXQ=
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: harubiru-mariadb
+  labels:
+    app: harubiru
+spec:
+  selector:
+    app: harubiru
+  ports:
+  - port: 3306
+    name: mariadb-port
+  clusterIP: None
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: harubiru-mariadb
+  labels:
+    app: harubiru
+spec:
+  selector:
+    matchLabels:
+      app: harubiru
+  serviceName: "harubiru-mariadb"
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: harubiru
+    spec:
+      containers:
+      - name: harubiru-mariadb
+        image: mariadb
+        ports:
+        - containerPort: 3306
+          name: mariadb-port
+        volumeMounts:
+        - name: datadir
+          mountPath: /var/lib/mysql
+        envFrom:
+          - secretRef:
+              name: harubiru-mariadb
+        env:
+          - name: MARIADB_DATABASE
+            value: harubiru
+  volumeClaimTemplates:
+  - metadata:
+      name: datadir
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 100M
